@@ -30,7 +30,7 @@ class BiNNOptimizer(Optimizer):
             temperature=temperature,
             beta=beta,
         )
-        super(Binn_optimizer, self).__init__(model.parameters(), default_dict)
+        super(BiNNOptimizer, self).__init__(model.parameters(), default_dict)
 
         ## Natural parameter prior lambda = 0
 
