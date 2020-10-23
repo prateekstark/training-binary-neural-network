@@ -126,7 +126,7 @@ class BiNNOptimizer(Optimizer):
         grad.mul_(1 / M)
 
         self.state["momentum"] = beta * self.state["momentum"] + (1 - beta) * (
-            grad + self.state["lambda"] - self.state[""]
+            grad + self.state["lambda"]
         )  ## P
 
         bias_correction1 = 1 - beta ** self.state["step"]
