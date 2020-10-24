@@ -8,12 +8,12 @@ class BiNNOptimizer(Optimizer):
     def __init__(
         self,
         model,
-        N,
-        mini_batch_size,
-        learning_rate,
-        temperature,
-        initialize_lambda,
-        beta,
+        N=1,
+        mini_batch_size=64,
+        learning_rate=1e-4,
+        temperature=1e-8,
+        initialize_lambda=10,
+        beta=0,
     ):
         """
         For torch's Optimizer class
@@ -30,12 +30,13 @@ class BiNNOptimizer(Optimizer):
             temperature=temperature,
             beta=beta,
         )
+
         super(BiNNOptimizer, self).__init__(model.parameters(), default_dict)
 
         ## Natural parameter prior lambda = 0
 
         self.train_modules = []
-        get_train_modules(model)
+        self.get_train_modules(model)
 
         for group in self.param_groups:
             group["lr"] = learning_rate
@@ -48,13 +49,14 @@ class BiNNOptimizer(Optimizer):
             self.state["lambda"] = theta1 * (initialize_lambda) + (1 - theta1) * (
                 -initialize_lambda
             )
+            # print(self.state)
 
-            self.state["mu"] = torch.tanh(self.state["lambda"])
+            self.state["mu"] = torch.tanh(self.state["lambda"].double())
             # Lambda_0 initialized as 0
-            self.state["lambda_prior"] = torch.zeros_like(p)
+            self.state["lambda_prior"] = torch.zeros_like(p).double()
             self.state["step"] = 0
             self.state["temperature"] = temperature
-            self.state["momentum"] = torch.zeros_like(p)
+            self.state["momentum"] = torch.zeros_like(p).double()
 
             break
 
@@ -67,7 +69,7 @@ class BiNNOptimizer(Optimizer):
                 self.train_modules.append(model)
         else:
             for sub_module in list(model.children()):
-                get_train_modules(sub_modules)
+                self.get_train_modules(sub_module)
 
     def step(self, closure=None):
 
@@ -84,7 +86,7 @@ class BiNNOptimizer(Optimizer):
         self.state["step"] += 1
 
         lr = self.param_groups[0]["lr"]
-        beta = self.param_groups["beta"]
+        # beta = self.param_groups["beta"]
         parameters = self.param_groups[0]["params"]
         momentum = self.state["momentum"]
         N = self.defaults["N"]
@@ -99,24 +101,21 @@ class BiNNOptimizer(Optimizer):
         if M <= 0:
             relaxed_w = torch.tanh(self.state["lambda"])
             vector_to_parameters(relaxed_w, parameters)
-
-            loss = closure()
-
+            loss, _ = closure()
+            # print(loss)
             g = parameters_to_vector(torch.autograd.grad(loss, parameters)).detach()
             grad = N * g
-
             loss_list.append(loss.detach())
-
         else:
             for num in range(M):
 
-                epsilon = torch.rand_like(lamda)
+                epsilon = torch.rand_like(lamda.double()).double()
                 delta = 0.5 * torch.log(epsilon / (1 - epsilon))
                 relaxed_w = torch.tanh((lamda + delta) / temperature)
                 vector_to_parameters(relaxed_w, parameters)
 
-                loss = closure()
-
+                loss, _ = closure()
+                print(loss)
                 g = parameters_to_vector(torch.autograd.grad(loss, parameters)).detach()
                 s = (N / temperature) * ((1 - relaxed_w * relaxed_w) / (1 - mu * mu))
                 grad.add_(s * g)
@@ -134,6 +133,7 @@ class BiNNOptimizer(Optimizer):
         self.state["lambda"] = (
             self.state["lambda"] - lr * self.state["momentum"] / bias_correction1
         )
+
         self.state["mu"] = torch.tanh(self.state["lambda"])
 
         loss = torch.mean(torch.stack(loss_list))
