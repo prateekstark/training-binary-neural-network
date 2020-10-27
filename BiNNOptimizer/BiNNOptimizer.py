@@ -95,47 +95,60 @@ class BiNNOptimizer(Optimizer):
         lamda = self.state["lambda"]
         temperature = self.state["temperature"]
 
-        grad = torch.zeros_like(lamda)
+        grad = torch.zeros_like(lamda).double()
 
         loss_list = []
+        pred_list = []
         if M <= 0:
             relaxed_w = torch.tanh(self.state["lambda"])
             vector_to_parameters(relaxed_w, parameters)
-            loss, _ = closure()
+            loss, pred = closure()
+            pred_list.append(pred)
             # print(loss)
-            g = parameters_to_vector(torch.autograd.grad(loss, parameters)).detach()
+            g_temp = torch.autograd.grad(loss, parameters)
+            g = parameters_to_vector(g_temp).detach()
             grad = N * g
             loss_list.append(loss.detach())
         else:
+            # print('M', M)
             for num in range(M):
-
-                epsilon = torch.rand_like(lamda.double()).double()
-                delta = 0.5 * torch.log(epsilon / (1 - epsilon))
+                print('training', num)
+                # print('optim 1')
+                epsilon = torch.rand_like(mu.double()).double()
+                delta = torch.log(epsilon / (1 - epsilon))/2
                 relaxed_w = torch.tanh((lamda + delta) / temperature)
                 vector_to_parameters(relaxed_w, parameters)
 
-                loss, _ = closure()
-                print(loss)
-                g = parameters_to_vector(torch.autograd.grad(loss, parameters)).detach()
+                loss, pred = closure()
+
+                pred_list.append(pred)
+                # print('optim 2')
+                # print(loss)
+                g_temp = torch.autograd.grad(loss, parameters)
+                g = parameters_to_vector(g_temp).detach()
                 s = (N / temperature) * ((1 - relaxed_w * relaxed_w) / (1 - mu * mu))
-                grad.add_(s * g)
+                # print(g)
+                grad.add_(g*s) 
 
                 loss_list.append(loss.detach())
+        print(grad)
 
         grad.mul_(1 / M)
+        beta = 0.99
 
         self.state["momentum"] = beta * self.state["momentum"] + (1 - beta) * (
             grad + self.state["lambda"]
         )  ## P
 
         bias_correction1 = 1 - beta ** self.state["step"]
-
+        print(' 1')
         self.state["lambda"] = (
             self.state["lambda"] - lr * self.state["momentum"] / bias_correction1
         )
-
+        print('2')
         self.state["mu"] = torch.tanh(self.state["lambda"])
-
+        print('3')
         loss = torch.mean(torch.stack(loss_list))
+        print('grad')
 
-        return loss
+        return loss, pred_list
