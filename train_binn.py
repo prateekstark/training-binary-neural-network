@@ -48,23 +48,15 @@ if __name__ == '__main__':
             print(inputs.shape)
             
             output = net.forward(inputs)
-            print('yes 1')
             loss = criterion(output, labels)
-            print('yes 2')
             loss.backward()
-            print('yes 3')
-            # print(inputs.size)
             def closure():
                 optimizer.zero_grad()
-                # print('yes in 1')
-                output = net.forward(inputs.double())
-                # print('yes in 2')
+                output = net.forward(inputs)
                 loss = criterion(output, labels)
-                # print('yes in 3')
                 return loss, output
 
             loss, output = optimizer.step(closure)
-            print('yes 4')
             output = output[0]
             pred = output.argmax(dim=1, keepdims=True)
             correct = pred.eq(labels.view_as(pred)).sum().item()
