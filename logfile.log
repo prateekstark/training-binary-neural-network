@@ -1,4 +1,426 @@
-INFO 2020-11-03 15:30:54,528 BinaryConnect(
+DEBUG 2020-11-04 03:55:07,895 findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
+DEBUG 2020-11-04 03:55:07,895 findfont: score(<Font 'cmr10' (cmr10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,895 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,895 findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,895 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'cmsy10' (cmsy10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'DejaVu Serif Display' (DejaVuSerifDisplay.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'DejaVu Sans Display' (DejaVuSansDisplay.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'cmex10' (cmex10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'STIXSizeFiveSym' (STIXSizFiveSymReg.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'cmss10' (cmss10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-BoldOblique.ttf) oblique normal 700 normal>) = 1.335
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'STIXGeneral' (STIXGeneralBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymReg.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'cmmi10' (cmmi10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'cmb10' (cmb10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,896 findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXGeneral' (STIXGeneralBolIta.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'DejaVu Sans' (DejaVuSans.ttf) normal normal 400 normal>) = 0.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymReg.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Oblique.ttf) oblique normal 400 normal>) = 1.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXNonUnicode' (STIXNonUni.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymReg.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXGeneral' (STIXGeneral.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXNonUnicode' (STIXNonUniIta.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBolIta.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,897 findfont: score(<Font 'cmtt10' (cmtt10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Bold.ttf) normal normal 700 normal>) = 0.33499999999999996
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'STIXGeneral' (STIXGeneralItalic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymReg.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Lohit Bengali' (Lohit-Bengali.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'KacstLetter' (KacstLetter.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Waree' (Waree-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Tlwg Typewriter' (TlwgTypewriter.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Ubuntu Condensed' (Ubuntu-C.ttf) normal normal 400 condensed>) = 10.25
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Tlwg Typewriter' (TlwgTypewriter-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Liberation Sans Narrow' (LiberationSansNarrow-BoldItalic.ttf) italic normal 700 condensed>) = 11.535
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Manjari' (Manjari-Bold.otf) normal normal bold normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Lato' (Lato-Thin.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Tlwg Typist' (TlwgTypist-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Arial Black' (ariblk.ttf) normal normal black normal>) = 10.525
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'Garuda' (Garuda-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,898 findfont: score(<Font 'STIXSizeOneSym' (STIXSizeOneSym-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Lato' (Lato-ThinItalic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Sawasdee' (Sawasdee-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Ubuntu' (Ubuntu-RI.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'KacstBook' (KacstBook.ttf) normal normal book normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Lato' (Lato-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'STIXSizeFourSym' (STIXSizeFourSym-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Lato' (Lato-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Lohit Gurmukhi' (Lohit-Gurmukhi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Trebuchet MS' (trebucbi.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'GFS Porson' (GFSPorson.otf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Arial' (arial.ttf) normal normal 400 normal>) = 6.413636363636363
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Lato' (Lato-Heavy.ttf) normal normal heavy normal>) = 10.43
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'FreeMono' (FreeMonoBoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'DejaVu Sans' (DejaVuSansCondensed-Bold.ttf) normal normal 700 condensed>) = 0.5349999999999999
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'mry_KacstQurn' (mry_KacstQurn.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'Liberation Mono' (LiberationMono-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,899 findfont: score(<Font 'NanumMyeongjo' (NanumMyeongjoBold.ttf) normal normal bold normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Norasi' (Norasi-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'NanumMyeongjo' (NanumMyeongjo.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Waree' (Waree.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Sawasdee' (Sawasdee-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Courier New' (Courier_New_Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'KacstQurn' (KacstQurn.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Courier New' (Courier_New_Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Navilu' (Navilu.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Trebuchet MS' (Trebuchet_MS_Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'AnjaliOldLipi' (AnjaliOldLipi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'FreeMono' (FreeMono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'DejaVu Sans' (DejaVuSansCondensed-BoldOblique.ttf) oblique normal 700 condensed>) = 1.535
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'KacstOne' (KacstOne.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'NanumSquareRound' (NanumSquareRoundB.ttf) normal normal bold normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Sahadeva' (sahadeva.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Bitstream Vera Sans' (VeraIt.ttf) oblique normal 400 normal>) = 1.9590909090909092
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'Lato' (Lato-SemiboldItalic.ttf) italic normal semibold normal>) = 11.24
+DEBUG 2020-11-04 03:55:07,900 findfont: score(<Font 'FreeSerif' (FreeSerifBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Rachana' (Rachana-Regular.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'cmmi10' (cmmi10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Suruma' (Suruma.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Georgia' (Georgia_Bold_Italic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Courier New' (Courier_New_Bold_Italic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Lato' (Lato-Black.ttf) normal normal black normal>) = 10.525
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'MathJax_Math' (MathJax_Math-BoldItalic.otf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'KacstPen' (KacstPen.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Mitra Mono' (mitra.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Tibetan Machine Uni' (TibetanMachineUni.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Arial' (Arial.ttf) normal normal 400 normal>) = 6.413636363636363
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Ubuntu' (Ubuntu-BI.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Lato' (Lato-MediumItalic.ttf) italic normal medium normal>) = 11.145
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Manjari' (Manjari-Thin.otf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Liberation Serif' (LiberationSerif-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Times New Roman' (timesbd.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,901 findfont: score(<Font 'Jamrul' (JamrulNormal.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Padauk Book' (PadaukBook-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Lohit Assamese' (Lohit-Assamese.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'KacstTitle' (KacstTitle.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Norasi' (Norasi-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Laksaman' (Laksaman-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'NanumSquareRound' (NanumSquareRoundR.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Noto Serif CJK JP' (NotoSerifCJK-Bold.ttc) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Tlwg Mono' (TlwgMono-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Gargi' (Gargi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'MathJax_Caligraphic' (MathJax_Caligraphic-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Purisa' (Purisa-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Arial' (arialbi.ttf) italic normal 700 normal>) = 7.698636363636363
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Georgia' (Georgia_Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,902 findfont: score(<Font 'Impact' (impact.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'KacstScreen' (KacstScreen.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'Tlwg Mono' (TlwgMono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'KacstOne' (KacstOne-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'Times New Roman' (Times_New_Roman_Italic.ttf) italic normal roman normal>) = 11.145
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'Abyssinica SIL' (AbyssinicaSIL-R.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'RaghuMalayalam' (RaghuMalayalamSans-Regular.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'Lohit Malayalam' (Lohit-Malayalam.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'MathJax_Main' (MathJax_Main-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'Liberation Serif' (LiberationSerif-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'Liberation Sans Narrow' (LiberationSansNarrow-Italic.ttf) italic normal 400 condensed>) = 11.25
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'Lato' (Lato-Light.ttf) normal normal light normal>) = 10.24
+DEBUG 2020-11-04 03:55:07,903 findfont: score(<Font 'Courier New' (Courier_New.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'Tlwg Typist' (TlwgTypist-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'Arial' (arialbd.ttf) normal normal 700 normal>) = 6.698636363636363
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'Lohit Odia' (Lohit-Odia.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'STIXIntegralsUpD' (STIXIntegralsUpD-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'Tlwg Mono' (TlwgMono-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'STIXIntegralsD' (STIXIntegralsD-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'Verdana' (verdanai.ttf) italic normal 400 normal>) = 4.6863636363636365
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'Times New Roman' (timesi.ttf) italic normal roman normal>) = 11.145
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'padmaa' (padmaa-Medium-0.5.ttf) normal normal normal normal>) = 10.0
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'STIXGeneral' (STIXGeneral-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'Dyuthi' (Dyuthi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'NanumBarunGothic' (NanumBarunGothicBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,904 findfont: score(<Font 'FreeSerif' (FreeSerif.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'Norasi' (Norasi-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'Lohit Tamil Classical' (Lohit-Tamil-Classical.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'Ubuntu' (Ubuntu-MI.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'DejaVu Serif' (DejaVuSerifCondensed-BoldItalic.ttf) italic normal 700 condensed>) = 11.535
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'MathJax_SansSerif' (MathJax_SansSerif-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'Georgia' (georgiaz.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'Trebuchet MS' (Trebuchet_MS_Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'Georgia' (georgiai.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Oblique.ttf) oblique normal 400 normal>) = 1.05
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'FreeMono' (FreeMonoOblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'Lato' (Lato-BlackItalic.ttf) italic normal black normal>) = 11.525
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'Tlwg Typo' (TlwgTypo-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'STIXIntegralsUpSm' (STIXIntegralsUpSm-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,905 findfont: score(<Font 'cmsy10' (cmsy10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'cmex10' (cmex10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Bold.ttf) normal normal 700 normal>) = 0.33499999999999996
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'wasy10' (wasy10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'STIXSizeFourSym' (STIXSizeFourSym-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-ExtraLight.ttf) normal normal light normal>) = 0.24
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'Bitstream Vera Sans Mono' (VeraMoBI.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'Tlwg Typist' (TlwgTypist-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'Umpush' (Umpush-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'Liberation Mono' (LiberationMono-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'FreeMono' (FreeMonoBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'NanumGothic' (NanumGothicBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'msam10' (msam10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,906 findfont: score(<Font 'Courier New' (cour.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Comic Sans MS' (comic.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Tlwg Typewriter' (TlwgTypewriter-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Liberation Sans Narrow' (LiberationSansNarrow-Regular.ttf) normal normal 400 condensed>) = 10.25
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Trebuchet MS' (trebucbd.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'rsfs10' (rsfs10.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'ori1Uni' (utkal.ttf) normal normal medium normal>) = 10.145
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'STIXNonUnicode' (STIXNonUnicode-BoldItalic.otf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Arial Black' (Arial_Black.ttf) normal normal black normal>) = 10.525
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Lato' (Lato-Hairline.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Lato' (Lato-Medium.ttf) normal normal medium normal>) = 10.145
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Lato' (Lato-Semibold.ttf) normal normal semibold normal>) = 10.24
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Nakula' (nakula.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Times New Roman' (Times_New_Roman_Bold_Italic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Padauk Book' (PadaukBook-Regular.ttf) normal normal book normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,907 findfont: score(<Font 'Lato' (Lato-HeavyItalic.ttf) italic normal heavy normal>) = 11.43
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Sawasdee' (Sawasdee.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'STIXSizeTwoSym' (STIXSizeTwoSym-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Lohit Devanagari' (Lohit-Devanagari.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Impact' (Impact.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'STIX' (STIX-BoldItalic.otf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'MathJax_Size4' (MathJax_Size4-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Trebuchet MS' (Trebuchet_MS.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Kalapi' (Kalapi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Sawasdee' (Sawasdee-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'FreeSans' (FreeSansBoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Tlwg Typist' (TlwgTypist.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Noto Mono' (NotoMono-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'MathJax_Vector' (MathJax_Vector-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,908 findfont: score(<Font 'Bitstream Vera Sans Mono' (VeraMoIt.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'Keraleeyam' (Keraleeyam.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'Rachana' (Rachana-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'Samanata' (samanata.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'KacstTitleL' (KacstTitleL.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'DejaVu Serif' (DejaVuSerifCondensed.ttf) normal normal 400 condensed>) = 10.25
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'Kinnari' (Kinnari-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'Trebuchet MS' (trebucit.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'Ubuntu Mono' (UbuntuMono-B.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'Pagul' (Pagul.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'STIXIntegralsSm' (STIXIntegralsSm-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'aakar' (aakar-medium.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'STIXNonUnicode' (STIXNonUnicode-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,909 findfont: score(<Font 'Verdana' (verdanaz.ttf) italic normal 700 normal>) = 4.971363636363637
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Webdings' (Webdings.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'GFS Baskerville' (GFSBaskerville.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Samyak Tamil' (Samyak-Tamil.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Waree' (Waree-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Ubuntu' (Ubuntu-B.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'KacstPoster' (KacstPoster.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Khmer OS' (KhmerOS.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Liberation Sans' (LiberationSans-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Times New Roman' (times.ttf) normal normal roman normal>) = 10.145
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Garuda' (Garuda.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Padauk' (Padauk-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Comic Sans MS' (comicbd.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Bitstream Vera Sans' (Vera.ttf) normal normal 400 normal>) = 0.9590909090909092
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Liberation Mono' (LiberationMono-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,910 findfont: score(<Font 'Times New Roman' (Times_New_Roman_Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Lohit Gujarati' (Lohit-Gujarati.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'STIX Math' (STIXMath-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Vemana2000' (vemana2000.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Noto Sans CJK JP' (NotoSansCJK-Regular.ttc) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Garuda' (Garuda-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Chandas' (chandas1-2.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Loma' (Loma-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Georgia' (Georgia.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Samyak Devanagari' (Samyak-Devanagari.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Ubuntu' (Ubuntu-LI.ttf) italic normal light normal>) = 11.24
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'DejaVu Math TeX Gyre' (DejaVuMathTeXGyre.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Ani' (ani.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Georgia' (Georgia_Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,911 findfont: score(<Font 'Verdana' (verdanab.ttf) normal normal 700 normal>) = 3.9713636363636367
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'MathJax_Size2' (MathJax_Size2-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'Bitstream Vera Serif' (VeraSe.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'Lato' (Lato-LightItalic.ttf) italic normal light normal>) = 11.24
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'MathJax_WinIE6' (MathJax_WinIE6-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'cmr10' (cmr10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'Tlwg Typo' (TlwgTypo-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'Loma' (Loma-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'Umpush' (Umpush-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'STIXIntegralsD' (STIXIntegralsD-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'STIXIntegralsUpD' (STIXIntegralsUpD-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'NanumSquare' (NanumSquareR.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'Umpush' (Umpush.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,912 findfont: score(<Font 'MathJax_Math' (MathJax_Math-Italic.otf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Bitstream Vera Sans Mono' (VeraMoBd.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Liberation Sans' (LiberationSans-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Purisa' (Purisa-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Times New Roman' (Times_New_Roman.ttf) normal normal roman normal>) = 10.145
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Saab' (Saab.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'STIX' (STIX-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'STIX' (STIX-Italic.otf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Verdana' (Verdana_Bold.ttf) normal normal 700 normal>) = 3.9713636363636367
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Kinnari' (Kinnari-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'STIXGeneral' (STIXGeneral-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'eufm10' (eufm10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'DejaVu Serif' (DejaVuSerifCondensed-Italic.ttf) italic normal 400 condensed>) = 11.25
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Kinnari' (Kinnari-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'LKLUG' (lklug.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,913 findfont: score(<Font 'Verdana' (Verdana.ttf) normal normal 400 normal>) = 3.6863636363636365
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Droid Sans Fallback' (DroidSansFallbackFull.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Ubuntu Mono' (UbuntuMono-BI.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'STIX' (STIX-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Bitstream Vera Sans Mono' (VeraMono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'STIXIntegralsSm' (STIXIntegralsSm-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'NanumBarunGothic' (NanumBarunGothic.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Arial' (ariali.ttf) italic normal 400 normal>) = 7.413636363636363
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Andale Mono' (Andale_Mono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Arial' (Arial_Bold.ttf) normal normal 700 normal>) = 6.698636363636363
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Padauk' (Padauk-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'FreeSans' (FreeSansOblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'msbm10' (msbm10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Tlwg Typo' (TlwgTypo-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Tlwg Typewriter' (TlwgTypewriter-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'STIXIntegralsUpSm' (STIXIntegralsUpSm-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Andale Mono' (andalemo.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'STIXNonUnicode' (STIXNonUnicode-Italic.otf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Loma' (Loma-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'Lato' (Lato-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,914 findfont: score(<Font 'DejaVu Sans' (DejaVuSansCondensed.ttf) normal normal 400 condensed>) = 0.25
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Phetsarath OT' (Phetsarath_OT.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Georgia' (georgiab.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'NanumSquare' (NanumSquareB.ttf) normal normal bold normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Georgia' (georgia.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Garuda' (Garuda-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Ubuntu Mono' (UbuntuMono-R.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'STIXGeneral' (STIXGeneral-Italic.otf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Laksaman' (Laksaman-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Courier New' (couri.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'TakaoPGothic' (fonts-japanese-gothic.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Purisa' (Purisa-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'STIXVariants' (STIXVariants-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'MathJax_SansSerif' (MathJax_SansSerif-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Mukti Narrow' (MuktiNarrowBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Norasi' (Norasi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'Ubuntu' (Ubuntu-R.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'MathJax_Math' (MathJax_Math-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'MathJax_Size3' (MathJax_Size3-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,915 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-BoldOblique.ttf) oblique normal 700 normal>) = 1.335
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Khmer OS System' (KhmerOSsys.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'MathJax_Main' (MathJax_Main-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Arial' (Arial_Italic.ttf) italic normal 400 normal>) = 7.413636363636363
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'STIXSizeThreeSym' (STIXSizeThreeSym-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Comic Sans MS' (Comic_Sans_MS.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Webdings' (webdings.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'DejaVu Sans' (DejaVuSans.ttf) normal normal 400 normal>) = 0.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Lato' (Lato-HairlineItalic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Likhan' (LikhanNormal.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Kalimati' (kalimati.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'STIXSizeOneSym' (STIXSizeOneSym-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'MathJax_Fraktur' (MathJax_Fraktur-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Courier New' (courbd.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Liberation Sans' (LiberationSans-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Meera' (Meera.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Trebuchet MS' (Trebuchet_MS_Bold_Italic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'FreeSans' (FreeSans.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,916 findfont: score(<Font 'Liberation Sans' (LiberationSans-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'MathJax_SansSerif' (MathJax_SansSerif-Italic.otf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Liberation Sans Narrow' (LiberationSansNarrow-Bold.ttf) normal normal 700 condensed>) = 10.535
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Norasi' (Norasi-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'STIXGeneral' (STIXGeneral-BoldItalic.otf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Lohit Tamil' (Lohit-Tamil.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'STIXVariants' (STIXVariants-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'esint10' (esint10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Bitstream Vera Serif' (VeraSeBd.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Pothana2000' (Pothana2000.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'OpenSymbol' (opens___.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Liberation Serif' (LiberationSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'FreeSans' (FreeSansBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Chilanka' (Chilanka-Regular.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Laksaman' (Laksaman-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'KacstNaskh' (KacstNaskh.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'FreeSerif' (FreeSerifItalic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Trebuchet MS' (trebuc.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'Tlwg Mono' (TlwgMono-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,917 findfont: score(<Font 'STIXNonUnicode' (STIXNonUnicode-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'MathJax_Typewriter' (MathJax_Typewriter-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Umpush' (Umpush-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Kinnari' (Kinnari-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'padmaa-Bold.1.1' (padmaa-Bold.1.1.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Verdana' (Verdana_Italic.ttf) italic normal 400 normal>) = 4.6863636363636365
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Ubuntu' (Ubuntu-L.ttf) normal normal light normal>) = 10.24
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'MathJax_Fraktur' (MathJax_Fraktur-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Sarai' (Sarai.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'KacstOffice' (KacstOffice.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Norasi' (Norasi-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'KacstDigital' (KacstDigital.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'MathJax_Vector-Bold' (MathJax_Vector-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'STIXIntegralsUp' (STIXIntegralsUp-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Arial' (Arial_Bold_Italic.ttf) italic normal 700 normal>) = 7.698636363636363
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'stmary10' (stmary10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Manjari' (Manjari-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'DejaVu Sans' (DejaVuSansCondensed-Oblique.ttf) oblique normal 400 condensed>) = 1.25
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Umpush' (Umpush-Light.ttf) normal normal light normal>) = 10.24
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Lato' (Lato-Regular.ttf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,918 findfont: score(<Font 'Verdana' (Verdana_Bold_Italic.ttf) italic normal 700 normal>) = 4.971363636363637
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'Waree' (Waree-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'NanumGothic' (NanumGothic.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'DejaVu Serif' (DejaVuSerifCondensed-Bold.ttf) normal normal 700 condensed>) = 10.535
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'Loma' (Loma.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'Ubuntu Mono' (UbuntuMono-RI.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'FreeSerif' (FreeSerifBoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'Bitstream Vera Sans' (VeraBI.ttf) oblique normal 700 normal>) = 2.244090909090909
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'Samyak Malayalam' (Samyak-Malayalam.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'MathJax_Caligraphic' (MathJax_Caligraphic-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'Karumbi' (Karumbi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'STIXSizeTwoSym' (STIXSizeTwoSym-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'KacstArt' (KacstArt.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,919 findfont: score(<Font 'KacstFarsi' (KacstFarsi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Bitstream Vera Sans' (VeraBd.ttf) normal normal 700 normal>) = 1.2440909090909091
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Lohit Kannada' (Lohit-Kannada.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Laksaman' (Laksaman.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Mukti Narrow' (MuktiNarrow.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Ubuntu' (Ubuntu-M.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Purisa' (Purisa.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'TakaoPGothic' (TakaoPGothic.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Samyak Gujarati' (Samyak-Gujarati.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Noto Sans CJK JP' (NotoSansCJK-Bold.ttc) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'KacstDecorative' (KacstDecorative.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'Umpush' (Umpush-LightOblique.ttf) oblique normal light normal>) = 11.24
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'MathJax_AMS' (MathJax_AMS-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,920 findfont: score(<Font 'padmaa' (padmaa.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Noto Serif CJK JP' (NotoSerifCJK-Regular.ttc) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'MathJax_WinChrome' (MathJax_WinChrome-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Tlwg Typo' (TlwgTypo.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Verdana' (verdana.ttf) normal normal 400 normal>) = 3.6863636363636365
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Rekha' (Rekha.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'MathJax_Size1' (MathJax_Size1-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'MathJax_Script' (MathJax_Script-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Liberation Serif' (LiberationSerif-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Courier New' (courbi.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Times New Roman' (timesbi.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Comic Sans MS' (Comic_Sans_MS_Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Gubbi' (Gubbi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Lohit Telugu' (Lohit-Telugu.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'MathJax_Main' (MathJax_Main-Italic.otf) italic normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'STIXIntegralsUp' (STIXIntegralsUp-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'STIXSizeThreeSym' (STIXSizeThreeSym-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'STIXSizeFiveSym' (STIXSizeFiveSym-Regular.otf) normal normal regular normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,921 findfont: score(<Font 'Symbola' (Symbola_hint.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,922 findfont: score(<Font 'Uroob' (Uroob.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,922 findfont: score(<Font 'Liberation Mono' (LiberationMono-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2020-11-04 03:55:07,922 findfont: score(<Font 'Kinnari' (Kinnari-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2020-11-04 03:55:07,922 findfont: score(<Font 'Kinnari' (Kinnari.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2020-11-04 03:55:07,922 findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/home/stark/anaconda3/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+INFO 2020-11-04 03:55:11,450 BinaryConnect(
   (dropout1): Dropout(p=0, inplace=False)
   (dropout2): Dropout(p=0, inplace=False)
   (dropout3): Dropout(p=0, inplace=False)
@@ -12,8 +434,8 @@ INFO 2020-11-03 15:30:54,528 BinaryConnect(
   (bn3): BatchNorm1d(2048, eps=0.0001, momentum=0.15, affine=False, track_running_stats=True)
   (bn4): BatchNorm1d(10, eps=0.0001, momentum=0.15, affine=False, track_running_stats=True)
 )
-INFO 2020-11-03 15:30:54,738 criterion: CrossEntropyLoss()
-INFO 2020-11-03 15:30:54,738 optimizer: BiNNOptimizer (
+INFO 2020-11-04 03:55:11,742 criterion: CrossEntropyLoss()
+INFO 2020-11-04 03:55:11,742 optimizer: BiNNOptimizer (
 Parameter Group 0
     N: 1
     beta: 0.0
@@ -23,38 +445,185 @@ Parameter Group 0
     mini_batch_size: 64
     temperature: 1e-10
 )
-INFO 2020-11-03 15:30:54,759 starting epoch 0
-INFO 2020-11-03 15:30:54,858 loss step: 2.7499494552612305
-INFO 2020-11-03 15:31:15,731 loss step: 2.7249205112457275
-INFO 2020-11-03 15:31:35,780 loss step: 1.7988632917404175
-INFO 2020-11-03 15:31:56,499 loss step: 1.670501708984375
-INFO 2020-11-03 15:32:17,669 loss step: 1.6357210874557495
-INFO 2020-11-03 15:32:37,835 loss step: 1.4808738231658936
-INFO 2020-11-03 15:32:58,080 loss step: 1.5502912998199463
-INFO 2020-11-03 15:33:18,168 loss step: 1.348767876625061
-INFO 2020-11-03 15:33:38,409 loss step: 1.4279541969299316
-INFO 2020-11-03 15:34:01,198 loss step: 1.2213895320892334
-INFO 2020-11-03 15:34:26,711 loss step: 1.2243653535842896
-INFO 2020-11-03 15:34:49,946 loss step: 1.3701775074005127
-INFO 2020-11-03 15:35:13,445 loss step: 1.4512759447097778
-INFO 2020-11-03 15:35:36,268 loss step: 1.0356734991073608
-INFO 2020-11-03 15:35:58,773 loss step: 1.202174425125122
-INFO 2020-11-03 15:36:21,499 loss step: 1.327223777770996
-INFO 2020-11-03 15:36:43,940 loss step: 1.2578376531600952
-INFO 2020-11-03 15:37:06,578 loss step: 1.0471957921981812
-INFO 2020-11-03 15:37:28,905 loss step: 1.0840880870819092
-INFO 2020-11-03 15:37:52,715 loss step: 1.0945281982421875
-INFO 2020-11-03 15:38:15,286 loss step: 1.0696256160736084
-INFO 2020-11-03 15:38:37,333 loss step: 1.114594578742981
-INFO 2020-11-03 15:39:00,017 loss step: 0.9761382937431335
-INFO 2020-11-03 15:39:23,116 loss step: 1.0103175640106201
-INFO 2020-11-03 15:39:47,640 loss step: 0.9451920986175537
-INFO 2020-11-03 15:40:07,988 loss step: 1.0840543508529663
-INFO 2020-11-03 15:40:28,445 loss step: 0.9922894835472107
-INFO 2020-11-03 15:40:52,377 loss step: 1.0660549402236938
-INFO 2020-11-03 15:41:15,521 loss step: 1.0830883979797363
-INFO 2020-11-03 15:41:39,147 loss step: 1.1078431606292725
-INFO 2020-11-03 15:42:04,061 loss step: 1.0751136541366577
-INFO 2020-11-03 15:42:30,152 loss step: 1.128048062324524
-INFO 2020-11-03 15:42:50,227 loss step: 0.9986072182655334
-INFO 2020-11-03 15:43:12,055 loss step: 0.9100381731987
+INFO 2020-11-04 03:55:11,742 starting epoch 0
+INFO 2020-11-04 03:55:12,005 loss step: 2.747525930404663
+INFO 2020-11-04 03:55:41,565 loss step: 2.5400004386901855
+INFO 2020-11-04 03:56:20,506 loss step: 2.2349143028259277
+INFO 2020-11-04 03:56:58,174 loss step: 1.682396411895752
+INFO 2020-11-04 03:57:38,811 loss step: 1.6072763204574585
+INFO 2020-11-04 03:58:12,729 loss step: 1.4526798725128174
+INFO 2020-11-04 03:58:49,521 loss step: 1.515486717224121
+INFO 2020-11-04 03:59:20,786 loss step: 1.3281219005584717
+INFO 2020-11-04 03:59:52,748 loss step: 1.3213064670562744
+INFO 2020-11-04 04:00:23,749 loss step: 1.2319319248199463
+INFO 2020-11-04 04:00:53,888 loss step: 1.1907652616500854
+INFO 2020-11-04 04:01:23,059 loss step: 1.0697581768035889
+INFO 2020-11-04 04:01:53,055 loss step: 1.0602996349334717
+INFO 2020-11-04 04:02:24,456 loss step: 1.0934861898422241
+INFO 2020-11-04 04:02:54,145 loss step: 1.0323987007141113
+INFO 2020-11-04 04:03:23,358 loss step: 1.0188593864440918
+INFO 2020-11-04 04:03:53,311 loss step: 1.0221656560897827
+INFO 2020-11-04 04:04:23,278 loss step: 0.9657140374183655
+INFO 2020-11-04 04:04:53,189 loss step: 0.9257417917251587
+INFO 2020-11-04 04:05:23,078 loss step: 1.042662501335144
+INFO 2020-11-04 04:05:53,717 loss step: 0.9256300926208496
+INFO 2020-11-04 04:06:25,034 loss step: 0.82878577709198
+INFO 2020-11-04 04:06:56,267 loss step: 0.8483743071556091
+INFO 2020-11-04 04:07:27,971 loss step: 0.9399459958076477
+INFO 2020-11-04 04:07:59,422 loss step: 1.0233169794082642
+INFO 2020-11-04 04:08:30,554 loss step: 0.9468331933021545
+INFO 2020-11-04 04:09:01,831 loss step: 0.9161288738250732
+INFO 2020-11-04 04:09:32,920 loss step: 0.8871497511863708
+INFO 2020-11-04 04:10:04,909 loss step: 0.8165076971054077
+INFO 2020-11-04 04:10:35,963 loss step: 0.9260510802268982
+INFO 2020-11-04 04:11:08,105 loss step: 0.9195854663848877
+INFO 2020-11-04 04:11:40,137 loss step: 0.7717097997665405
+INFO 2020-11-04 04:12:12,440 loss step: 0.9108723402023315
+INFO 2020-11-04 04:12:44,718 loss step: 0.9153270125389099
+INFO 2020-11-04 04:13:16,961 loss step: 0.9528026580810547
+INFO 2020-11-04 04:13:49,194 loss step: 0.9504026770591736
+INFO 2020-11-04 04:14:21,432 loss step: 0.7485763430595398
+INFO 2020-11-04 04:14:53,218 loss step: 0.8952972888946533
+INFO 2020-11-04 04:15:25,479 loss step: 0.8714057803153992
+INFO 2020-11-04 04:15:57,757 loss step: 0.7517446875572205
+INFO 2020-11-04 04:16:29,136 loss step: 0.8468483686447144
+INFO 2020-11-04 04:16:59,738 loss step: 0.8077882528305054
+INFO 2020-11-04 04:17:30,831 loss step: 0.8122757077217102
+INFO 2020-11-04 04:18:01,222 loss step: 0.8098665475845337
+INFO 2020-11-04 04:18:32,107 loss step: 0.7672346234321594
+INFO 2020-11-04 04:19:03,563 loss step: 0.7408062219619751
+INFO 2020-11-04 04:19:35,593 loss step: 0.7905576229095459
+INFO 2020-11-04 04:20:06,524 loss step: 0.7502767443656921
+INFO 2020-11-04 04:20:37,580 loss step: 0.7564847469329834
+INFO 2020-11-04 04:21:08,587 loss step: 0.7885594367980957
+INFO 2020-11-04 04:21:39,747 loss step: 0.8003706932067871
+INFO 2020-11-04 04:22:10,216 loss step: 0.8023518323898315
+INFO 2020-11-04 04:22:41,609 loss step: 0.7846395373344421
+INFO 2020-11-04 04:23:12,781 loss step: 0.7251585125923157
+INFO 2020-11-04 04:23:43,111 loss step: 0.7702479362487793
+INFO 2020-11-04 04:24:14,055 loss step: 0.7458785176277161
+INFO 2020-11-04 04:24:44,267 loss step: 0.89697265625
+INFO 2020-11-04 04:25:14,214 loss step: 0.7848202586174011
+INFO 2020-11-04 04:25:43,420 loss step: 0.7385396361351013
+INFO 2020-11-04 04:26:12,428 loss step: 0.8438140153884888
+INFO 2020-11-04 04:26:42,234 loss step: 0.7679288983345032
+INFO 2020-11-04 04:27:11,290 loss step: 0.729571521282196
+INFO 2020-11-04 04:27:39,847 loss step: 0.8014439940452576
+INFO 2020-11-04 04:28:08,985 loss step: 0.7388690114021301
+INFO 2020-11-04 04:28:38,050 loss step: 0.6476765275001526
+INFO 2020-11-04 04:29:06,564 loss step: 0.7534140944480896
+INFO 2020-11-04 04:29:35,685 loss step: 0.7438817024230957
+INFO 2020-11-04 04:30:05,135 loss step: 0.8627963066101074
+INFO 2020-11-04 04:30:34,219 loss step: 0.7408189177513123
+INFO 2020-11-04 04:31:03,267 loss step: 0.8161672949790955
+INFO 2020-11-04 04:31:31,228 loss step: 0.7611359357833862
+INFO 2020-11-04 04:31:58,820 loss step: 0.6839489936828613
+INFO 2020-11-04 04:32:26,870 loss step: 0.6915765404701233
+INFO 2020-11-04 04:32:55,156 loss step: 0.616810142993927
+INFO 2020-11-04 04:33:23,578 loss step: 0.6583627462387085
+INFO 2020-11-04 04:33:51,717 loss step: 0.768218457698822
+INFO 2020-11-04 04:34:19,646 loss step: 0.667203426361084
+INFO 2020-11-04 04:34:47,556 loss step: 0.5464012622833252
+INFO 2020-11-04 04:35:14,714 loss step: 0.6148355007171631
+INFO 2020-11-04 04:35:42,050 loss step: 0.7031921148300171
+INFO 2020-11-04 04:36:09,857 loss step: 0.7845919132232666
+INFO 2020-11-04 04:36:37,826 loss step: 0.7523505687713623
+INFO 2020-11-04 04:37:05,262 loss step: 0.619528591632843
+INFO 2020-11-04 04:37:33,181 loss step: 0.7129519581794739
+INFO 2020-11-04 04:38:01,096 loss step: 0.6256144046783447
+INFO 2020-11-04 04:38:28,635 loss step: 0.6677531599998474
+INFO 2020-11-04 04:38:55,407 loss step: 0.7228491306304932
+INFO 2020-11-04 04:39:25,870 loss step: 0.6481246948242188
+INFO 2020-11-04 04:39:57,108 loss step: 0.659758448600769
+INFO 2020-11-04 04:40:24,863 loss step: 0.7009140253067017
+INFO 2020-11-04 04:40:54,485 loss step: 0.6677076816558838
+INFO 2020-11-04 04:41:25,660 loss step: 0.64045250415802
+INFO 2020-11-04 04:41:55,778 loss step: 0.658455491065979
+INFO 2020-11-04 04:42:22,764 loss step: 0.6743261814117432
+INFO 2020-11-04 04:42:49,711 loss step: 0.6669504642486572
+INFO 2020-11-04 04:43:15,678 loss step: 0.6531683206558228
+INFO 2020-11-04 04:43:42,087 loss step: 0.716082751750946
+INFO 2020-11-04 04:44:08,474 loss step: 0.694153904914856
+INFO 2020-11-04 04:44:35,349 loss step: 0.6893495917320251
+INFO 2020-11-04 04:45:01,131 loss step: 0.5964915156364441
+INFO 2020-11-04 04:45:27,034 loss step: 0.6770017147064209
+INFO 2020-11-04 04:45:53,466 loss step: 0.5983126163482666
+INFO 2020-11-04 04:46:20,021 loss step: 0.7205996513366699
+INFO 2020-11-04 04:46:46,584 loss step: 0.5848003625869751
+INFO 2020-11-04 04:47:14,321 loss step: 0.7020294070243835
+INFO 2020-11-04 04:47:43,696 loss step: 0.6222559809684753
+INFO 2020-11-04 04:48:13,055 loss step: 0.6653088927268982
+INFO 2020-11-04 04:48:42,651 loss step: 0.6770839095115662
+INFO 2020-11-04 04:49:10,342 loss step: 0.6841399669647217
+INFO 2020-11-04 04:49:39,372 loss step: 0.6434792280197144
+INFO 2020-11-04 04:50:06,262 loss step: 0.600391149520874
+INFO 2020-11-04 04:50:35,286 loss step: 0.6186725497245789
+INFO 2020-11-04 04:51:11,492 loss step: 0.806342601776123
+INFO 2020-11-04 04:51:45,482 loss step: 0.6203382015228271
+INFO 2020-11-04 04:52:19,917 loss step: 0.6108179092407227
+INFO 2020-11-04 04:52:48,869 loss step: 0.7046577334403992
+INFO 2020-11-04 04:53:21,906 loss step: 0.6538649797439575
+INFO 2020-11-04 04:53:52,634 loss step: 0.656411349773407
+INFO 2020-11-04 04:54:23,955 loss step: 0.6173639893531799
+INFO 2020-11-04 04:54:55,561 loss step: 0.5542749762535095
+INFO 2020-11-04 04:55:30,076 loss step: 0.5969958305358887
+INFO 2020-11-04 04:55:56,638 loss step: 0.6726552844047546
+INFO 2020-11-04 04:56:23,353 loss step: 0.6134573817253113
+INFO 2020-11-04 04:56:49,977 loss step: 0.6834353804588318
+INFO 2020-11-04 04:57:21,202 loss step: 0.5418202877044678
+INFO 2020-11-04 04:57:49,220 loss step: 0.64484041929245
+INFO 2020-11-04 04:58:22,085 loss step: 0.7946462035179138
+INFO 2020-11-04 04:58:52,646 loss step: 0.6349048614501953
+INFO 2020-11-04 04:59:22,457 loss step: 0.6520789861679077
+INFO 2020-11-04 04:59:55,517 loss step: 0.6278148889541626
+INFO 2020-11-04 05:00:25,378 loss step: 0.6522131562232971
+INFO 2020-11-04 05:00:57,552 loss step: 0.5807254314422607
+INFO 2020-11-04 05:01:32,683 loss step: 0.6510746479034424
+INFO 2020-11-04 05:02:02,354 loss step: 0.6389925479888916
+INFO 2020-11-04 05:02:31,849 loss step: 0.6145841479301453
+INFO 2020-11-04 05:03:03,238 loss step: 0.6319981813430786
+INFO 2020-11-04 05:03:29,450 loss step: 0.7314484119415283
+INFO 2020-11-04 05:03:58,844 loss step: 0.8234351277351379
+INFO 2020-11-04 05:04:28,990 loss step: 0.583112895488739
+INFO 2020-11-04 05:04:59,730 loss step: 0.6351480484008789
+INFO 2020-11-04 05:05:31,264 loss step: 0.6556363701820374
+INFO 2020-11-04 05:06:00,773 loss step: 0.6154999732971191
+INFO 2020-11-04 05:06:31,570 loss step: 0.6751570105552673
+INFO 2020-11-04 05:07:01,700 loss step: 0.6351912617683411
+INFO 2020-11-04 05:07:34,159 loss step: 0.5912162065505981
+INFO 2020-11-04 05:08:06,904 loss step: 0.6057812571525574
+INFO 2020-11-04 05:08:38,295 loss step: 0.5679553747177124
+INFO 2020-11-04 05:09:10,645 loss step: 0.6208266615867615
+INFO 2020-11-04 05:09:41,121 loss step: 0.7377496957778931
+INFO 2020-11-04 05:10:10,526 loss step: 0.6607788801193237
+INFO 2020-11-04 05:10:43,262 loss step: 0.6378975510597229
+INFO 2020-11-04 05:11:12,470 loss step: 0.5184469819068909
+INFO 2020-11-04 05:11:44,221 loss step: 0.5763732194900513
+INFO 2020-11-04 05:12:13,097 loss step: 0.7028139233589172
+INFO 2020-11-04 05:12:40,635 loss step: 0.5345616340637207
+INFO 2020-11-04 05:13:11,515 loss step: 0.644635021686554
+INFO 2020-11-04 05:13:42,653 loss step: 0.5280055999755859
+INFO 2020-11-04 05:14:10,545 loss step: 0.6229697465896606
+INFO 2020-11-04 05:14:42,085 loss step: 0.6796936988830566
+INFO 2020-11-04 05:15:10,521 loss step: 0.609650731086731
+INFO 2020-11-04 05:15:37,654 loss step: 0.5920563340187073
+INFO 2020-11-04 05:16:08,036 loss step: 0.5812936425209045
+INFO 2020-11-04 05:16:40,634 loss step: 0.6150195598602295
+INFO 2020-11-04 05:17:14,750 loss step: 0.5221983790397644
+INFO 2020-11-04 05:17:46,228 loss step: 0.6512402892112732
+INFO 2020-11-04 05:18:13,746 loss step: 0.665468156337738
+INFO 2020-11-04 05:18:48,673 loss step: 0.6444056034088135
+INFO 2020-11-04 05:19:18,993 loss step: 0.5373921394348145
+INFO 2020-11-04 05:19:50,135 loss step: 0.6575630903244019
+INFO 2020-11-04 05:20:18,104 loss step: 0.6830632090568542
+INFO 2020-11-04 05:20:45,172 loss step: 0.6066129207611084
+INFO 2020-11-04 05:21:12,141 loss step: 0.5909879803657532
+INFO 2020-11-04 05:21:41,798 loss step: 0.6149333715438843
+INFO 2020-11-04 05:22:08,715 loss step: 0.624459445476532
+INFO 2020-11-04 05:22:35,951 loss step: 0.662585973739624
+INFO 2020-11-04 05:23:07,547 loss step: 0.5696637034416199
+INFO 2020-11-04 05:23:39,699 loss step: 0.5550287365913391
+INFO 2020-11-04 05:24:07,437 loss step: 0.5803043842315674
+INFO 2020-11-04 05:24:34,067 loss step: 0.5353409051895142
+INFO 2020-11-04 05:25:01,647 loss step: 0.6473166942596436
+INFO 2020-11-04 05:25:29,525 loss step: 0.5473844408988953

@@ -1,7 +1,7 @@
 from torchvision import datasets, transforms
 import torch
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 class Dataset(object):
     def __init__(
@@ -16,6 +16,7 @@ class Dataset(object):
         assert (
             data == "mnist" or data == "cifar10" or data == "cifar100"
         ), "only cifar10, cifar100 and mnist datasets are supported!"
+        
         assert 0 <= validation_split < 1, "validation_split must lie between [0, 1)"
 
         self.pin_memory = pin_memory
@@ -29,18 +30,19 @@ class Dataset(object):
             if data_augmentation:
                 train_transform = transforms.Compose(
                     [
-                        transforms.RandomCrop(32, padding=4),
+                        transforms.RandomCrop(28, padding=4),
                         transforms.RandomHorizontalFlip(),
                         transforms.ToTensor(),
-                        transforms.Normalize((0.1307,), (0.3081)),
+                        transforms.Normalize((0.1307,), (0.3081,)),
                     ]
                 )
+                print("is it entering here?")
             else:
                 train_transform = transforms.Compose(
-                    [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081))]
+                    [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
                 )
             test_transform = transforms.Compose(
-                [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081))]
+                [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
             )
             self.train_data = datasets.MNIST(
                 "./data", train=True, download=True, transform=train_transform
@@ -48,6 +50,7 @@ class Dataset(object):
             self.test_data = datasets.MNIST(
                 "./data", train=False, download=True, transform=test_transform
             )
+
             self.val_data = None
             if validation_split > 0:
                 self.val_data = datasets.MNIST(
@@ -57,13 +60,19 @@ class Dataset(object):
                 indices = list(range(training_points))
                 np.random.shuffle(indices)
                 validation_size = int(np.floor(validation_split * training_points))
+
+                print("Number of training samples:", training_points)
+                print("Number of validation samples:", validation_size)
+
                 train_indices, valid_indices = (
                     indices[validation_size:],
                     indices[:validation_size],
                 )
+                
                 self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
                     train_indices
                 )
+                
                 self.valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(
                     valid_indices
                 )
@@ -77,7 +86,10 @@ class Dataset(object):
             drop_last=self.drop_last,
             num_workers=self.num_workers,
         )
+
         val_loader = None
+        train_loader=None
+        
         if self.validation_split > 0:
             train_loader = torch.utils.data.DataLoader(
                 self.train_data,
@@ -95,6 +107,7 @@ class Dataset(object):
                 num_workers=self.num_workers,
                 sampler=self.valid_sampler,
             )
+        
         else:
             train_loader = torch.utils.data.DataLoader(
                 self.train_data,
@@ -104,6 +117,10 @@ class Dataset(object):
                 drop_last=self.drop_last,
                 num_workers=self.num_workers,
             )
+        image = iter(train_loader).next()[0][0][0]
+        plt.imshow(image)
+        plt.show()
+        print(iter(train_loader).next()[0].shape)
         return train_loader, test_loader, val_loader
 
 
