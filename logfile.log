@@ -1,1 +1,60 @@
-INFO 2020-11-02 04:27:25,978 None
+INFO 2020-11-03 15:30:54,528 BinaryConnect(
+  (dropout1): Dropout(p=0, inplace=False)
+  (dropout2): Dropout(p=0, inplace=False)
+  (dropout3): Dropout(p=0, inplace=False)
+  (dropout4): Dropout(p=0, inplace=False)
+  (fc1): Linear(in_features=784, out_features=2048, bias=False)
+  (fc2): Linear(in_features=2048, out_features=2048, bias=False)
+  (fc3): Linear(in_features=2048, out_features=2048, bias=False)
+  (fc4): Linear(in_features=2048, out_features=10, bias=False)
+  (bn1): BatchNorm1d(2048, eps=0.0001, momentum=0.15, affine=False, track_running_stats=True)
+  (bn2): BatchNorm1d(2048, eps=0.0001, momentum=0.15, affine=False, track_running_stats=True)
+  (bn3): BatchNorm1d(2048, eps=0.0001, momentum=0.15, affine=False, track_running_stats=True)
+  (bn4): BatchNorm1d(10, eps=0.0001, momentum=0.15, affine=False, track_running_stats=True)
+)
+INFO 2020-11-03 15:30:54,738 criterion: CrossEntropyLoss()
+INFO 2020-11-03 15:30:54,738 optimizer: BiNNOptimizer (
+Parameter Group 0
+    N: 1
+    beta: 0.0
+    initial_lr: 0.0001
+    learning_rate: 0.0001
+    lr: 0.0001
+    mini_batch_size: 64
+    temperature: 1e-10
+)
+INFO 2020-11-03 15:30:54,759 starting epoch 0
+INFO 2020-11-03 15:30:54,858 loss step: 2.7499494552612305
+INFO 2020-11-03 15:31:15,731 loss step: 2.7249205112457275
+INFO 2020-11-03 15:31:35,780 loss step: 1.7988632917404175
+INFO 2020-11-03 15:31:56,499 loss step: 1.670501708984375
+INFO 2020-11-03 15:32:17,669 loss step: 1.6357210874557495
+INFO 2020-11-03 15:32:37,835 loss step: 1.4808738231658936
+INFO 2020-11-03 15:32:58,080 loss step: 1.5502912998199463
+INFO 2020-11-03 15:33:18,168 loss step: 1.348767876625061
+INFO 2020-11-03 15:33:38,409 loss step: 1.4279541969299316
+INFO 2020-11-03 15:34:01,198 loss step: 1.2213895320892334
+INFO 2020-11-03 15:34:26,711 loss step: 1.2243653535842896
+INFO 2020-11-03 15:34:49,946 loss step: 1.3701775074005127
+INFO 2020-11-03 15:35:13,445 loss step: 1.4512759447097778
+INFO 2020-11-03 15:35:36,268 loss step: 1.0356734991073608
+INFO 2020-11-03 15:35:58,773 loss step: 1.202174425125122
+INFO 2020-11-03 15:36:21,499 loss step: 1.327223777770996
+INFO 2020-11-03 15:36:43,940 loss step: 1.2578376531600952
+INFO 2020-11-03 15:37:06,578 loss step: 1.0471957921981812
+INFO 2020-11-03 15:37:28,905 loss step: 1.0840880870819092
+INFO 2020-11-03 15:37:52,715 loss step: 1.0945281982421875
+INFO 2020-11-03 15:38:15,286 loss step: 1.0696256160736084
+INFO 2020-11-03 15:38:37,333 loss step: 1.114594578742981
+INFO 2020-11-03 15:39:00,017 loss step: 0.9761382937431335
+INFO 2020-11-03 15:39:23,116 loss step: 1.0103175640106201
+INFO 2020-11-03 15:39:47,640 loss step: 0.9451920986175537
+INFO 2020-11-03 15:40:07,988 loss step: 1.0840543508529663
+INFO 2020-11-03 15:40:28,445 loss step: 0.9922894835472107
+INFO 2020-11-03 15:40:52,377 loss step: 1.0660549402236938
+INFO 2020-11-03 15:41:15,521 loss step: 1.0830883979797363
+INFO 2020-11-03 15:41:39,147 loss step: 1.1078431606292725
+INFO 2020-11-03 15:42:04,061 loss step: 1.0751136541366577
+INFO 2020-11-03 15:42:30,152 loss step: 1.128048062324524
+INFO 2020-11-03 15:42:50,227 loss step: 0.9986072182655334
+INFO 2020-11-03 15:43:12,055 loss step: 0.9100381731987

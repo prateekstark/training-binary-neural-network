@@ -72,13 +72,7 @@ class BiNNOptimizer(Optimizer):
                 self.get_train_modules(sub_module)
 
     def step(self, closure=None):
-
-        loss = None
-        pred = None
-
-        if closure is not None:
-            pass
-        else:
+        if closure is None:
             raise RuntimeError(
                 "Something is wrong in step function of optimizer class, Please Check!"
             )
@@ -114,23 +108,27 @@ class BiNNOptimizer(Optimizer):
             for num in range(M):
                 # print('number',self.state['step'])
                 epsilon = torch.rand_like(mu)
-                delta = torch.log(epsilon / (1 - epsilon))/2
+                delta = torch.log(epsilon / (1 - epsilon)) / 2
                 relaxed_w = torch.tanh((lamda + delta) / temperature)
 
                 vector_to_parameters(relaxed_w, parameters)
                 loss, pred = closure()
                 pred_list.append(pred)
-                
+
                 g = parameters_to_vector(torch.autograd.grad(loss, parameters)).detach()
-                s = (N / temperature) * ((1 - relaxed_w * relaxed_w + 1e-10) / (1 - mu * mu + 1e-10))
-                grad.add_(g*s) 
-                
+                s = (N / temperature) * (
+                    (1 - relaxed_w * relaxed_w + 1e-10) / (1 - mu * mu + 1e-10)
+                )
+                grad.add_(g * s)
+
                 loss_list.append(loss.detach())
 
         grad.mul_(1 / M)
         beta = 0.99
 
-        self.state["momentum"] = beta * self.state["momentum"] + (1 - beta) * (grad + self.state["lambda"])  ## P
+        self.state["momentum"] = beta * self.state["momentum"] + (1 - beta) * (
+            grad + self.state["lambda"]
+        )  ## P
 
         bias_correction1 = 1 - beta ** self.state["step"]
         self.state["lambda"] = (
@@ -141,5 +139,3 @@ class BiNNOptimizer(Optimizer):
         # print('loss:', loss)
         # print('grad:', grad)
         return loss, pred_list
-
-
