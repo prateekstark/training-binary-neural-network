@@ -10,6 +10,7 @@ from BiNN.optim.BayesBiNNOptimizer import BiNNOptimizer
 from configparser import ConfigParser
 import dataloader
 from torch.nn.utils import vector_to_parameters
+from tqdm import tqdm
 
 if __name__ == "__main__":
     if(torch.cuda.is_available()):
@@ -46,7 +47,7 @@ if __name__ == "__main__":
     else:
         raise ValueError("Wrong optimizer name, please check!")
 
-    epochs = 12
+    epochs = 100
     milestones = [int(epochs / 2), int(epochs / 12), 150, 250, 350, 450]
     
     lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
@@ -59,45 +60,44 @@ if __name__ == "__main__":
 
     for epoch in range(epochs):
         net.train(True)
-        lr_scheduler.step()
         logger.info("starting epoch {}".format(epoch))
-        for i, data in enumerate(trainloader):
-            inputs, labels = data
-            print(len(trainloader.sampler))
-            # output = net.forward(inputs.to(device))
-            # loss = criterion(output, labels.to(device))
-            # loss.backward()
-            
+        predictions = []
+        for inputs, labels in tqdm(trainloader):
             def closure():
                 optimizer.zero_grad()
                 output = net.forward(inputs.to(device))
                 loss = criterion(output, labels.to(device))
-                logger.info("loss step: {}".format(loss))
+                # logger.info("loss step: {}".format(loss))
                 return loss, output
 
             loss, output = optimizer.step(closure)
             output = output[0]
             pred = output.argmax(dim=1, keepdims=True)
             correct = pred.eq(labels.to(device).view_as(pred)).sum().item()
-            # print(correct)
+            predictions.append(correct)
+        logger.info("train correct: {}".format(sum(predictions) / len(predictions)))
+        lr_scheduler.step()
 
         '''
         To check the validation set.
         '''
+        
+        result = []
         with torch.no_grad():
             for inputs, labels in testloader:
-                raw_noises = []
+                # raw_noises = []
                 mean_vector = torch.where(optimizer.state['mu'] <= 0, torch.zeros_like(optimizer.state['mu']), torch.ones_like(optimizer.state['mu']))
-                raw_noises.append(mean_vector)
+                # raw_noises.append(mean_vector)
                 params = optimizer.param_groups[0]['params']
                 predictions = []
-                for raw_noise in raw_noises:
-                    vector_to_parameters(2 * raw_noise - 1, params)
-                    output = net.forward(inputs)
-                    predictions.append(output)
+                raw_noise = mean_vector
+                # for raw_noise in raw_noises:
+                vector_to_parameters(2 * raw_noise - 1, params)
+                output = net.forward(inputs.to(device))
+                predictions.append(output)
                 prob_tensor = torch.stack(predictions, dim=2)
                 probs = torch.mean(prob_tensor, dim=2)
                 _, pred_class = torch.max(probs, 1)
-                correct = pred_class.eq(target.view_as(pred_class)).sum().item()
-                print("test correct: {}".format(correct))
-
+                correct = pred_class.eq(labels.to(device).view_as(pred_class)).sum().item()
+                result.append(correct)
+        logger.info("test correct: {}".format(sum(result) / len(result)))
