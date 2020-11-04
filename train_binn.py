@@ -12,6 +12,10 @@ import dataloader
 from torch.nn.utils import vector_to_parameters
 
 if __name__ == "__main__":
+    if(torch.cuda.is_available()):
+        device = 'cuda:0'
+    else:
+        device = 'cpu'
     logging.basicConfig(
         filename="logfile.log",
         format="%(levelname)s %(asctime)s %(message)s",
@@ -24,12 +28,11 @@ if __name__ == "__main__":
     config = ConfigParser()
     config.read("mnist_config.ini")
 
-
-    dataset = dataloader.Dataset('mnist', data_augmentation=False, validation_split=0)
+    dataset = dataloader.Dataset('mnist', data_augmentation=False, validation_split=0.1)
     trainloader, testloader, valloader = dataset.get_dataloaders(batch_size=100)
-    net = BinaryConnect(784, 10)
+    net = BinaryConnect(784, 10).to(device)
     logger.info(net)
-    summary(net, input_size=(1, 784), device="cpu")
+    summary(net, input_size=(100, 784), device='cuda')
 
     print(config["PARAMETERS"]["criterion"])
 
@@ -39,7 +42,7 @@ if __name__ == "__main__":
         raise ValueError("No such criterion is present!")
 
     if config["PARAMETERS"]["optimizer"] == "bayesbinn":
-        optimizer = BiNNOptimizer(net)
+        optimizer = BiNNOptimizer(net, train_set_size=dataset.get_trainsize())
     else:
         raise ValueError("Wrong optimizer name, please check!")
 
@@ -50,31 +53,33 @@ if __name__ == "__main__":
         optimizer, T_max=500, eta_min=1e-16, last_epoch=-1
     )
 
+    logger.info("Code running on {}".format(device))
     logger.info("criterion: {}".format(criterion))
     logger.info("optimizer: {}".format(optimizer))
 
-    for epoch in range(5):
+    for epoch in range(epochs):
         net.train(True)
         lr_scheduler.step()
         logger.info("starting epoch {}".format(epoch))
         for i, data in enumerate(trainloader):
             inputs, labels = data
-            output = net.forward(inputs)
-            loss = criterion(output, labels)
-            loss.backward()
-            logger.info("loss step: {}".format(loss))
-
+            print(len(trainloader.sampler))
+            # output = net.forward(inputs.to(device))
+            # loss = criterion(output, labels.to(device))
+            # loss.backward()
+            
             def closure():
                 optimizer.zero_grad()
-                output = net.forward(inputs)
-                loss = criterion(output, labels)
+                output = net.forward(inputs.to(device))
+                loss = criterion(output, labels.to(device))
+                logger.info("loss step: {}".format(loss))
                 return loss, output
 
             loss, output = optimizer.step(closure)
             output = output[0]
             pred = output.argmax(dim=1, keepdims=True)
-            correct = pred.eq(labels.view_as(pred)).sum().item()
-            print(correct)
+            correct = pred.eq(labels.to(device).view_as(pred)).sum().item()
+            # print(correct)
 
         '''
         To check the validation set.
@@ -95,8 +100,4 @@ if __name__ == "__main__":
                 _, pred_class = torch.max(probs, 1)
                 correct = pred_class.eq(target.view_as(pred_class)).sum().item()
                 print("test correct: {}".format(correct))
-
-
-
-
 

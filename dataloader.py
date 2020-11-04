@@ -1,7 +1,7 @@
 from torchvision import datasets, transforms
 import torch
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 class Dataset(object):
     def __init__(
@@ -58,6 +58,7 @@ class Dataset(object):
                 )
                 training_points = len(self.train_data)
                 indices = list(range(training_points))
+
                 np.random.shuffle(indices)
                 validation_size = int(np.floor(validation_split * training_points))
 
@@ -68,6 +69,7 @@ class Dataset(object):
                     indices[validation_size:],
                     indices[:validation_size],
                 )
+                self.trainsize = len(train_indices)
                 
                 self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
                     train_indices
@@ -118,10 +120,13 @@ class Dataset(object):
                 num_workers=self.num_workers,
             )
         image = iter(train_loader).next()[0][0][0]
-        plt.imshow(image)
-        plt.show()
+        # plt.imshow(image)
+        # plt.show()
         print(iter(train_loader).next()[0].shape)
         return train_loader, test_loader, val_loader
+    
+    def get_trainsize(self):
+        return self.trainsize
 
 
 if __name__ == "__main__":
