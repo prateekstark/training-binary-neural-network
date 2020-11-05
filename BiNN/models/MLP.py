@@ -4,8 +4,17 @@ import torch.nn.functional as F
 
 
 class BinaryConnect(nn.Module):
-    def __init__(self, in_features, out_features, num_units=2048, momentum=0.15, eps=1e-4, drop_prob=0, batch_affine=False):
-        
+    def __init__(
+        self,
+        in_features,
+        out_features,
+        num_units=2048,
+        momentum=0.15,
+        eps=1e-4,
+        drop_prob=0,
+        batch_affine=False,
+    ):
+
         super(BinaryConnect, self).__init__()
 
         self.in_features = in_features
@@ -20,10 +29,18 @@ class BinaryConnect(nn.Module):
         self.fc3 = nn.Linear(num_units, num_units, bias=False)
         self.fc4 = nn.Linear(num_units, out_features, bias=False)
 
-        self.bn1 = nn.BatchNorm1d(num_units, eps=eps, momentum=momentum, affine=batch_affine)
-        self.bn2 = nn.BatchNorm1d(num_units, eps=eps, momentum=momentum, affine=batch_affine)
-        self.bn3 = nn.BatchNorm1d(num_units, eps=eps, momentum=momentum, affine=batch_affine)
-        self.bn4 = nn.BatchNorm1d(out_features, eps=eps, momentum=momentum, affine=batch_affine)
+        self.bn1 = nn.BatchNorm1d(
+            num_units, eps=eps, momentum=momentum, affine=batch_affine
+        )
+        self.bn2 = nn.BatchNorm1d(
+            num_units, eps=eps, momentum=momentum, affine=batch_affine
+        )
+        self.bn3 = nn.BatchNorm1d(
+            num_units, eps=eps, momentum=momentum, affine=batch_affine
+        )
+        self.bn4 = nn.BatchNorm1d(
+            out_features, eps=eps, momentum=momentum, affine=batch_affine
+        )
 
     def forward(self, x):
         x = x.view(-1, self.in_features)
@@ -32,11 +49,9 @@ class BinaryConnect(nn.Module):
         x = F.relu(self.bn1(x))
         x = self.dropout2(x)
 
-
         x = self.fc2(x)
         x = F.relu(self.bn2(x))
         x = self.dropout3(x)
-
 
         x = self.fc3(x)
         x = F.relu(self.bn3(x))
