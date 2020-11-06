@@ -5,7 +5,16 @@ from .layers import *
 
 
 class BinaryConnect(nn.Module):
-    def __init__(self, in_features, out_features, num_units = 2048, momentum=0.15, eps=1e-4, drop_prob=0, batch_affine=True):
+    def __init__(
+        self,
+        in_features,
+        out_features,
+        num_units=2048,
+        momentum=0.15,
+        eps=1e-4,
+        drop_prob=0,
+        batch_affine=True,
+    ):
         super(BinaryConnect, self).__init__()
         self.in_features = in_features
         self.dropout1 = nn.Dropout(p=drop_prob)
@@ -18,10 +27,18 @@ class BinaryConnect(nn.Module):
         self.fc3 = BinaryLinear(num_units, num_units, bias=False)
         self.fc4 = BinaryLinear(num_units, out_features, bias=False)
 
-        self.bn1 = nn.BatchNorm1d(num_units, eps=eps, momentum=momentum, affine=batch_affine)
-        self.bn2 = nn.BatchNorm1d(num_units, eps=eps, momentum=momentum, affine=batch_affine)
-        self.bn3 = nn.BatchNorm1d(num_units, eps=eps, momentum=momentum, affine=batch_affine)
-        self.bn4 = nn.BatchNorm1d(out_features, eps=eps, momentum=momentum, affine=batch_affine)
+        self.bn1 = nn.BatchNorm1d(
+            num_units, eps=eps, momentum=momentum, affine=batch_affine
+        )
+        self.bn2 = nn.BatchNorm1d(
+            num_units, eps=eps, momentum=momentum, affine=batch_affine
+        )
+        self.bn3 = nn.BatchNorm1d(
+            num_units, eps=eps, momentum=momentum, affine=batch_affine
+        )
+        self.bn4 = nn.BatchNorm1d(
+            out_features, eps=eps, momentum=momentum, affine=batch_affine
+        )
 
     def forward(self, x):
         x = x.view(-1, self.in_features)
@@ -43,6 +60,7 @@ class BinaryConnect(nn.Module):
 
         return x
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     net = BinaryConnect(784, 10)
     print(net)

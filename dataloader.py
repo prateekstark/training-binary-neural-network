@@ -1,7 +1,7 @@
 from torchvision import datasets, transforms
 import torch
 import numpy as np
-# import matplotlib.pyplot as plt
+
 
 class Dataset(object):
     def __init__(
@@ -16,7 +16,7 @@ class Dataset(object):
         assert (
             data == "mnist" or data == "cifar10" or data == "cifar100"
         ), "only cifar10, cifar100 and mnist datasets are supported!"
-        
+
         assert 0 <= validation_split < 1, "validation_split must lie between [0, 1)"
 
         self.pin_memory = pin_memory
@@ -31,12 +31,10 @@ class Dataset(object):
                 train_transform = transforms.Compose(
                     [
                         transforms.RandomCrop(28, padding=4),
-                        transforms.RandomHorizontalFlip(),
                         transforms.ToTensor(),
                         transforms.Normalize((0.1307,), (0.3081,)),
                     ]
                 )
-                print("is it entering here?")
             else:
                 train_transform = transforms.Compose(
                     [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
@@ -56,25 +54,153 @@ class Dataset(object):
                 self.val_data = datasets.MNIST(
                     "./data", train=True, download=True, transform=test_transform
                 )
+
                 training_points = len(self.train_data)
                 indices = list(range(training_points))
 
                 np.random.shuffle(indices)
                 validation_size = int(np.floor(validation_split * training_points))
 
-                print("Number of training samples:", training_points)
-                print("Number of validation samples:", validation_size)
+                train_indices, valid_indices = (
+                    indices[validation_size:],
+                    indices[:validation_size],
+                )
+
+                self.trainsize = len(train_indices)
+
+                print("Number of training samples:", len(train_indices))
+                print("Number of validation samples:", len(valid_indices))
+
+                self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
+                    train_indices
+                )
+                self.valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(
+                    valid_indices
+                )
+
+        if data == "cifar10":
+            if data_augmentation:
+                train_transform = transforms.Compose(
+                    [
+                        transforms.RandomCrop(32, padding=4),
+                        transforms.RandomHorizontalFlip(),
+                        transforms.ToTensor(),
+                        transforms.Normalize(
+                            (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)
+                        ),
+                    ]
+                )
+            else:
+                train_transform = transforms.Compose(
+                    [
+                        transforms.ToTensor(),
+                        transforms.Normalize(
+                            (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)
+                        ),
+                    ]
+                )
+            test_transform = transforms.Compose(
+                [
+                    transforms.ToTensor(),
+                    transforms.Normalize(
+                        (0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)
+                    ),
+                ]
+            )
+            self.train_data = datasets.CIFAR10(
+                "./data", train=True, download=True, transform=train_transform
+            )
+            self.test_data = datasets.CIFAR10(
+                "./data", train=False, download=True, transform=test_transform
+            )
+
+            self.val_data = None
+            if validation_split > 0:
+                self.val_data = datasets.CIFAR10(
+                    "./data", train=True, download=True, transform=test_transform
+                )
+
+                training_points = len(self.train_data)
+                indices = list(range(training_points))
+
+                np.random.shuffle(indices)
+                validation_size = int(np.floor(validation_split * training_points))
 
                 train_indices, valid_indices = (
                     indices[validation_size:],
                     indices[:validation_size],
                 )
+
                 self.trainsize = len(train_indices)
-                
+
+                print("Number of training samples:", len(train_indices))
+                print("Number of validation samples:", len(valid_indices))
+
                 self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
                     train_indices
                 )
-                
+                self.valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(
+                    valid_indices
+                )
+
+        if data == "cifar100":
+            if data_augmentation:
+                train_transform = transforms.Compose(
+                    [
+                        transforms.RandomCrop(32, padding=4),
+                        transforms.RandomHorizontalFlip(),
+                        transforms.ToTensor(),
+                        transforms.Normalize(
+                            (0.507, 0.487, 0.441), (0.267, 0.256, 0.276)
+                        ),
+                    ]
+                )
+            else:
+                train_transform = transforms.Compose(
+                    [
+                        transforms.ToTensor(),
+                        transforms.Normalize(
+                            (0.507, 0.487, 0.441), (0.267, 0.256, 0.276)
+                        ),
+                    ]
+                )
+            test_transform = transforms.Compose(
+                [
+                    transforms.ToTensor(),
+                    transforms.Normalize((0.507, 0.487, 0.441), (0.267, 0.256, 0.276)),
+                ]
+            )
+            self.train_data = datasets.CIFAR100(
+                "./data", train=True, download=True, transform=train_transform
+            )
+            self.test_data = datasets.CIFAR100(
+                "./data", train=False, download=True, transform=test_transform
+            )
+
+            self.val_data = None
+            if validation_split > 0:
+                self.val_data = datasets.CIFAR100(
+                    "./data", train=True, download=True, transform=test_transform
+                )
+
+                training_points = len(self.train_data)
+                indices = list(range(training_points))
+
+                np.random.shuffle(indices)
+                validation_size = int(np.floor(validation_split * training_points))
+
+                train_indices, valid_indices = (
+                    indices[validation_size:],
+                    indices[:validation_size],
+                )
+
+                self.trainsize = len(train_indices)
+
+                print("Number of training samples:", len(train_indices))
+                print("Number of validation samples:", len(valid_indices))
+                self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
+                    train_indices
+                )
                 self.valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(
                     valid_indices
                 )
@@ -90,8 +216,8 @@ class Dataset(object):
         )
 
         val_loader = None
-        train_loader=None
-        
+        train_loader = None
+
         if self.validation_split > 0:
             train_loader = torch.utils.data.DataLoader(
                 self.train_data,
@@ -109,7 +235,7 @@ class Dataset(object):
                 num_workers=self.num_workers,
                 sampler=self.valid_sampler,
             )
-        
+
         else:
             train_loader = torch.utils.data.DataLoader(
                 self.train_data,
@@ -119,12 +245,8 @@ class Dataset(object):
                 drop_last=self.drop_last,
                 num_workers=self.num_workers,
             )
-        image = iter(train_loader).next()[0][0][0]
-        # plt.imshow(image)
-        # plt.show()
-        print(iter(train_loader).next()[0].shape)
         return train_loader, test_loader, val_loader
-    
+
     def get_trainsize(self):
         return self.trainsize
 

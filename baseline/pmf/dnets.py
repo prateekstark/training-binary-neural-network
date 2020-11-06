@@ -201,7 +201,7 @@ def main():
             train_set = datasets.CIFAR100(args.data_path, train=True, download=True, transform=transform_train)
             test_set = datasets.CIFAR100(args.data_path, train=False, download=True, transform=transform_test)
         else:
-            print 'Dataset type "{0}" not recognized, exiting ...'.format(args.dataset)
+            print('Dataset type "{0}" not recognized, exiting ...'.format(args.dataset))
             exit()
 
         if args.val_set == 'TRAIN':
@@ -240,7 +240,7 @@ def main():
         args.dataset_size = len(train_set)
 
     else:
-        print 'Dataset type "{0}" not recognized, exiting ...'.format(args.dataset)
+        print('Dataset type "{0}" not recognized, exiting ...'.format(args.dataset))
         exit()
 
     if args.num_epochs == 0:
@@ -277,7 +277,7 @@ def main():
     elif args.loss_function == 'CROSSENTROPY':
         criterion = nn.CrossEntropyLoss()
     else:
-        print 'Loss type "{0}" not recognized, exiting ...'.format(args.loss_function)
+        print('Loss type "{0}" not recognized, exiting ...'.format(args.loss_function))
         exit()
 
     if args.method == 'REF':
@@ -292,7 +292,7 @@ def main():
         args.projection = 'ARGMAX'
         sim.setup_and_run(args, criterion, device, train_loader, test_loader, val_loader, logging, results)
     else:
-        print 'Method "{0}" not recognized, exiting ...'.format(args.method)
+        print('Method "{0}" not recognized, exiting ...'.format(args.method))
         exit()
 
 if __name__ == '__main__':
