@@ -96,7 +96,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
     elif args.architecture == 'RESNET152':
         model = models.ResNet152(args.input_channels, args.im_size, args.output_dim).to(device)
     else:
-        print 'Architecture type "{0}" not recognized, exiting ...'.format(args.architecture)
+        print('Architecture type "{0}" not recognized, exiting ...'.format(args.architecture))
         exit()
 
     # optimizer
@@ -106,7 +106,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
         optimizer = optim.SGD(model.parameters(), lr=args.learning_rate, 
                 momentum=args.momentum, nesterov=args.nesterov, weight_decay=args.weight_decay)
     else:
-        print 'Optimizer type "{0}" not recognized, exiting ...'.format(args.optimizer)
+        print('Optimizer type "{0}" not recognized, exiting ...'.format(args.optimizer))
         exit()
 
     # lr-scheduler
@@ -120,7 +120,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
         scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=lri, gamma=args.lr_scale)
         args.lr_interval = 1    # lr_interval handled in scheduler!
     else:
-        print 'LR decay type "{0}" not recognized, exiting ...'.format(args.lr_decay)
+        print('LR decay type "{0}" not recognized, exiting ...'.format(args.lr_decay))
         exit()
 
     init_weights(model, xavier=True)
@@ -134,7 +134,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
     if args.eval:
         logging.info('Loading checkpoint file "{0}" for evaluation'.format(args.eval))
         if not os.path.isfile(args.eval):
-            print 'Checkpoint file "{0}" for evaluation not recognized, exiting ...'.format(args.eval)
+            print('Checkpoint file "{0}" for evaluation not recognized, exiting ...'.format(args.eval))
             exit()
         checkpoint = torch.load(args.eval)
         model.load_state_dict(checkpoint['state_dict'])
@@ -143,7 +143,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
         checkpoint_file = args.resume
         logging.info('Loading checkpoint file "{0}" to resume'.format(args.resume))
         if not os.path.isfile(checkpoint_file):
-            print 'Checkpoint file "{0}" not recognized, exiting ...'.format(checkpoint_file)
+            print('Checkpoint file "{0}" not recognized, exiting ...'.format(checkpoint_file))
             exit()
         checkpoint = torch.load(checkpoint_file)
         start_epoch = checkpoint['epoch']
@@ -200,7 +200,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
 
     # eval-set
     if args.eval_set != 'TRAIN' and args.eval_set != 'TEST':
-        print 'Evaluation set "{0}" not recognized ...'.format(args.eval_set)
+        print('Evaluation set "{0}" not recognized ...'.format(args.eval_set))
 
     logging.info('Evaluating REF on the {0} set...'.format(args.eval_set))
     st = timer()       

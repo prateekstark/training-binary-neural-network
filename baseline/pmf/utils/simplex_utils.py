@@ -77,7 +77,7 @@ def view_w_as_u(w, d):
     elif szl == 4:  # conv2d weights    (dN1 x N2 x N3 x N4 --> N1N2N3N4 x d)
         u = w.permute(1, 2, 3, 0).contiguous().view(-1, d)
     else:
-        print 'Weight size "{0}" not recognized, exiting ...'.format(w.size())
+        print('Weight size "{0}" not recognized, exiting ...'.format(w.size()))
         exit()
     return u
 
@@ -93,6 +93,6 @@ def view_u_as_w(u, wo):
     elif szl == 4:  # conv2d weights    (N1N2N3N4 x d --> dN1 x N2 x N3 x N4)
         w = u.view_as(wo.permute(1, 2, 3, 0)).permute(3, 0, 1, 2)
     else:
-        print 'Weight size "{0}" not recognized, exiting ...'.format(wo.size())
+        print('Weight size "{0}" not recognized, exiting ...'.format(wo.size()))
         exit()
     return w

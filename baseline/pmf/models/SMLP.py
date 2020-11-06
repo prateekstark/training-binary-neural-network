@@ -3,7 +3,6 @@
 
 import torch
 import torch.nn as nn
-
 import SimplexLayers as sl
 
 class SMLP(nn.Module):

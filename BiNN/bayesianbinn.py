@@ -9,4 +9,3 @@ class BayesianBiNN(object):
 
     def train_step(self):
         self.architecture.train(True)
-
