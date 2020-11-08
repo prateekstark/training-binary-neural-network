@@ -17,7 +17,10 @@ def birealnet(hparams, input_shape, num_classes):
         if in_filters != out_filters:
             shortcut = tf.keras.layers.AvgPool2D(2, strides=2, padding="same")(shortcut)
             shortcut = tf.keras.layers.Conv2D(
-                out_filters, 1, kernel_initializer="glorot_normal", use_bias=False,
+                out_filters,
+                1,
+                kernel_initializer="glorot_normal",
+                use_bias=False,
             )(shortcut)
             shortcut = tf.keras.layers.BatchNormalization(momentum=0.8)(shortcut)
 

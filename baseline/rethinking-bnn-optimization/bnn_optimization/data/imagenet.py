@@ -136,7 +136,10 @@ def _normalize(image, mean_rgb=MEAN_RGB, stddev_rgb=STDDEV_RGB):
 
 
 def preprocess_image(
-    image_bytes, is_training=False, use_bfloat16=False, image_size=IMAGE_SIZE,
+    image_bytes,
+    is_training=False,
+    use_bfloat16=False,
+    image_size=IMAGE_SIZE,
 ):
     """Preprocesses the given image.
 
@@ -173,4 +176,8 @@ class default(ImageNetClassification):
     decoders = {"image": tfds.decode.SkipDecoding()}
 
     def inputs(self, data, training):
-        return preprocess_image(data["image"], is_training=training, image_size=224,)
+        return preprocess_image(
+            data["image"],
+            is_training=training,
+            image_size=224,
+        )

@@ -4,6 +4,7 @@
 import torch
 import torch.nn as nn
 
+
 class MLP(nn.Module):
     """deepnn builds the graph for a deep net for classifying digits.
     Args:
@@ -12,6 +13,7 @@ class MLP(nn.Module):
       y: a tensor of shape (dataset_size, output_dim), with values
       equal to the logits of classifying the digit into one of output_dim classes
     """
+
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(MLP, self).__init__()
         self.input_dim = input_dim
@@ -26,4 +28,3 @@ class MLP(nn.Module):
         x = self.relu1(x)
         x = self.w2(x)
         return x
-

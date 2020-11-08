@@ -6,6 +6,7 @@ import torch.nn as nn
 
 import SimplexLayers as sl
 
+
 class SLeNet300(nn.Module):
     """deepnn builds the graph for a deep net for classifying digits.
     Args:
@@ -14,6 +15,7 @@ class SLeNet300(nn.Module):
       y: a tensor of shape (dataset_size, output_dim), with values
       equal to the logits of classifying the digit into one of output_dim classes
     """
+
     def __init__(self, input_dim, output_dim, Q_l):
         super(SLeNet300, self).__init__()
         self.Q_l = Q_l

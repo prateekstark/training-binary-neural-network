@@ -5,6 +5,7 @@ import torch
 import torch.nn as nn
 import SimplexLayers as sl
 
+
 class SMLP(nn.Module):
     """deepnn builds the graph for a deep net for classifying digits.
     Args:
@@ -13,6 +14,7 @@ class SMLP(nn.Module):
       y: a tensor of shape (dataset_size, output_dim), with values
       equal to the logits of classifying the digit into one of output_dim classes
     """
+
     def __init__(self, input_dim, hidden_dim, output_dim, Q_l):
         super(SMLP, self).__init__()
         self.Q_l = Q_l
@@ -29,4 +31,3 @@ class SMLP(nn.Module):
         x = self.relu1(x)
         x = self.w2(x)
         return x
-

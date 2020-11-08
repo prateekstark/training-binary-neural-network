@@ -4,6 +4,7 @@
 import torch
 import torch.nn as nn
 
+
 class LeNet300(nn.Module):
     """deepnn builds the graph for a deep net for classifying digits.
     Args:
@@ -12,6 +13,7 @@ class LeNet300(nn.Module):
       y: a tensor of shape (dataset_size, output_dim), with values
       equal to the logits of classifying the digit into one of output_dim classes
     """
+
     def __init__(self, input_dim, output_dim):
         super(LeNet300, self).__init__()
         self.input_dim = input_dim
