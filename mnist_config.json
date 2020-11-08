@@ -1,0 +1,12 @@
+{
+    "dataset": "mnist",
+    "input_shape": 784,
+    "output_shape": 10,
+    "data_augmentation": false,
+    "epochs": 100,
+    "criterion": "crossentropy",
+    "optimizer": "bayesbinn",
+    "validation_split": 0.1,
+    "lr_scheduler": "cosine",
+    "batch_size": 100
+}
