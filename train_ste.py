@@ -54,4 +54,10 @@ if __name__ == "__main__":
     trainer = STETrainer(
         net, config["criterion"], config["lr_scheduler"], logger, log_params=True
     )
-    trainer.train(config["epochs"], trainloader, device=device)
+    trainer.train(
+        config["epochs"],
+        trainloader,
+        device=device,
+        valloader=valloader,
+        testloader=testloader,
+    )

@@ -51,53 +51,11 @@ if __name__ == "__main__":
         dataset.get_trainsize(),
         log_params=True,
     )
-    trainer.train(config["epochs"], trainloader, device=device)
-
-'''
-    for epoch in range(epochs):
-        net.train(True)
-        logger.info("starting epoch {}".format(epoch))
-        predictions = []
-        for inputs, labels in tqdm(trainloader):
-
-            def closure():
-                optimizer.zero_grad()
-                output = net.forward(inputs.to(device))
-                loss = criterion(output, labels.to(device))
-                return loss, output
-
-            loss, output = optimizer.step(closure)
-            output = output[0]
-            pred = output.argmax(dim=1, keepdims=True)
-            correct = pred.eq(labels.to(device).view_as(pred)).sum().item()
-            predictions.append(correct)
-        logger.info("train correct: {}".format(sum(predictions) / len(predictions)))
-        lr_scheduler.step()
-
-        """
-        To check the validation set.
-        """
-
-        result = []
-        with torch.no_grad():
-            for inputs, labels in testloader:
-                mean_vector = torch.where(
-                    optimizer.state["mu"] <= 0,
-                    torch.zeros_like(optimizer.state["mu"]),
-                    torch.ones_like(optimizer.state["mu"]),
-                )
-                params = optimizer.param_groups[0]["params"]
-                predictions = []
-                raw_noise = mean_vector
-                vector_to_parameters(2 * raw_noise - 1, params)
-                output = net.forward(inputs.to(device))
-                predictions.append(output)
-                prob_tensor = torch.stack(predictions, dim=2)
-                probs = torch.mean(prob_tensor, dim=2)
-                _, pred_class = torch.max(probs, 1)
-                correct = (
-                    pred_class.eq(labels.to(device).view_as(pred_class)).sum().item()
-                )
-                result.append(correct)
-        logger.info("test correct: {}".format(sum(result) / len(result)))
-'''
+    trainer.train(
+        config["epochs"],
+        trainloader,
+        device=device,
+        valloader=valloader,
+        testloader=testloader,
+        M=0,
+    )

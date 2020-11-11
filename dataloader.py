@@ -26,6 +26,8 @@ class Dataset(object):
         self.train_sampler = None
         self.valid_sampler = None
 
+        datapath = "./data"
+
         if data == "mnist":
             if data_augmentation:
                 train_transform = transforms.Compose(
@@ -42,41 +44,7 @@ class Dataset(object):
             test_transform = transforms.Compose(
                 [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
             )
-            self.train_data = datasets.MNIST(
-                "./data", train=True, download=True, transform=train_transform
-            )
-            self.test_data = datasets.MNIST(
-                "./data", train=False, download=True, transform=test_transform
-            )
-
-            self.val_data = None
-            if validation_split > 0:
-                self.val_data = datasets.MNIST(
-                    "./data", train=True, download=True, transform=test_transform
-                )
-
-                training_points = len(self.train_data)
-                indices = list(range(training_points))
-
-                np.random.shuffle(indices)
-                validation_size = int(np.floor(validation_split * training_points))
-
-                train_indices, valid_indices = (
-                    indices[validation_size:],
-                    indices[:validation_size],
-                )
-
-                self.trainsize = len(train_indices)
-
-                print("Number of training samples:", len(train_indices))
-                print("Number of validation samples:", len(valid_indices))
-
-                self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
-                    train_indices
-                )
-                self.valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(
-                    valid_indices
-                )
+            dataset = datasets.MNIST
 
         if data == "cifar10":
             if data_augmentation:
@@ -107,41 +75,7 @@ class Dataset(object):
                     ),
                 ]
             )
-            self.train_data = datasets.CIFAR10(
-                "./data", train=True, download=True, transform=train_transform
-            )
-            self.test_data = datasets.CIFAR10(
-                "./data", train=False, download=True, transform=test_transform
-            )
-
-            self.val_data = None
-            if validation_split > 0:
-                self.val_data = datasets.CIFAR10(
-                    "./data", train=True, download=True, transform=test_transform
-                )
-
-                training_points = len(self.train_data)
-                indices = list(range(training_points))
-
-                np.random.shuffle(indices)
-                validation_size = int(np.floor(validation_split * training_points))
-
-                train_indices, valid_indices = (
-                    indices[validation_size:],
-                    indices[:validation_size],
-                )
-
-                self.trainsize = len(train_indices)
-
-                print("Number of training samples:", len(train_indices))
-                print("Number of validation samples:", len(valid_indices))
-
-                self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
-                    train_indices
-                )
-                self.valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(
-                    valid_indices
-                )
+            dataset = datasets.CIFAR10
 
         if data == "cifar100":
             if data_augmentation:
@@ -170,40 +104,44 @@ class Dataset(object):
                     transforms.Normalize((0.507, 0.487, 0.441), (0.267, 0.256, 0.276)),
                 ]
             )
-            self.train_data = datasets.CIFAR100(
-                "./data", train=True, download=True, transform=train_transform
+            dataset = datasets.CIFAR100
+
+        self.train_data = dataset(
+            datapath, train=True, download=True, transform=train_transform
+        )
+
+        self.test_data = dataset(
+            datapath, train=False, download=True, transform=test_transform
+        )
+
+        self.val_data = None
+
+        if validation_split > 0:
+            self.val_data = dataset(
+                datapath, train=True, download=True, transform=test_transform
             )
-            self.test_data = datasets.CIFAR100(
-                "./data", train=False, download=True, transform=test_transform
+
+            training_points = len(self.train_data)
+            indices = list(range(training_points))
+
+            np.random.shuffle(indices)
+            validation_size = int(np.floor(validation_split * training_points))
+
+            train_indices, valid_indices = (
+                indices[validation_size:],
+                indices[:validation_size],
             )
 
-            self.val_data = None
-            if validation_split > 0:
-                self.val_data = datasets.CIFAR100(
-                    "./data", train=True, download=True, transform=test_transform
-                )
+            self.trainsize = len(train_indices)
 
-                training_points = len(self.train_data)
-                indices = list(range(training_points))
-
-                np.random.shuffle(indices)
-                validation_size = int(np.floor(validation_split * training_points))
-
-                train_indices, valid_indices = (
-                    indices[validation_size:],
-                    indices[:validation_size],
-                )
-
-                self.trainsize = len(train_indices)
-
-                print("Number of training samples:", len(train_indices))
-                print("Number of validation samples:", len(valid_indices))
-                self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
-                    train_indices
-                )
-                self.valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(
-                    valid_indices
-                )
+            print("Number of training samples:", len(train_indices))
+            print("Number of validation samples:", len(valid_indices))
+            self.train_sampler = torch.utils.data.sampler.SubsetRandomSampler(
+                train_indices
+            )
+            self.valid_sampler = torch.utils.data.sampler.SubsetRandomSampler(
+                valid_indices
+            )
 
     def get_dataloaders(self, batch_size):
         test_loader = torch.utils.data.DataLoader(
