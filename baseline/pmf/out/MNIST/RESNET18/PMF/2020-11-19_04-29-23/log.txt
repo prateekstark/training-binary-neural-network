@@ -1,0 +1,124 @@
+2020-11-19 04:29:23 - INFO - Saving to ./out/MNIST/RESNET18/PMF/2020-11-19_04-29-23
+2020-11-19 04:29:34 - DEBUG - Run arguments: Namespace(architecture='RESNET18', batch_size=100, beta_interval=100, beta_scale=1.2, data_path='./Datasets/MNIST', dataset='MNIST', dataset_size=50000, eval='', eval_set='TEST', gpu_id='0', hidden_dim=2, im_size=28, input_channels=1, input_dim=784, learning_rate=0.001, log_interval=100, loss_function='CROSSENTROPY', lr_decay='STEP', lr_interval=7000, lr_scale=0.2, method='PMF', momentum=0.95, nesterov=False, num_epochs=200, num_iters=100000, optimizer='ADAM', output_dim=10, pr_interval=100, pretrained_model='', quant_levels=2, resume='', rounding='ARGMAX', save_dir='./out/MNIST/RESNET18/PMF/2020-11-19_04-29-23', save_name='./out/MNIST/RESNET18/PMF/2020-11-19_04-29-23/best_model.pth.tar', val_set='TRAIN', weight_decay=0.0)
+2020-11-19 04:29:35 - INFO - SResNet(
+  (conv1): SConv2d(
+    (conv2d): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  )
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): SConv2d(
+        (conv2d): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (conv2): SConv2d(
+        (conv2d): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (1): BasicBlock(
+      (conv1): SConv2d(
+        (conv2d): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (conv2): SConv2d(
+        (conv2d): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): SConv2d(
+        (conv2d): Conv2d(64, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      )
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (conv2): SConv2d(
+        (conv2d): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SConv2d(
+          (conv2d): Conv2d(64, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        )
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SConv2d(
+        (conv2d): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (conv2): SConv2d(
+        (conv2d): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): SConv2d(
+        (conv2d): Conv2d(128, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      )
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (conv2): SConv2d(
+        (conv2d): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SConv2d(
+          (conv2d): Conv2d(128, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        )
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SConv2d(
+        (conv2d): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (conv2): SConv2d(
+        (conv2d): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): SConv2d(
+        (conv2d): Conv2d(256, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      )
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (conv2): SConv2d(
+        (conv2d): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): SConv2d(
+          (conv2d): Conv2d(256, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        )
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): SConv2d(
+        (conv2d): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (conv2): SConv2d(
+        (conv2d): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      )
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): SLinear(
+    (linear): Linear(in_features=512, out_features=20, bias=True)
+  )
+)
+2020-11-19 04:29:35 - INFO - Number of parameters: 22328724
+2020-11-19 04:29:35 - INFO - Training...

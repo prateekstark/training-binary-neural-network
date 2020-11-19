@@ -1,0 +1,123 @@
+2020-11-20 00:18:40 - INFO - Saving to ./out/MNIST/LENET300/PMF/2020-11-20_00-18-40
+2020-11-20 00:18:40 - DEBUG - Run arguments: Namespace(architecture='LENET300', batch_size=128, beta_interval=100, beta_scale=1.2, data_path='./Datasets/MNIST', dataset='MNIST', dataset_size=50000, eval='', eval_set='TEST', gpu_id='0', hidden_dim=2, im_size=28, input_channels=1, input_dim=784, learning_rate=0.001, log_interval=100, loss_function='CROSSENTROPY', lr_decay='STEP', lr_interval=7000, lr_scale=0.2, method='PMF', momentum=0.95, nesterov=False, num_epochs=256, num_iters=100000, optimizer='ADAM', output_dim=10, pr_interval=100, pretrained_model='', quant_levels=2, resume='', rounding='ARGMAX', save_dir='./out/MNIST/LENET300/PMF/2020-11-20_00-18-40', save_name='./out/MNIST/LENET300/PMF/2020-11-20_00-18-40/best_model.pth.tar', val_set='TRAIN', weight_decay=0.0)
+2020-11-20 00:18:40 - INFO - SLeNet300(
+  (w1): SLinear(
+    (linear): Linear(in_features=784, out_features=600, bias=True)
+  )
+  (bn1): BatchNorm1d(300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu1): ReLU(inplace=True)
+  (w2): SLinear(
+    (linear): Linear(in_features=300, out_features=200, bias=True)
+  )
+  (bn2): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu2): ReLU(inplace=True)
+  (w3): SLinear(
+    (linear): Linear(in_features=100, out_features=20, bias=True)
+  )
+)
+2020-11-20 00:18:40 - INFO - Number of parameters: 534020
+2020-11-20 00:18:40 - INFO - Training...
+2020-11-20 00:18:42 - INFO - Epoch: 0,	 Iter: 0,	 Loss: 2.40846,	 Val-Acc1: 19.85 (Best: 19.85),	 Val-Acc5: 61.07
+2020-11-20 00:18:42 - INFO - lr: 0.0002
+2020-11-20 00:18:49 - INFO - Epoch: 0,	 Iter: 100,	 Loss: 0.57148,	 Val-Acc1: 36.82 (Best: 36.82),	 Val-Acc5: 83.89
+2020-11-20 00:18:56 - INFO - Epoch: 0,	 Iter: 200,	 Loss: 0.44395,	 Val-Acc1: 39.61 (Best: 39.61),	 Val-Acc5: 89.68
+2020-11-20 00:19:04 - INFO - Epoch: 0,	 Iter: 300,	 Loss: 0.34455,	 Val-Acc1: 40.31 (Best: 40.31),	 Val-Acc5: 85.42
+2020-11-20 00:19:15 - INFO - Epoch: 1,	 Iter: 0,	 Loss: 0.20819,	 Val-Acc1: 39.36 (Best: 40.31),	 Val-Acc5: 85.26
+2020-11-20 00:19:23 - INFO - Epoch: 1,	 Iter: 100,	 Loss: 0.14132,	 Val-Acc1: 31.60 (Best: 40.31),	 Val-Acc5: 84.36
+2020-11-20 00:19:32 - INFO - Epoch: 1,	 Iter: 200,	 Loss: 0.27548,	 Val-Acc1: 34.42 (Best: 40.31),	 Val-Acc5: 80.88
+2020-11-20 00:19:41 - INFO - Epoch: 1,	 Iter: 300,	 Loss: 0.12990,	 Val-Acc1: 31.55 (Best: 40.31),	 Val-Acc5: 85.25
+2020-11-20 00:19:51 - INFO - Epoch: 2,	 Iter: 0,	 Loss: 0.10178,	 Val-Acc1: 29.79 (Best: 40.31),	 Val-Acc5: 81.37
+2020-11-20 00:20:00 - INFO - Epoch: 2,	 Iter: 100,	 Loss: 0.08915,	 Val-Acc1: 24.49 (Best: 40.31),	 Val-Acc5: 80.49
+2020-11-20 00:20:08 - INFO - Epoch: 2,	 Iter: 200,	 Loss: 0.12893,	 Val-Acc1: 31.25 (Best: 40.31),	 Val-Acc5: 84.24
+2020-11-20 00:20:17 - INFO - Epoch: 2,	 Iter: 300,	 Loss: 0.08416,	 Val-Acc1: 27.97 (Best: 40.31),	 Val-Acc5: 83.00
+2020-11-20 00:20:28 - INFO - Epoch: 3,	 Iter: 0,	 Loss: 0.14567,	 Val-Acc1: 31.33 (Best: 40.31),	 Val-Acc5: 82.77
+2020-11-20 00:20:36 - INFO - Epoch: 3,	 Iter: 100,	 Loss: 0.09915,	 Val-Acc1: 36.08 (Best: 40.31),	 Val-Acc5: 85.59
+2020-11-20 00:20:45 - INFO - Epoch: 3,	 Iter: 200,	 Loss: 0.06811,	 Val-Acc1: 39.78 (Best: 40.31),	 Val-Acc5: 85.12
+2020-11-20 00:20:54 - INFO - Epoch: 3,	 Iter: 300,	 Loss: 0.08765,	 Val-Acc1: 44.92 (Best: 44.92),	 Val-Acc5: 86.48
+2020-11-20 00:21:04 - INFO - Epoch: 4,	 Iter: 0,	 Loss: 0.02982,	 Val-Acc1: 42.52 (Best: 44.92),	 Val-Acc5: 90.20
+2020-11-20 00:21:13 - INFO - Epoch: 4,	 Iter: 100,	 Loss: 0.02676,	 Val-Acc1: 49.35 (Best: 49.35),	 Val-Acc5: 88.18
+2020-11-20 00:21:22 - INFO - Epoch: 4,	 Iter: 200,	 Loss: 0.06398,	 Val-Acc1: 49.97 (Best: 49.97),	 Val-Acc5: 89.18
+2020-11-20 00:21:31 - INFO - Epoch: 4,	 Iter: 300,	 Loss: 0.03783,	 Val-Acc1: 48.67 (Best: 49.97),	 Val-Acc5: 89.39
+2020-11-20 00:21:41 - INFO - Epoch: 5,	 Iter: 0,	 Loss: 0.06155,	 Val-Acc1: 49.55 (Best: 49.97),	 Val-Acc5: 91.61
+2020-11-20 00:21:50 - INFO - Epoch: 5,	 Iter: 100,	 Loss: 0.04091,	 Val-Acc1: 57.91 (Best: 57.91),	 Val-Acc5: 93.07
+2020-11-20 00:21:58 - INFO - Epoch: 5,	 Iter: 200,	 Loss: 0.04100,	 Val-Acc1: 60.08 (Best: 60.08),	 Val-Acc5: 94.76
+2020-11-20 00:22:07 - INFO - Epoch: 5,	 Iter: 300,	 Loss: 0.01867,	 Val-Acc1: 61.10 (Best: 61.10),	 Val-Acc5: 95.51
+2020-11-20 00:22:18 - INFO - Epoch: 6,	 Iter: 0,	 Loss: 0.02096,	 Val-Acc1: 67.02 (Best: 67.02),	 Val-Acc5: 96.74
+2020-11-20 00:22:28 - INFO - Epoch: 6,	 Iter: 100,	 Loss: 0.01586,	 Val-Acc1: 62.60 (Best: 67.02),	 Val-Acc5: 96.65
+2020-11-20 00:22:38 - INFO - Epoch: 6,	 Iter: 200,	 Loss: 0.06045,	 Val-Acc1: 63.47 (Best: 67.02),	 Val-Acc5: 97.29
+2020-11-20 00:22:47 - INFO - Epoch: 6,	 Iter: 300,	 Loss: 0.11995,	 Val-Acc1: 64.09 (Best: 67.02),	 Val-Acc5: 97.38
+2020-11-20 00:22:58 - INFO - Epoch: 7,	 Iter: 0,	 Loss: 0.08337,	 Val-Acc1: 68.77 (Best: 68.77),	 Val-Acc5: 98.37
+2020-11-20 00:23:07 - INFO - Epoch: 7,	 Iter: 100,	 Loss: 0.04292,	 Val-Acc1: 69.46 (Best: 69.46),	 Val-Acc5: 98.68
+2020-11-20 00:23:17 - INFO - Epoch: 7,	 Iter: 200,	 Loss: 0.11414,	 Val-Acc1: 73.49 (Best: 73.49),	 Val-Acc5: 99.16
+2020-11-20 00:23:26 - INFO - Epoch: 7,	 Iter: 300,	 Loss: 0.02879,	 Val-Acc1: 78.30 (Best: 78.30),	 Val-Acc5: 99.40
+2020-11-20 00:23:37 - INFO - Epoch: 8,	 Iter: 0,	 Loss: 0.06103,	 Val-Acc1: 83.56 (Best: 83.56),	 Val-Acc5: 99.51
+2020-11-20 00:23:47 - INFO - Epoch: 8,	 Iter: 100,	 Loss: 0.02186,	 Val-Acc1: 86.58 (Best: 86.58),	 Val-Acc5: 99.51
+2020-11-20 00:23:58 - INFO - Epoch: 8,	 Iter: 200,	 Loss: 0.06902,	 Val-Acc1: 86.69 (Best: 86.69),	 Val-Acc5: 99.56
+2020-11-20 00:24:08 - INFO - Epoch: 8,	 Iter: 300,	 Loss: 0.19086,	 Val-Acc1: 83.89 (Best: 86.69),	 Val-Acc5: 99.49
+2020-11-20 00:24:21 - INFO - Epoch: 9,	 Iter: 0,	 Loss: 0.06859,	 Val-Acc1: 89.59 (Best: 89.59),	 Val-Acc5: 99.71
+2020-11-20 00:24:35 - INFO - Epoch: 9,	 Iter: 100,	 Loss: 0.07922,	 Val-Acc1: 90.10 (Best: 90.10),	 Val-Acc5: 99.63
+2020-11-20 00:24:49 - INFO - Epoch: 9,	 Iter: 200,	 Loss: 0.08710,	 Val-Acc1: 89.34 (Best: 90.10),	 Val-Acc5: 99.70
+2020-11-20 00:25:04 - INFO - Epoch: 9,	 Iter: 300,	 Loss: 0.16722,	 Val-Acc1: 91.84 (Best: 91.84),	 Val-Acc5: 99.75
+2020-11-20 00:25:21 - INFO - Epoch: 10,	 Iter: 0,	 Loss: 0.04990,	 Val-Acc1: 91.02 (Best: 92.25),	 Val-Acc5: 99.70
+2020-11-20 00:25:37 - INFO - Epoch: 10,	 Iter: 100,	 Loss: 0.13705,	 Val-Acc1: 93.22 (Best: 93.22),	 Val-Acc5: 99.71
+2020-11-20 00:25:52 - INFO - Epoch: 10,	 Iter: 200,	 Loss: 0.03092,	 Val-Acc1: 91.97 (Best: 93.22),	 Val-Acc5: 99.72
+2020-11-20 00:26:06 - INFO - Epoch: 10,	 Iter: 300,	 Loss: 0.12976,	 Val-Acc1: 93.75 (Best: 93.75),	 Val-Acc5: 99.81
+2020-11-20 00:26:21 - INFO - Epoch: 11,	 Iter: 0,	 Loss: 0.15226,	 Val-Acc1: 94.49 (Best: 94.49),	 Val-Acc5: 99.77
+2020-11-20 00:26:35 - INFO - Epoch: 11,	 Iter: 100,	 Loss: 0.05587,	 Val-Acc1: 94.36 (Best: 94.49),	 Val-Acc5: 99.84
+2020-11-20 00:26:49 - INFO - Epoch: 11,	 Iter: 200,	 Loss: 0.14460,	 Val-Acc1: 94.17 (Best: 94.49),	 Val-Acc5: 99.72
+2020-11-20 00:27:02 - INFO - Epoch: 11,	 Iter: 300,	 Loss: 0.05560,	 Val-Acc1: 93.90 (Best: 94.49),	 Val-Acc5: 99.76
+2020-11-20 00:27:15 - INFO - Epoch: 12,	 Iter: 0,	 Loss: 0.08396,	 Val-Acc1: 94.15 (Best: 94.49),	 Val-Acc5: 99.79
+2020-11-20 00:27:27 - INFO - Epoch: 12,	 Iter: 100,	 Loss: 0.16411,	 Val-Acc1: 94.24 (Best: 94.49),	 Val-Acc5: 99.79
+2020-11-20 00:27:38 - INFO - Epoch: 12,	 Iter: 200,	 Loss: 0.16028,	 Val-Acc1: 94.00 (Best: 94.49),	 Val-Acc5: 99.85
+2020-11-20 00:27:49 - INFO - Epoch: 12,	 Iter: 300,	 Loss: 0.23953,	 Val-Acc1: 94.47 (Best: 94.49),	 Val-Acc5: 99.82
+2020-11-20 00:28:02 - INFO - Epoch: 13,	 Iter: 0,	 Loss: 0.02991,	 Val-Acc1: 95.64 (Best: 95.64),	 Val-Acc5: 99.80
+2020-11-20 00:28:13 - INFO - Epoch: 13,	 Iter: 100,	 Loss: 0.07941,	 Val-Acc1: 93.95 (Best: 95.64),	 Val-Acc5: 99.79
+2020-11-20 00:28:25 - INFO - Epoch: 13,	 Iter: 200,	 Loss: 0.03806,	 Val-Acc1: 95.33 (Best: 95.64),	 Val-Acc5: 99.85
+2020-11-20 00:28:37 - INFO - Epoch: 13,	 Iter: 300,	 Loss: 0.04837,	 Val-Acc1: 95.42 (Best: 95.64),	 Val-Acc5: 99.84
+2020-11-20 00:28:51 - INFO - Epoch: 14,	 Iter: 0,	 Loss: 0.09271,	 Val-Acc1: 95.68 (Best: 96.09),	 Val-Acc5: 99.86
+2020-11-20 00:29:02 - INFO - Epoch: 14,	 Iter: 100,	 Loss: 0.09645,	 Val-Acc1: 94.96 (Best: 96.09),	 Val-Acc5: 99.86
+2020-11-20 00:29:12 - INFO - Epoch: 14,	 Iter: 200,	 Loss: 0.10654,	 Val-Acc1: 94.10 (Best: 96.09),	 Val-Acc5: 99.76
+2020-11-20 00:29:23 - INFO - Epoch: 14,	 Iter: 300,	 Loss: 0.45441,	 Val-Acc1: 95.14 (Best: 96.09),	 Val-Acc5: 99.85
+2020-11-20 00:29:35 - INFO - Epoch: 15,	 Iter: 0,	 Loss: 0.08862,	 Val-Acc1: 96.23 (Best: 96.23),	 Val-Acc5: 99.86
+2020-11-20 00:29:45 - INFO - Epoch: 15,	 Iter: 100,	 Loss: 0.06366,	 Val-Acc1: 96.05 (Best: 96.23),	 Val-Acc5: 99.86
+2020-11-20 00:29:56 - INFO - Epoch: 15,	 Iter: 200,	 Loss: 0.15921,	 Val-Acc1: 95.97 (Best: 96.23),	 Val-Acc5: 99.79
+2020-11-20 00:30:08 - INFO - Epoch: 15,	 Iter: 300,	 Loss: 0.07243,	 Val-Acc1: 95.63 (Best: 96.23),	 Val-Acc5: 99.82
+2020-11-20 00:30:21 - INFO - Epoch: 16,	 Iter: 0,	 Loss: 0.05541,	 Val-Acc1: 96.09 (Best: 96.23),	 Val-Acc5: 99.83
+2020-11-20 00:30:33 - INFO - Epoch: 16,	 Iter: 100,	 Loss: 0.07487,	 Val-Acc1: 95.90 (Best: 96.23),	 Val-Acc5: 99.89
+2020-11-20 00:30:46 - INFO - Epoch: 16,	 Iter: 200,	 Loss: 0.01270,	 Val-Acc1: 95.60 (Best: 96.23),	 Val-Acc5: 99.81
+2020-11-20 00:30:58 - INFO - Epoch: 16,	 Iter: 300,	 Loss: 0.06473,	 Val-Acc1: 95.87 (Best: 96.23),	 Val-Acc5: 99.86
+2020-11-20 00:31:12 - INFO - Epoch: 17,	 Iter: 0,	 Loss: 0.02172,	 Val-Acc1: 96.68 (Best: 96.68),	 Val-Acc5: 99.93
+2020-11-20 00:31:24 - INFO - Epoch: 17,	 Iter: 100,	 Loss: 0.07432,	 Val-Acc1: 95.05 (Best: 96.68),	 Val-Acc5: 99.86
+2020-11-20 00:31:37 - INFO - Epoch: 17,	 Iter: 200,	 Loss: 0.07561,	 Val-Acc1: 94.54 (Best: 96.68),	 Val-Acc5: 99.85
+2020-11-20 00:31:50 - INFO - Epoch: 17,	 Iter: 300,	 Loss: 0.02768,	 Val-Acc1: 96.78 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:31:55 - INFO - lr: 4e-05
+2020-11-20 00:32:03 - INFO - Epoch: 18,	 Iter: 0,	 Loss: 0.08971,	 Val-Acc1: 96.21 (Best: 96.78),	 Val-Acc5: 99.86
+2020-11-20 00:32:16 - INFO - Epoch: 18,	 Iter: 100,	 Loss: 0.00866,	 Val-Acc1: 96.50 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:32:29 - INFO - Epoch: 18,	 Iter: 200,	 Loss: 0.01731,	 Val-Acc1: 96.37 (Best: 96.78),	 Val-Acc5: 99.94
+2020-11-20 00:32:41 - INFO - Epoch: 18,	 Iter: 300,	 Loss: 0.02642,	 Val-Acc1: 96.64 (Best: 96.78),	 Val-Acc5: 99.92
+2020-11-20 00:32:55 - INFO - Epoch: 19,	 Iter: 0,	 Loss: 0.02163,	 Val-Acc1: 96.23 (Best: 96.78),	 Val-Acc5: 99.88
+2020-11-20 00:33:09 - INFO - Epoch: 19,	 Iter: 100,	 Loss: 0.02472,	 Val-Acc1: 96.70 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:33:20 - INFO - Epoch: 19,	 Iter: 200,	 Loss: 0.03212,	 Val-Acc1: 96.77 (Best: 96.78),	 Val-Acc5: 99.88
+2020-11-20 00:33:33 - INFO - Epoch: 19,	 Iter: 300,	 Loss: 0.03805,	 Val-Acc1: 95.93 (Best: 96.78),	 Val-Acc5: 99.88
+2020-11-20 00:33:46 - INFO - Epoch: 20,	 Iter: 0,	 Loss: 0.01713,	 Val-Acc1: 96.17 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:33:58 - INFO - Epoch: 20,	 Iter: 100,	 Loss: 0.01203,	 Val-Acc1: 96.15 (Best: 96.78),	 Val-Acc5: 99.90
+2020-11-20 00:34:09 - INFO - Epoch: 20,	 Iter: 200,	 Loss: 0.01005,	 Val-Acc1: 96.48 (Best: 96.78),	 Val-Acc5: 99.91
+2020-11-20 00:34:20 - INFO - Epoch: 20,	 Iter: 300,	 Loss: 0.00971,	 Val-Acc1: 96.26 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:34:32 - INFO - Epoch: 21,	 Iter: 0,	 Loss: 0.05962,	 Val-Acc1: 95.87 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:34:44 - INFO - Epoch: 21,	 Iter: 100,	 Loss: 0.01728,	 Val-Acc1: 96.09 (Best: 96.78),	 Val-Acc5: 99.91
+2020-11-20 00:34:57 - INFO - Epoch: 21,	 Iter: 200,	 Loss: 0.01877,	 Val-Acc1: 96.30 (Best: 96.78),	 Val-Acc5: 99.84
+2020-11-20 00:35:10 - INFO - Epoch: 21,	 Iter: 300,	 Loss: 0.02138,	 Val-Acc1: 96.47 (Best: 96.78),	 Val-Acc5: 99.87
+2020-11-20 00:35:25 - INFO - Epoch: 22,	 Iter: 0,	 Loss: 0.05378,	 Val-Acc1: 96.11 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:35:36 - INFO - Epoch: 22,	 Iter: 100,	 Loss: 0.02005,	 Val-Acc1: 96.39 (Best: 96.78),	 Val-Acc5: 99.88
+2020-11-20 00:35:47 - INFO - Epoch: 22,	 Iter: 200,	 Loss: 0.04486,	 Val-Acc1: 96.42 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:35:59 - INFO - Epoch: 22,	 Iter: 300,	 Loss: 0.02356,	 Val-Acc1: 96.48 (Best: 96.78),	 Val-Acc5: 99.85
+2020-11-20 00:36:11 - INFO - Epoch: 23,	 Iter: 0,	 Loss: 0.03871,	 Val-Acc1: 96.06 (Best: 96.78),	 Val-Acc5: 99.81
+2020-11-20 00:36:23 - INFO - Epoch: 23,	 Iter: 100,	 Loss: 0.02777,	 Val-Acc1: 96.58 (Best: 96.78),	 Val-Acc5: 99.87
+2020-11-20 00:36:33 - INFO - Epoch: 23,	 Iter: 200,	 Loss: 0.01022,	 Val-Acc1: 96.39 (Best: 96.78),	 Val-Acc5: 99.90
+2020-11-20 00:36:44 - INFO - Epoch: 23,	 Iter: 300,	 Loss: 0.07311,	 Val-Acc1: 95.37 (Best: 96.78),	 Val-Acc5: 99.86
+2020-11-20 00:36:57 - INFO - Epoch: 24,	 Iter: 0,	 Loss: 0.01053,	 Val-Acc1: 94.22 (Best: 96.78),	 Val-Acc5: 99.91
+2020-11-20 00:37:09 - INFO - Epoch: 24,	 Iter: 100,	 Loss: 0.04910,	 Val-Acc1: 96.68 (Best: 96.78),	 Val-Acc5: 99.88
+2020-11-20 00:37:21 - INFO - Epoch: 24,	 Iter: 200,	 Loss: 0.02758,	 Val-Acc1: 96.10 (Best: 96.78),	 Val-Acc5: 99.86
+2020-11-20 00:37:32 - INFO - Epoch: 24,	 Iter: 300,	 Loss: 0.03750,	 Val-Acc1: 96.02 (Best: 96.78),	 Val-Acc5: 99.89
+2020-11-20 00:37:44 - INFO - Epoch: 25,	 Iter: 0,	 Loss: 0.01439,	 Val-Acc1: 95.80 (Best: 96.78),	 Val-Acc5: 99.83
+2020-11-20 00:37:54 - INFO - Epoch: 25,	 Iter: 100,	 Loss: 0.01578,	 Val-Acc1: 96.43 (Best: 96.78),	 Val-Acc5: 99.90

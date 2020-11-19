@@ -1,0 +1,22 @@
+2020-11-20 01:23:17 - INFO - Saving to ./out/MNIST/LENET300/PMF/2020-11-20_01-23-17
+2020-11-20 01:23:25 - DEBUG - Run arguments: Namespace(architecture='LENET300', batch_size=128, beta_interval=100, beta_scale=1.2, data_path='./Datasets/MNIST', dataset='MNIST', dataset_size=50000, eval='', eval_set='TEST', gpu_id='0', hidden_dim=2, im_size=28, input_channels=1, input_dim=784, learning_rate=0.001, log_interval=100, loss_function='CROSSENTROPY', lr_decay='STEP', lr_interval=7000, lr_scale=0.2, method='PMF', momentum=0.95, nesterov=False, num_epochs=256, num_iters=100000, optimizer='ADAM', output_dim=10, pr_interval=100, pretrained_model='', quant_levels=2, resume='', rounding='ARGMAX', save_dir='./out/MNIST/LENET300/PMF/2020-11-20_01-23-17', save_name='./out/MNIST/LENET300/PMF/2020-11-20_01-23-17/best_model.pth.tar', val_set='TRAIN', weight_decay=0.0)
+2020-11-20 01:23:25 - INFO - SLeNet300(
+  (w1): SLinear(
+    (linear): Linear(in_features=784, out_features=600, bias=True)
+  )
+  (bn1): BatchNorm1d(300, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu1): ReLU(inplace=True)
+  (w2): SLinear(
+    (linear): Linear(in_features=300, out_features=200, bias=True)
+  )
+  (bn2): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu2): ReLU(inplace=True)
+  (w3): SLinear(
+    (linear): Linear(in_features=100, out_features=20, bias=True)
+  )
+)
+2020-11-20 01:23:25 - INFO - Number of parameters: 534020
+2020-11-20 01:23:25 - INFO - Training...
+2020-11-20 01:23:27 - INFO - Epoch: 0,	 Iter: 0,	 Loss: 2.40846,	 Val-Acc1: 19.85 (Best: 19.85),	 Val-Acc5: 61.07
+2020-11-20 01:23:27 - INFO - lr: 0.0002
+2020-11-20 01:23:34 - INFO - Epoch: 0,	 Iter: 100,	 Loss: 0.57148,	 Val-Acc1: 36.82 (Best: 36.82),	 Val-Acc5: 83.89
