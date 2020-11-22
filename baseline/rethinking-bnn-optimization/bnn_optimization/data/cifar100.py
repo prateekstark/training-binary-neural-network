@@ -3,7 +3,7 @@ from bnn_optimization.data.problem_definitions import ImageClassification
 import tensorflow as tf
 
 
-@registry.register_preprocess("cifar10")
+@registry.register_preprocess("cifar100")
 class resize_and_flip(ImageClassification):
     def inputs(self, data, training):
         image = data["image"]

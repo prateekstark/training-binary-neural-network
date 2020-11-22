@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        bnno=bnn_optimization.train:cli
+    
