@@ -26,8 +26,8 @@ setup(
     license="Apache 2.0",
     install_requires=install_requires(),
     extras_require={
-        "tensorflow": ["tensorflow==2.0.0"],
-        "tensorflow_gpu": ["tensorflow-gpu==2.0.0"],
+        "tensorflow": ["tensorflow"],
+        "tensorflow_gpu": ["tensorflow-gpu"],
     },
     entry_points="""
         [console_scripts]
