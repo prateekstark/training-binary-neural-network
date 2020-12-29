@@ -27,7 +27,7 @@ class auxmodel():
         for i, p in enumerate(model.parameters()):
             self.auxparams.append(p.data.clone())
             self.nparams += 1
-        print 'No of param-sets: {0}'.format(self.nparams)
+        print('No of param-sets: {0}'.format(self.nparams))
         return
 
     def store(self, model):
@@ -44,7 +44,7 @@ def update_auxgradient(model, amodel, projection='ARGMAX', beta=1.):
         g_u = (g_u * (d P(tu)/d (tu)), approximate using straight-through est.
     """
     if model.qlevels != 2 and projection == 'ARGMAX':
-        print 'Only binary labels are supported, exiting ...'
+        print('Only binary labels are supported, exiting ...')
         exit()
 
     for i, p in enumerate(model.parameters()):  
@@ -89,7 +89,7 @@ def update_auxgradient(model, amodel, projection='ARGMAX', beta=1.):
             g.squeeze_()
 
         else:
-            print 'Projection type "{0}" not recognized in update gradient, exiting ...'.format(projection)
+            print('Projection type "{0}" not recognized in update gradient, exiting ...'.format(projection))
             exit()
         
         p.grad.data = su.view_u_as_w(g, p.grad.data)   # convert N x d to original format
@@ -108,7 +108,7 @@ def doround(model, device, scheme='ARGMAX', data=None, target=None, optimizer=No
             w = w.float()
             p.data = su.view_u_as_w(w, p.data)   # convert N x d to original format
     else:
-        print 'Rounding type "{0}" not recognized, returning ...'.format(scheme)
+        print('Rounding type "{0}" not recognized, returning ...'.format(scheme))
         return
 
 def simplex(model, device, projection='SOFTMAX', beta=1):
@@ -126,7 +126,7 @@ def simplex(model, device, projection='SOFTMAX', beta=1):
         elif projection == 'EUCLIDEAN':   # condat based (Euclidean) simplex projection 
             w = su.sparsemax(w * beta, model.qlevels)
         else:
-            print 'Projection type "{0}" not implemented, returning ...'.format(projection)
+            print('Projection type "{0}" not implemented, returning ...'.format(projection))
             
         p.data = su.view_u_as_w(w, p.data)   # convert N x d to original format
         assert(su.isfeasible(model.qlevels, p.data))
@@ -213,14 +213,14 @@ def set_weights(device, params, w1, w2):
 
 def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader, logging, results):
     global BEST_ACC
-    print '\n#### Running {0} ####'.format(args.method)
+    print('\n#### Running {0} ####'.format(args.method))
 
     # quantized levels
     if args.quant_levels <= 1:
-        print 'Quantization levels "{0}" is invalid, exiting ...'.format(args.quant_levels)
+        print('Quantization levels "{0}" is invalid, exiting ...'.format(args.quant_levels))
         exit()
-    qs = args.quant_levels/2
-    qe = args.quant_levels/2+1
+    qs = args.quant_levels//2
+    qe = args.quant_levels//2 + 1
     Q_l = torch.arange(-qs, qe)    
     if args.quant_levels % 2 == 0:  # if even remove 0
         Q_l = torch.cat((Q_l[:qs], Q_l[qe:]))
@@ -248,7 +248,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
     elif args.architecture == 'RESNET152':
         model = models.SResNet152(Q_l, args.input_channels, args.im_size, args.output_dim).to(device)
     else:
-        print 'Architecture type "{0}" not recognized, exiting ...'.format(args.architecture)
+        print('Architecture type "{0}" not recognized, exiting ...'.format(args.architecture))
         exit()
 
     # optimizer
@@ -258,7 +258,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
         optimizer = optim.SGD(model.parameters(), lr=args.learning_rate, 
                 momentum=args.momentum, nesterov=args.nesterov, weight_decay=args.weight_decay)
     else:
-        print 'Optimizer type "{0}" not recognized, exiting ...'.format(args.optimizer)
+        print('Optimizer type "{0}" not recognized, exiting ...'.format(args.optimizer))
         exit()
     
     # lr-scheduler
@@ -272,7 +272,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
         scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=lri, gamma=args.lr_scale)
         args.lr_interval = 1    # lr_interval handled in scheduler!
     else:
-        print 'LR decay type "{0}" not recognized, exiting ...'.format(args.lr_decay)
+        print('LR decay type "{0}" not recognized, exiting ...'.format(args.lr_decay))
         exit()
 
     init_weights(model, Q_l, device, xavier=True)
@@ -288,7 +288,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
     if args.eval:
         logging.info('Loading checkpoint file "{0}" for evaluation'.format(args.eval))
         if not os.path.isfile(args.eval):
-            print 'Checkpoint file "{0}" for evaluation not recognized, exiting ...'.format(args.eval)
+            print('Checkpoint file "{0}" for evaluation not recognized, exiting ...'.format(args.eval))
             exit()
         checkpoint = torch.load(args.eval)
         model.load_state_dict(checkpoint['state_dict'])
@@ -299,7 +299,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
         checkpoint_file = args.resume
         logging.info('Loading checkpoint file "{0}" to resume'.format(args.resume))
         if not os.path.isfile(checkpoint_file):
-            print 'Checkpoint file "{0}" not recognized, exiting ...'.format(checkpoint_file)
+            print('Checkpoint file "{0}" not recognized, exiting ...'.format(checkpoint_file))
             exit()
         checkpoint = torch.load(checkpoint_file)
         start_epoch = checkpoint['epoch']
@@ -360,7 +360,7 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
     simplex(model, device, projection=args.projection, beta=beta)     # projection to the simplex
     # eval-set
     if args.eval_set != 'TRAIN' and args.eval_set != 'TEST':
-        print 'Evaluation set "{0}" not recognized ...'.format(args.eval_set)
+        print('Evaluation set "{0}" not recognized ...'.format(args.eval_set))
 
     logging.info('Evaluating fractional {0} on the {1} set...'.format(args.method, args.eval_set))
     st = timer()                

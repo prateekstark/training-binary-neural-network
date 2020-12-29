@@ -1,5 +1,5 @@
 #!/bin/bash
-dt='CIFAR10'
+dt='CIFAR100'
 sd=./out
 bs=100
 lr=0.001
@@ -15,6 +15,7 @@ wd=0.0001
 
 
 ## PMF
+
 mt='PMF'
 lr=0.01
 lrs=0.2
@@ -26,12 +27,11 @@ echo python dnets.py --save-dir $sd --learning-rate $lr --architecture $ar --los
 python dnets.py --save-dir $sd --learning-rate $lr --architecture $ar --loss-function $lf --method $mt --optimizer $op --dataset $dt --batch-size $bs --lr-scale $lrs --lr-interval $lri --num-iters $iters --weight-decay $wd --beta-scale $bts --quant-levels $ql
 
 
-
 # Accoring to BiNN paper:
-# Learning rate start: 10−2 
-# Learning rate decay type: Step
-# LR decay interval (iterations): 30k 
-# LR-scale: 0.2 
+# lr: 10−2
+# Learning rate decay: Step
+# LR decay interval (iterations):30k
+# lrs: 0.2
 # Optimizer: Adam
-# Weight decay: 10−4
+# wd: 10−4
 # bts: 1.05
