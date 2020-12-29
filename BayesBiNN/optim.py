@@ -8,8 +8,8 @@ class BiNNOptimizer(Optimizer):
     def __init__(
         self,
         model,
-        N=5,
         train_set_size,
+        N=5,
         learning_rate=1e-9,
         temperature=1e-10,
         initialize_lambda=10,
