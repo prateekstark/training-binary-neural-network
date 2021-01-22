@@ -1,7 +1,7 @@
 #!/bin/bash
 dt='MNIST'
 sd=./out
-bs=128
+bs=100
 lr=0.001
 ar='LENET300'
 lf='CROSSENTROPY'
