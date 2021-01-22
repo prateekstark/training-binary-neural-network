@@ -1,16 +1,16 @@
 {
-    "dataset": "mnist",
-    "input_shape": 784,
+    "dataset": "cifar10",
+    "input_shape": 3,
     "output_shape": 10,
-    "data_augmentation": false,
+    "data_augmentation": true,
     "epochs": 500,
     "criterion": "crossentropy",
     "validation_split": 0.1,
     "lr_scheduler": "cosine",
-    "batch_size": 100,
+    "batch_size": 50,
     "lr_init": 0.01,
     "lr_final": 1e-16,
-    "drop_prob": 0.2,
     "batch_affine": false,
-    "model_architecture": "BinaryConnectMLP"
+    "model_architecture": "VGGBinaryConnect",
+    "momentum": 0.2
 }

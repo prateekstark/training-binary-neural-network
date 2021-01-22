@@ -1,12 +1,11 @@
 import os
+import sys
 import json
 import torch
 import logging
 from Trainer import STETrainer
 from dataloader import Dataset
 from torchsummary import summary
-from STE.MLP import BinaryConnect
-import wandb
 
 """
 Pointers: 
@@ -24,7 +23,23 @@ if __name__ == "__main__":
         filemode="w",
     )
 
-    wandb.init(project="bayes-binn")
+    wandb_support = False
+    print(sys.argv)
+    if len(sys.argv) == 2:
+        config_filename = sys.argv[1]
+    elif len(sys.argv) == 3:
+        config_filename = sys.argv[1]
+        if sys.argv[2] == "wandb_on":
+            import wandb
+
+            wandb_support = True
+        else:
+            raise Exception("Wrong keyword for wandb support!")
+    else:
+        raise Exception("Wrong Arguments")
+
+    if wandb_support:
+        wandb.init(project="bayes-binn")
 
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
@@ -38,7 +53,7 @@ if __name__ == "__main__":
 
     logger.info("Code running on {}".format(device))
 
-    with open("configs/mnist_config_ste.json") as f:
+    with open(config_filename) as f:
         config = json.load(f)
     logger.info("config: {}".format(config))
 
@@ -52,21 +67,41 @@ if __name__ == "__main__":
         batch_size=config["batch_size"]
     )
 
-    net = BinaryConnect(
-        config["input_shape"],
-        config["output_shape"],
-        drop_prob=config["drop_prob"],
-        batch_affine=config["batch_affine"],
-    ).to(device)
+    if config["model_architecture"] == "BinaryConnect":
+        from STE.models import BinaryConnect
+
+        net = BinaryConnect(
+            config["input_shape"],
+            config["output_shape"],
+            drop_prob=config["drop_prob"],
+            batch_affine=config["batch_affine"],
+        ).to(device)
+        summary(
+            net,
+            input_size=(config["batch_size"], config["input_shape"]),
+            device=("cuda" if "cuda" in device else "cpu"),
+        )
+    elif config["model_architecture"] == "VGGBinaryConnect":
+        from STE.models import VGGBinaryConnect
+
+        net = VGGBinaryConnect(
+            config["input_shape"],
+            config["output_shape"],
+            momentum=config["momentum"],
+            batch_affine=config["batch_affine"],
+        ).to(device)
+        print((config["batch_size"], config["input_shape"], 32, 32))
+        print(net)
+        summary(
+            net,
+            input_size=(config["input_shape"], 32, 32),
+            device=("cuda" if "cuda" in device else "cpu"),
+        )
+
     logger.info(net)
 
-    wandb.watch(net)
-
-    summary(
-        net,
-        input_size=(config["batch_size"], config["input_shape"]),
-        device=("cuda" if "cuda" in device else "cpu"),
-    )
+    if wandb_support:
+        wandb.watch(net)
 
     logger.info("Starting training with STE optimizer...")
 
@@ -86,5 +121,5 @@ if __name__ == "__main__":
         device=device,
         valloader=valloader,
         testloader=testloader,
-        wandb_logger=True,
+        wandb_logger=wandb_support,
     )
