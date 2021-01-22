@@ -1,14 +1,21 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 from torch.nn.utils import vector_to_parameters
 from BayesBiNN.optim import BiNNOptimizer
 from tqdm import tqdm
+import wandb
 
 
 class BayesianTrainer(object):
     def __init__(
-        self, model, criterion, lr_scheduler, logger, train_set_size, log_params=True
+        self,
+        model,
+        criterion,
+        lr_scheduler,
+        logger,
+        train_set_size,
+        log_params=True,
+        learning_rate=1e-9,
     ):
         self.model = model
         if criterion == "crossentropy":
@@ -16,12 +23,14 @@ class BayesianTrainer(object):
         else:
             raise ValueError("No such criterion is present!")
 
-        self.optim = BiNNOptimizer(self.model, train_set_size=train_set_size)
+        self.optim = BiNNOptimizer(
+            self.model, train_set_size=train_set_size, learning_rate=learning_rate
+        )
         self.logger = logger
 
         if lr_scheduler == "cosine":
             self.lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-                self.optim, T_max=500, eta_min=1e-16, last_epoch=-1
+                self.optim, T_max=500, eta_min=1e-16, last_epoch=-1, verbose=True
             )
         else:
             raise ValueError("Wrong Scheduler, please check")
@@ -97,7 +106,7 @@ class BayesianTrainer(object):
             predictions = []
             for inputs, labels in tqdm(trainloader):
                 loss, correct = self.train_step(inputs, labels, device=device)
-                predictions.append(correct)
+                predictions.append(loss)
             self.logger.info(
                 "train correct: {}".format(sum(predictions) / len(predictions))
             )
@@ -114,8 +123,16 @@ class BayesianTrainer(object):
 
 class STETrainer(object):
     def __init__(
-        self, model, criterion, lr_scheduler, logger, lr_init=0.001, log_params=True
+        self,
+        model,
+        criterion,
+        lr_scheduler,
+        logger,
+        lr_init=0.001,
+        lr_final=1e-16,
+        log_params=True,
     ):
+
         self.model = model
         if criterion == "crossentropy":
             self.criterion = nn.CrossEntropyLoss()
@@ -127,7 +144,7 @@ class STETrainer(object):
 
         if lr_scheduler == "cosine":
             self.lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-                self.optim, T_max=500, eta_min=1e-16, last_epoch=-1
+                self.optim, T_max=500, eta_min=lr_final, last_epoch=-1
             )
         else:
             raise ValueError("Wrong Scheduler, please check")
@@ -146,16 +163,23 @@ class STETrainer(object):
         correct = pred.eq(labels.to(device).view_as(pred)).sum().item()
         return loss, correct
 
-    def evaluate(self, x_loader, device="cpu", print_info="Evaluation correct"):
+    def evaluate(
+        self,
+        x_loader,
+        device="cpu",
+        print_info="Evaluation correct",
+        wandb_logger=False,
+    ):
         self.model.eval()
         predictions = []
         with torch.no_grad():
             for inputs, labels in x_loader:
                 loss, correct = self.evaluate_step(inputs, labels, device=device)
                 predictions.append(correct)
-            self.logger.info(
-                "{}: {}".format(print_info, sum(predictions) / len(predictions))
-            )
+        accuracy = sum(predictions) / len(predictions)
+        self.logger.info("{}: {}".format(print_info, accuracy))
+        if wandb_logger:
+            wandb.log({print_info: accuracy})
 
     def train_step(self, inputs, labels, device="cpu"):
         self.optim.zero_grad()
@@ -178,21 +202,47 @@ class STETrainer(object):
 
         return loss, correct
 
-    def train(self, epochs, trainloader, device="cpu", valloader=None, testloader=None):
+    def train(
+        self,
+        epochs,
+        trainloader,
+        device="cpu",
+        valloader=None,
+        testloader=None,
+        wandb_logger=False,
+    ):
         for epoch in range(epochs):
             self.model.train(True)
             self.logger.info("starting epoch {}".format(epoch))
             predictions = []
+            losses = []
             for inputs, labels in tqdm(trainloader):
                 loss, correct = self.train_step(inputs, labels, device=device)
                 predictions.append(correct)
-            self.logger.info(
-                "train correct: {}".format(sum(predictions) / len(predictions))
-            )
+                losses.append(loss)
+            training_accuracy = sum(predictions) / len(predictions)
+            average_loss = sum(losses) / len(losses)
+
+            self.logger.info("train correct: {}".format(training_accuracy))
+
+            if wandb_logger:
+                wandb.log(
+                    {"Training Accuracy": training_accuracy, "Loss": average_loss}
+                )
+
             self.lr_scheduler.step()
+
             if valloader:
                 self.evaluate(
-                    valloader, device=device, print_info="Validation accuracy"
+                    valloader,
+                    device=device,
+                    print_info="Validation accuracy",
+                    wandb_logger=wandb_logger,
                 )
             if testloader:
-                self.evaluate(testloader, device=device, print_info="Test accuracy")
+                self.evaluate(
+                    testloader,
+                    device=device,
+                    print_info="Test accuracy",
+                    wandb_logger=wandb_logger,
+                )

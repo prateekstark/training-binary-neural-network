@@ -38,21 +38,21 @@ class BiNNOptimizer(Optimizer):
         self.train_modules = []
         self.get_train_modules(model)
 
-        for group in self.param_groups:
-            group["lr"] = learning_rate
-            group["beta"] = beta
-            p = parameters_to_vector(group["params"])
+        self.param_groups[0]["lr"] = learning_rate
+        self.param_groups[0]["beta"] = beta
+        p = parameters_to_vector(self.param_groups[0]["params"])
 
         # Initialization lamda  between -10 and 10
         # Convex combination
         theta1 = torch.randint_like(p, 2)
-        self.state["lambda"] = (theta1 * initialize_lambda) + ((1 - theta1) * initialize_lambda)
+        self.state["lambda"] = (theta1 * initialize_lambda) - (
+            (1 - theta1) * initialize_lambda
+        )
         self.state["mu"] = torch.tanh(self.state["lambda"])
         self.state["momentum"] = torch.zeros_like(p)
         self.state["lambda_prior"] = torch.zeros_like(p)
         self.state["step"] = 0
         self.state["temperature"] = temperature
-
 
     def get_train_modules(self, model):
         """
@@ -79,10 +79,10 @@ class BiNNOptimizer(Optimizer):
         N = self.defaults["N"]
         beta = self.defaults["beta"]
         M = self.defaults["train_set_size"]
-        
+
         mu = self.state["mu"]
         lamda = self.state["lambda"]
-        
+
         temperature = self.state["temperature"]
         grad = torch.zeros_like(lamda)
 
@@ -102,7 +102,7 @@ class BiNNOptimizer(Optimizer):
             for num in range(N):
                 epsilon = torch.rand_like(mu)
                 delta = torch.log(epsilon / (1 - epsilon)) / 2
-                relaxed_w = torch.tanh((lamda + delta) / temperature)
+                relaxed_w = torch.tanh((self.state["lambda"] + delta) / temperature)
 
                 vector_to_parameters(relaxed_w, parameters)
                 loss, pred = closure()
@@ -110,17 +110,28 @@ class BiNNOptimizer(Optimizer):
                 loss_list.append(loss.detach())
 
                 g = parameters_to_vector(torch.autograd.grad(loss, parameters)).detach()
-                s = (1 / temperature) * ((1 - (relaxed_w * relaxed_w) + 1e-10) / (1 - (mu * mu) + 1e-10))
-                grad.add_(g * s)
+                s = (
+                    (1 - relaxed_w * relaxed_w + 1e-10)
+                    / temperature
+                    / (1 - self.state["mu"] * self.state["mu"] + 1e-10)
+                )
+                grad.add_(s * g)
 
             grad.mul(M / N)
+            # print(grad)
+            print(torch.norm(grad), grad.max())
 
-        self.state["momentum"] = beta * self.state["momentum"] + (1 - beta) * (grad + self.state["lambda"])  ## P
+        self.state["momentum"] = beta * self.state["momentum"] + (1 - beta) * (
+            grad + self.state["lambda"]
+        )  ## P
 
         loss = torch.mean(torch.stack(loss_list))
 
         bias_correction1 = 1 - beta ** self.state["step"]
 
-        self.state["lambda"] = (self.state["lambda"] - lr * self.state["momentum"]) / bias_correction1
+        self.state["lambda"] = (
+            self.state["lambda"]
+            - self.param_groups[0]["lr"] * self.state["momentum"] / bias_correction1
+        )
         self.state["mu"] = torch.tanh(lamda)
         return loss, pred_list

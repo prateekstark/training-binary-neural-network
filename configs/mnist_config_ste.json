@@ -5,8 +5,11 @@
     "data_augmentation": false,
     "epochs": 100,
     "criterion": "crossentropy",
-    "optimizer": "bayesbinn",
     "validation_split": 0.1,
     "lr_scheduler": "cosine",
-    "batch_size": 100
+    "batch_size": 100,
+    "lr_init": 0.01,
+    "lr_final": 1e-16,
+    "drop_prob": 0.2,
+    "batch_affine": false
 }

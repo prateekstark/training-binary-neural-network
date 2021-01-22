@@ -51,6 +51,7 @@ if __name__ == "__main__":
         dataset.get_trainsize(),
         log_params=True,
     )
+
     trainer.train(
         config["epochs"],
         trainloader,
