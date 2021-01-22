@@ -13,7 +13,7 @@ class BiNNOptimizer(Optimizer):
         learning_rate=1e-9,
         temperature=1e-10,
         initialize_lambda=10,
-        beta=0.0,
+        beta=0.99,
     ):
         """
         For torch's Optimizer class
@@ -83,7 +83,7 @@ class BiNNOptimizer(Optimizer):
         mu = self.state["mu"]
         lamda = self.state["lambda"]
 
-        temperature = self.state["temperature"]
+        temperature = self.defaults["temperature"]
         grad = torch.zeros_like(lamda)
 
         loss_list = []
@@ -116,7 +116,7 @@ class BiNNOptimizer(Optimizer):
                 )
                 grad.add_(s * g)
 
-            grad.mul(M / N)
+            grad.mul_(M / N)
 
         self.state["momentum"] = beta * self.state["momentum"] + (1 - beta) * (
             grad + self.state["lambda"]

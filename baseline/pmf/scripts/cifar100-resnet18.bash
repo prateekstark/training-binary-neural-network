@@ -1,7 +1,7 @@
 #!/bin/bash
 dt='CIFAR100'
 sd=./out
-bs=100
+bs=50
 lr=0.001
 ar='RESNET18'
 lf='CROSSENTROPY'
