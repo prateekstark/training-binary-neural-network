@@ -1,8 +1,8 @@
 #!/bin/bash
 dt='CIFAR10'
 sd=./out
-bs=100
-lr=0.001
+bs=50
+lr=0.01
 ar='RESNET18'
 lf='CROSSENTROPY'
 op='ADAM'

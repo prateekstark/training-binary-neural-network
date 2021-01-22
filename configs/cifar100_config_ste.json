@@ -1,0 +1,16 @@
+{
+    "dataset": "cifar10",
+    "input_shape": 3,
+    "output_shape": 100,
+    "data_augmentation": true,
+    "epochs": 500,
+    "criterion": "crossentropy",
+    "validation_split": 0.1,
+    "lr_scheduler": "cosine",
+    "batch_size": 50,
+    "lr_init": 0.01,
+    "lr_final": 1e-16,
+    "batch_affine": false,
+    "model_architecture": "VGGBinaryConnect",
+    "momentum": 0.2
+}
