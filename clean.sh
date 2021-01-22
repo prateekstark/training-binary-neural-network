@@ -1,1 +1,2 @@
-rm -rf BayesBiNN/__pycache__ __pycache__ BayesBiNN/models/__pycache__ __pycache__ *.log STE/__pycache__ wandb
+rm -rf *.log wandb
+find . -type d -name __pycache__ -exec rm -rf {} \;

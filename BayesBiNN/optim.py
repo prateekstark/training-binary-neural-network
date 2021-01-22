@@ -93,7 +93,6 @@ class BiNNOptimizer(Optimizer):
             vector_to_parameters(relaxed_w, parameters)
             loss, pred = closure()
             pred_list.append(pred)
-            print(loss)
             loss_list.append(loss.detach())
             g_temp = torch.autograd.grad(loss, parameters)
             g = parameters_to_vector(g_temp).detach()
@@ -118,8 +117,6 @@ class BiNNOptimizer(Optimizer):
                 grad.add_(s * g)
 
             grad.mul(M / N)
-            # print(grad)
-            print(torch.norm(grad), grad.max())
 
         self.state["momentum"] = beta * self.state["momentum"] + (1 - beta) * (
             grad + self.state["lambda"]
