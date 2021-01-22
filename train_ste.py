@@ -24,7 +24,6 @@ if __name__ == "__main__":
     )
 
     wandb_support = False
-    print(sys.argv)
     if len(sys.argv) == 2:
         config_filename = sys.argv[1]
     elif len(sys.argv) == 3:
@@ -44,15 +43,9 @@ if __name__ == "__main__":
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
 
-    if torch.cuda.is_available():
-        device = "cuda:0"
-    else:
-        device = "cpu"
-
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
     logger.info("Code running on {}".format(device))
-
     with open(config_filename) as f:
         config = json.load(f)
     logger.info("config: {}".format(config))
@@ -90,13 +83,14 @@ if __name__ == "__main__":
             momentum=config["momentum"],
             batch_affine=config["batch_affine"],
         ).to(device)
-        print((config["batch_size"], config["input_shape"], 32, 32))
-        print(net)
+
         summary(
             net,
             input_size=(config["input_shape"], 32, 32),
             device=("cuda" if "cuda" in device else "cpu"),
         )
+    else:
+        raise Exception("Model Architecture NOT supported!")
 
     logger.info(net)
 

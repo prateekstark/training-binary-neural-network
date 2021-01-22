@@ -3,7 +3,6 @@ import torch.nn as nn
 from torch.nn.utils import vector_to_parameters
 from BayesBiNN.optim import BiNNOptimizer
 from tqdm import tqdm
-import wandb
 
 
 class BayesianTrainer(object):
@@ -14,8 +13,12 @@ class BayesianTrainer(object):
         lr_scheduler,
         logger,
         train_set_size,
+        mc_steps=1,
+        lr_init=1e-4,
+        lr_final=1e-16,
         log_params=True,
-        learning_rate=1e-9,
+        temperature=1e-10,
+        initialize_lambda=10,
     ):
         self.model = model
         if criterion == "crossentropy":
@@ -24,13 +27,18 @@ class BayesianTrainer(object):
             raise ValueError("No such criterion is present!")
 
         self.optim = BiNNOptimizer(
-            self.model, train_set_size=train_set_size, learning_rate=learning_rate
+            self.model,
+            train_set_size=train_set_size,
+            learning_rate=lr_init,
+            N=mc_steps,
+            temperature=temperature,
+            initialize_lambda=initialize_lambda,
         )
         self.logger = logger
 
         if lr_scheduler == "cosine":
             self.lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-                self.optim, T_max=500, eta_min=1e-16, last_epoch=-1, verbose=True
+                self.optim, T_max=500, eta_min=lr_final, last_epoch=-1, verbose=True
             )
         else:
             raise ValueError("Wrong Scheduler, please check")
@@ -72,7 +80,17 @@ class BayesianTrainer(object):
         correct = pred.eq(labels.to(device).view_as(pred)).sum().item()
         return loss, correct
 
-    def evaluate(self, x_loader, M=0, device="cpu", print_info="Evaluation correct"):
+    def evaluate(
+        self,
+        x_loader,
+        M=0,
+        device="cpu",
+        print_info="Evaluation correct",
+        wandb_logger=False,
+    ):
+        if wandb_logger:
+            import wandb
+
         assert M >= 0
         self.model.eval()
         with torch.no_grad():
@@ -80,9 +98,10 @@ class BayesianTrainer(object):
             for inputs, labels in x_loader:
                 loss, correct = self.evaluate_step(inputs, labels, device=device, M=M)
                 predictions.append(correct)
-            self.logger.info(
-                "{}: {}".format(print_info, sum(predictions) / len(predictions))
-            )
+            accuracy = sum(predictions) / len(predictions)
+            self.logger.info("{}: {}".format(print_info, accuracy))
+            if wandb_logger:
+                wandb.log({print_info: accuracy})
 
     def train_step(self, inputs, labels, device="cpu"):
         def closure():
@@ -98,26 +117,55 @@ class BayesianTrainer(object):
         return loss, correct
 
     def train(
-        self, epochs, trainloader, device="cpu", valloader=None, testloader=None, M=0
+        self,
+        epochs,
+        trainloader,
+        device="cpu",
+        valloader=None,
+        testloader=None,
+        M=0,
+        wandb_logger=False,
     ):
+        if wandb_logger:
+            import wandb
+
         for epoch in range(epochs):
             self.model.train(True)
             self.logger.info("starting epoch {}".format(epoch))
+
             predictions = []
+            losses = []
             for inputs, labels in tqdm(trainloader):
                 loss, correct = self.train_step(inputs, labels, device=device)
-                predictions.append(loss)
-            self.logger.info(
-                "train correct: {}".format(sum(predictions) / len(predictions))
-            )
+                predictions.append(correct)
+                losses.append(loss)
+            training_accuracy = sum(predictions) / len(predictions)
+            average_loss = sum(losses) / len(losses)
+
+            self.logger.info("train correct: {}".format(training_accuracy))
+
+            if wandb_logger:
+                wandb.log(
+                    {"Training Accuracy": training_accuracy, "Loss": average_loss}
+                )
+
             self.lr_scheduler.step()
+
             if valloader:
                 self.evaluate(
-                    valloader, device=device, print_info="Validation accuracy", M=M
+                    valloader,
+                    device=device,
+                    print_info="Validation Accuracy",
+                    M=M,
+                    wandb_logger=wandb_logger,
                 )
             if testloader:
                 self.evaluate(
-                    testloader, device=device, print_info="Test accuracy", M=M
+                    testloader,
+                    device=device,
+                    print_info="Test Accuracy",
+                    M=M,
+                    wandb_logger=wandb_logger,
                 )
 
 
@@ -144,7 +192,7 @@ class STETrainer(object):
 
         if lr_scheduler == "cosine":
             self.lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-                self.optim, T_max=500, eta_min=lr_final, last_epoch=-1
+                self.optim, T_max=500, eta_min=lr_final, last_epoch=-1, verbose=True
             )
         else:
             raise ValueError("Wrong Scheduler, please check")
@@ -170,6 +218,8 @@ class STETrainer(object):
         print_info="Evaluation correct",
         wandb_logger=False,
     ):
+        if wandb_logger:
+            import wandb
         self.model.eval()
         predictions = []
         with torch.no_grad():
@@ -211,6 +261,8 @@ class STETrainer(object):
         testloader=None,
         wandb_logger=False,
     ):
+        if wandb_logger:
+            import wandb
         for epoch in range(epochs):
             self.model.train(True)
             self.logger.info("starting epoch {}".format(epoch))
@@ -236,13 +288,13 @@ class STETrainer(object):
                 self.evaluate(
                     valloader,
                     device=device,
-                    print_info="Validation accuracy",
+                    print_info="Validation Accuracy",
                     wandb_logger=wandb_logger,
                 )
             if testloader:
                 self.evaluate(
                     testloader,
                     device=device,
-                    print_info="Test accuracy",
+                    print_info="Test Accuracy",
                     wandb_logger=wandb_logger,
                 )
