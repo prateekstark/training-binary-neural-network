@@ -1,5 +1,5 @@
 {
-    "dataset": "cifar10",
+    "dataset": "cifar100",
     "input_shape": 3,
     "output_shape": 100,
     "data_augmentation": true,

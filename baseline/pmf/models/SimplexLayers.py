@@ -10,7 +10,7 @@ class SLinear(nn.Module):
     :math: `y = (xA^T + b)q`
     """
 
-    def __init__(self, in_features, out_features, Q_l, bias=True):
+    def __init__(self, in_features, out_features, Q_l={-1, 1}, bias=True):
         super(SLinear, self).__init__()
         self.Q_l = Q_l
         self.qlevels = Q_l.size(0)
@@ -38,7 +38,7 @@ class SConv2d(nn.Module):
         in_channels,
         out_channels,
         kernel_size,
-        Q_l,
+        Q_l=2,
         stride=1,
         padding=0,
         dilation=1,

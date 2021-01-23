@@ -1,6 +1,6 @@
 """ quantized classifier with given model -- main script
 """
-
+import random
 import argparse
 from datetime import datetime
 import logging
@@ -27,7 +27,7 @@ HIDDEN_DIM = 2
 OUTPUT_DIM = 2
 DATASET_SIZE = 10
 NUM_ITERS = 1000
-NUM_EPOCHS = 0
+NUM_EPOCHS = 500
 BATCH_SIZE = 100
 LEARNING_RATE = 0.0001
 SAVE_DIR = "./out"
