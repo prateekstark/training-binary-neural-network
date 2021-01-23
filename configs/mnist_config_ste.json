@@ -12,5 +12,8 @@
     "lr_final": 1e-16,
     "drop_prob": 0.2,
     "batch_affine": false,
-    "model_architecture": "BinaryConnectMLP"
+    "model_architecture": "BinaryConnect",
+    "momentum": 0.15,
+    "grad_clip_value": 1,
+    "weight_clip_value": 1
 }

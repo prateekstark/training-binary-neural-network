@@ -12,7 +12,7 @@
     "lr_final": 1e-16,
     "drop_prob": 0.2,
     "batch_affine": false,
-    "model_architecture": "BinaryConnectMLP",
+    "model_architecture": "VGGBinaryConnect",
     "mc_steps": 1,
     "temperature": 1e-10,
     "evaluate_steps": 0

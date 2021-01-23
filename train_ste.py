@@ -68,6 +68,7 @@ if __name__ == "__main__":
             config["output_shape"],
             drop_prob=config["drop_prob"],
             batch_affine=config["batch_affine"],
+            momentum=config["momentum"],
         ).to(device)
         summary(
             net,
@@ -116,4 +117,6 @@ if __name__ == "__main__":
         valloader=valloader,
         testloader=testloader,
         wandb_logger=wandb_support,
+        grad_clip_value=config["grad_clip_value"],
+        weight_clip_value=config["weight_clip_value"],
     )
