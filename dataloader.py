@@ -117,6 +117,7 @@ class Dataset(object):
         self.val_data = None
 
         if validation_split > 0:
+            assert(validation_split < 1)
             self.val_data = dataset(
                 datapath, train=True, download=True, transform=test_transform
             )

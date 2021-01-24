@@ -13,7 +13,7 @@ class BinaryConnect(nn.Module):
         momentum=0.15,
         eps=1e-4,
         drop_prob=0,
-        batch_affine=True,
+        batch_affine=False,
     ):
         super(BinaryConnect, self).__init__()
         self.in_features = in_features

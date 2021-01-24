@@ -73,7 +73,7 @@ if __name__ == "__main__":
         )
 
     elif config["model_architecture"] == "VGGBinaryConnect":
-        from STE.models.CNN import VGGBinaryConnect
+        from BayesBiNN.models.CNN import VGGBinaryConnect
 
         net = VGGBinaryConnect(
             config["input_shape"],
