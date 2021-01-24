@@ -15,5 +15,6 @@
     "model_architecture": "VGGBinaryConnect",
     "mc_steps": 1,
     "temperature": 1e-10,
-    "evaluate_steps": 0
+    "evaluate_steps": 0,
+    "momentum": 0.2
 }
