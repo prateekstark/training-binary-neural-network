@@ -237,6 +237,7 @@ class STETrainer(object):
         self.optim.zero_grad()
         output = self.model(inputs.to(device))
         loss = self.criterion(output, labels.to(device))
+
         loss.backward()
         clip_grad_value_(self.model.parameters(), grad_clip_value)
 

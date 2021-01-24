@@ -1,0 +1,19 @@
+{
+    "dataset": "mnist",
+    "input_shape": 784,
+    "output_shape": 10,
+    "data_augmentation": false,
+    "epochs": 500,
+    "criterion": "crossentropy",
+    "validation_split": 0.1,
+    "lr_scheduler": "cosine",
+    "batch_size": 100,
+    "lr_init": 0.01,
+    "lr_final": 1e-16,
+    "drop_prob": 0.2,
+    "batch_affine": false,
+    "model_architecture": "BinaryConnect",
+    "momentum": 0.15,
+    "grad_clip_value": 1,
+    "weight_clip_value": 1
+}
