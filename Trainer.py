@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from torch.nn.utils import vector_to_parameters
+from torch.nn.utils import vector_to_parameters, clip_grad_value_
 from BayesBiNN.optim import BiNNOptimizer
 from tqdm import tqdm
 
@@ -231,11 +231,15 @@ class STETrainer(object):
         if wandb_logger:
             wandb.log({print_info: accuracy})
 
-    def train_step(self, inputs, labels, device="cpu"):
+    def train_step(
+        self, inputs, labels, device="cpu", grad_clip_value=1, weight_clip_value=1
+    ):
         self.optim.zero_grad()
         output = self.model(inputs.to(device))
         loss = self.criterion(output, labels.to(device))
+
         loss.backward()
+        clip_grad_value_(self.model.parameters(), grad_clip_value)
 
         for p in self.model.parameters():
             if hasattr(p, "latent_"):
@@ -244,6 +248,7 @@ class STETrainer(object):
         self.optim.step()
 
         for p in self.model.parameters():
+            p.data.clamp_(-weight_clip_value, weight_clip_value)
             if hasattr(p, "latent_"):
                 p.latent_.copy_(p.data)
 
@@ -260,6 +265,8 @@ class STETrainer(object):
         valloader=None,
         testloader=None,
         wandb_logger=False,
+        grad_clip_value=1,
+        weight_clip_value=1,
     ):
         if wandb_logger:
             import wandb
@@ -269,7 +276,13 @@ class STETrainer(object):
             predictions = []
             losses = []
             for inputs, labels in tqdm(trainloader):
-                loss, correct = self.train_step(inputs, labels, device=device)
+                loss, correct = self.train_step(
+                    inputs,
+                    labels,
+                    device=device,
+                    grad_clip_value=grad_clip_value,
+                    weight_clip_value=weight_clip_value,
+                )
                 predictions.append(correct)
                 losses.append(loss)
             training_accuracy = sum(predictions) / len(predictions)

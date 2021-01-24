@@ -10,6 +10,7 @@ bnn_optimization/data/cifar100.py
 bnn_optimization/data/imagenet.py
 bnn_optimization/data/mnist.py
 bnn_optimization/data/problem_definitions.py
+bnn_optimization/models/BinaryConnect.py
 bnn_optimization/models/__init__.py
 bnn_optimization/models/binary_alexnet.py
 bnn_optimization/models/binarynet.py

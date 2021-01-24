@@ -3,22 +3,22 @@ import sys
 import json
 import torch
 import logging
-from Trainer import STETrainer
+from Trainer import BaselineTrainer
 from dataloader import Dataset
 from torchsummary import summary
 
 """
 Pointers: 
-	1) We need to make sure that while we use batch_norm layer, we must use a batch size of more than 1.
+    1) We need to make sure that while we use batch_norm layer, we must use a batch size of more than 1.
 """
 
 if __name__ == "__main__":
     id_ = 1
-    while "logfile_ste_{}.log".format(id_) in os.listdir():
+    while "logfile_full_prec_mnist_{}.log".format(id_) in os.listdir():
         id_ += 1
 
     logging.basicConfig(
-        filename="logfile_ste_{}.log".format(id_),
+        filename="logfile_full_prec_mnist_{}.log".format(id_),
         format="%(levelname)s %(asctime)s %(message)s",
         filemode="w",
     )
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     )
 
     if config["model_architecture"] == "BinaryConnect":
-        from STE.models import BinaryConnect
+        from models.MLP import BinaryConnect
 
         net = BinaryConnect(
             config["input_shape"],
@@ -76,7 +76,7 @@ if __name__ == "__main__":
             device=("cuda" if "cuda" in device else "cpu"),
         )
     elif config["model_architecture"] == "VGGBinaryConnect":
-        from STE.models import VGGBinaryConnect
+        from models.CNN import VGGBinaryConnect
 
         net = VGGBinaryConnect(
             config["input_shape"],
@@ -98,9 +98,9 @@ if __name__ == "__main__":
     if wandb_support:
         wandb.watch(net)
 
-    logger.info("Starting training with STE optimizer...")
+    logger.info("Starting training with Full-Precision optimizer...")
 
-    trainer = STETrainer(
+    trainer = BaselineTrainer(
         net,
         config["criterion"],
         config["lr_scheduler"],

@@ -17,10 +17,10 @@ class BinaryTanh(nn.Module):
 
 class BinaryLinear(nn.Linear):
     def forward(self, x):
+        """
+        Initialization
+        """
         if not hasattr(self.weight, "latent_"):
-            """
-            Initialization
-            """
             self.weight.latent_ = self.weight.data
         self.weight.data = binarize(self.weight.latent_)
         if not self.bias is None:

@@ -229,14 +229,19 @@ def setup_and_run(args, criterion, device, train_loader, test_loader, val_loader
     # architecture
     if args.architecture == 'MLP':
         model = models.SMLP(args.input_dim, args.hidden_dim, args.output_dim, Q_l).to(device)
+    elif args.architecture == 'BinaryConnect':
+        model = models.BinaryConnect(args.input_dim, args.output_dim, Q_l).to(device)
     elif args.architecture == 'LENET300':
         model = models.SLeNet300(args.input_dim, args.output_dim, Q_l).to(device)
     elif args.architecture == 'LENET5':
         model = models.SLeNet5(args.input_channels, args.im_size, args.output_dim, Q_l).to(device)
     elif 'VGG' in args.architecture:
         assert(args.architecture == 'VGG11' or args.architecture == 'VGG13' or args.architecture == 'VGG16' 
-                or args.architecture == 'VGG19')
-        model = models.SVGG(args.architecture, Q_l, args.input_channels, args.im_size, args.output_dim).to(device)
+                or args.architecture == 'VGG19' or args.architecture == 'VGG16BinaryConnect')
+        if(args.architecture == 'VGG16BinaryConnect'):
+            model = models.VGG16BinaryConnect(args.input_channels, args.output_dim, Q_l).to(device)
+        else:
+            model = models.SVGG(args.architecture, Q_l, args.input_channels, args.im_size, args.output_dim).to(device)
     elif args.architecture == 'RESNET18':
         model = models.SResNet18(Q_l, args.input_channels, args.im_size, args.output_dim).to(device)
     elif args.architecture == 'RESNET34':

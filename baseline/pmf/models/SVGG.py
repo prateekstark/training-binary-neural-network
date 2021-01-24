@@ -2,10 +2,10 @@
 """
 import torch
 import torch.nn as nn
-
+import torch.nn.functional as F
 from collections import OrderedDict
-
 import SimplexLayers as sl
+
 
 cfg = {
     "VGG11": [64, "M", 128, "M", 256, 256, "M", 512, 512, "M", 512, 512, "M"],
@@ -122,5 +122,80 @@ def test():
     y = net(x)
     print(y.size())
 
+class VGG16BinaryConnect(nn.Module):
+    def __init__(
+        self, input_channels, output_dim, Q_l, momentum=0.2, batch_affine=False
+    ):
+        super(VGG16BinaryConnect, self).__init__()
 
+        self.Q_l = Q_l
+        self.qlevels = Q_l.size(0)
+
+        self.conv1 = sl.SConv2d(
+            input_channels, 128, kernel_size=3, padding=1, bias=False, Q_l=Q_l
+        )
+        self.bn1 = nn.BatchNorm2d(128, momentum=momentum, affine=batch_affine)
+
+        self.conv2 = sl.SConv2d(128, 128, kernel_size=3, padding=1, bias=False, Q_l=Q_l)
+        self.bn2 = nn.BatchNorm2d(128, momentum=momentum, affine=batch_affine)
+
+        self.conv3 = sl.SConv2d(128, 256, kernel_size=3, padding=1, bias=False, Q_l=Q_l)
+        self.bn3 = nn.BatchNorm2d(256, momentum=momentum, affine=batch_affine)
+
+        self.conv4 = sl.SConv2d(256, 256, kernel_size=3, padding=1, bias=False, Q_l=Q_l)
+        self.bn4 = nn.BatchNorm2d(256, momentum=momentum, affine=batch_affine)
+
+        self.conv5 = sl.SConv2d(256, 512, kernel_size=3, padding=1, bias=False, Q_l=Q_l)
+        self.bn5 = nn.BatchNorm2d(512, momentum=momentum, affine=batch_affine)
+
+        self.conv6 = sl.SConv2d(512, 512, kernel_size=3, padding=1, bias=False, Q_l=Q_l)
+        self.bn6 = nn.BatchNorm2d(512, momentum=momentum, affine=batch_affine)
+
+        self.fc1 = sl.SLinear(512 * 4 * 4, 1024, bias=False, Q_l=Q_l)
+        self.bn7 = nn.BatchNorm1d(1024, affine=batch_affine)
+
+        self.fc2 = sl.SLinear(1024, 1024, bias=False, Q_l=Q_l)
+        self.bn8 = nn.BatchNorm1d(1024, affine=batch_affine)
+
+        self.fc3 = sl.SLinear(1024, output_dim, bias=False, Q_l=Q_l)
+        self.bn9 = nn.BatchNorm1d(output_dim, affine=batch_affine)
+
+    def forward(self, x):
+        x = F.relu(self.bn1(self.conv1(x)))
+
+        x = self.conv2(x)
+        x = F.max_pool2d(x, 2, 2)
+        x = F.relu(self.bn2(x))
+
+        x = F.relu(self.bn3(self.conv3(x)))
+
+        x = self.conv4(x)
+        x = F.max_pool2d(x, 2, 2)
+        x = F.relu(self.bn4(x))
+
+        x = F.relu(self.bn5(self.conv5(x)))
+
+        x = self.conv6(x)
+        x = F.max_pool2d(x, 2, 2)
+        x = F.relu(self.bn6(x))
+
+        x = x.view(-1, 512 * 4 * 4)
+
+        x = self.fc1(x)
+        x = F.relu(self.bn7(x))
+
+        x = self.fc2(x)
+        x = F.relu(self.bn8(x))
+
+        x = self.fc3(x)
+        x = self.bn9(x)
+        return x
+
+def test_vgg16_bc():
+    net = VGG16BinaryConnect(3, 10)
+    x = torch.randn(2, 3, 32, 32)
+    y = net(x)
+    print(y.size())
+
+# test_vgg16_bc()
 # test()
