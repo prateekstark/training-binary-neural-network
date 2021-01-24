@@ -41,9 +41,9 @@ class BaselineTrainer(object):
 
     def evaluate_step(self, inputs, labels, device="cpu"):
         output = self.model(inputs.to(device))
-        loss = self.criterion(output, labels.to(device))
+        loss = self.criterion(output, labels.to(device)) / labels.shape[0]
         pred = output.argmax(dim=1, keepdims=True)
-        correct = pred.eq(labels.to(device).view_as(pred)).sum().item()
+        correct = (pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]) * 100
         return loss, correct
 
     def evaluate(
