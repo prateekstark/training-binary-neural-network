@@ -36,9 +36,9 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", help="Default=6", type=int, default=6)
-    parser.add_argument("--mc_steps", help="Default=5", type=int, default=5)
+    parser.add_argument("--mc-steps", help="Default=1", type=int, default=1)
     parser.add_argument("--lr", help="Default=1e-4", type=float, default=1e-4)
-    parser.add_argument("--temperature", help="Default=1", type=float, default=1)
+    parser.add_argument("--temperature", help="Default=1e-10", type=float, default=1e-10)
     parser.add_argument(
         "-print_dataset", help="Default=False", action="store_true", default=False
     )

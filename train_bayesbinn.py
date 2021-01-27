@@ -88,6 +88,37 @@ if __name__ == "__main__":
             device=("cuda" if "cuda" in device else "cpu"),
         )
 
+    elif config["model_architecture"] == "LRNetSmall":
+        from BayesBiNN.models.CNN import LRNetSmall
+        net = LRNetSmall(
+            input_channels=config["input_shape"],
+            output_shape=config["output_shape"],
+            momentum=config["momentum"],
+            batch_affine=config["batch_affine"],
+        ).to(device)
+
+        summary(
+            net,
+            input_size=(config["input_shape"], 28, 28),
+            device=("cuda" if "cuda" in device else "cpu"),
+        )
+
+    elif config["model_architecture"] == "LRNetBig":
+        from BayesBiNN.models.CNN import LRNetBig
+        net = LRNetBig(
+            input_channels=config["input_shape"],
+            output_shape=config["output_shape"],
+            momentum=config["momentum"],
+            batch_affine=config["batch_affine"],
+        ).to(device)
+
+        summary(
+            net,
+            input_size=(config["input_shape"], 32, 32),
+            device=("cuda" if "cuda" in device else "cpu"),
+        )
+
+
     else:
         raise Exception("Model Architecture NOT supported!")
 

@@ -77,7 +77,9 @@ class BayesianTrainer(object):
         probs = torch.mean(output_tensor, dim=2)
         loss = self.criterion(probs, labels.to(device))
         _, pred = torch.max(probs, 1)
-        correct = (pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]) * 100
+        correct = (
+            pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]
+        ) * 100
         return loss, correct
 
     def evaluate(
@@ -113,7 +115,9 @@ class BayesianTrainer(object):
         loss, output = self.optim.step(closure)
         output = output[0]
         pred = output.argmax(dim=1, keepdims=True)
-        correct = (pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]) * 100
+        correct = (
+            pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]
+        ) * 100
         return loss, correct
 
     def train(
@@ -208,7 +212,9 @@ class STETrainer(object):
         output = self.model(inputs.to(device))
         loss = self.criterion(output, labels.to(device))
         pred = output.argmax(dim=1, keepdims=True)
-        correct = (pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]) * 100
+        correct = (
+            pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]
+        ) * 100
         return loss, correct
 
     def evaluate(
@@ -251,7 +257,9 @@ class STETrainer(object):
                 p.latent_.copy_(p.data.clamp_(-weight_clip_value, weight_clip_value))
 
         pred = output.argmax(dim=1, keepdims=True)
-        correct = (pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]) * 100
+        correct = (
+            pred.eq(labels.to(device).view_as(pred)).sum().item() / labels.shape[0]
+        ) * 100
 
         return loss, correct
 

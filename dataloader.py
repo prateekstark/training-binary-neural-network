@@ -115,9 +115,9 @@ class Dataset(object):
         )
 
         self.val_data = None
-
+        self.trainsize = len(self.train_data)
         if validation_split > 0:
-            assert(validation_split < 1)
+            assert validation_split < 1
             self.val_data = dataset(
                 datapath, train=True, download=True, transform=test_transform
             )
