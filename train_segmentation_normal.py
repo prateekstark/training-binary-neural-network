@@ -3,11 +3,12 @@ import torch
 import random
 import logging
 import argparse
-from prepare_data import get_dataloader
+from segmentation.prepare_data import get_dataloader
 from torchsummary import summary
 from BayesBiNN.models.UNET import UNet20
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+from segmentation.utils import IoULoss
 
 
 def output_mean(output):
@@ -25,7 +26,7 @@ if __name__ == "__main__":
         os.mkdir(id_)
 
     logging.basicConfig(
-        filename="{}/logfile.log".format(id_),
+        filename="{}/logfile_normal.log".format(id_),
         format="%(levelname)s %(asctime)s %(message)s",
         filemode="w",
     )
@@ -34,13 +35,27 @@ if __name__ == "__main__":
     logger.setLevel(logging.DEBUG)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--batch_size", help="Default=6", type=int, default=6)
-    parser.add_argument("--lr", help="Default=1e-4", type=float, default=1e-3)
     parser.add_argument(
-        "-print_dataset", help="Default=False", action="store_true", default=False
+        "--batch_size", help="Batch Size (Default: 6)", type=int, default=6
     )
-    parser.add_argument("--epochs", help="Default=500", type=int, default=500)
-    parser.add_argument("--dropout_rate", help="Default=0.05", type=float, default=0.05)
+    parser.add_argument(
+        "--lr", help="Initial Learning Rate (Default: 1e-3)", type=float, default=1e-3
+    )
+    parser.add_argument(
+        "-print_dataset",
+        help="Do you want to print dataset information? (Default: False)",
+        action="store_true",
+        default=False,
+    )
+    parser.add_argument(
+        "--epochs", help="Number of epochs (Default: 500)", type=int, default=500
+    )
+    parser.add_argument(
+        "--dropout_rate",
+        help="Dropout rate in NN (Default: 0.05)",
+        type=float,
+        default=0.05,
+    )
     args = parser.parse_args()
 
     logger.info(args)
@@ -49,8 +64,17 @@ if __name__ == "__main__":
     logger.info("Device: {}".format(device))
 
     trainloader = get_dataloader(
-        image_dir="data/biomedical_image_segmentation/train_imgs",
-        labels_dir="data/biomedical_image_segmentation/train_labels",
+        image_dir="segmentation/data/biomedical_image_segmentation/train_imgs",
+        labels_dir="segmentation/data/biomedical_image_segmentation/train_labels",
+        print_dataset=args.print_dataset,
+        batch_size=args.batch_size,
+        input_img_size=(572, 572),
+        output_img_size=(388, 388),
+    )
+
+    valloader = get_dataloader(
+        image_dir="segmentation/data/biomedical_image_segmentation/val_imgs",
+        labels_dir="segmentation/data/biomedical_image_segmentation/val_labels",
         print_dataset=args.print_dataset,
         batch_size=args.batch_size,
         input_img_size=(572, 572),
@@ -72,9 +96,11 @@ if __name__ == "__main__":
         optim, T_max=500, eta_min=1e-16, last_epoch=-1, verbose=True
     )
 
-    net.train(True)
+    test_loss = IoULoss()
+
     for epoch in range(args.epochs):
         total_loss = 0
+        net.train(True)
         for inputs, labels in tqdm(trainloader):
             optim.zero_grad()
             output = net(inputs.to(device))
@@ -95,3 +121,10 @@ if __name__ == "__main__":
         plt.savefig("{}/output_{}.png".format(id_, epoch))
         plt.imshow(output[0][0].cpu().detach().numpy())
         plt.savefig("{}/output_raw_{}.png".format(id_, epoch))
+        net.eval()
+        iou_loss = 0
+        for inputs, labels in tqdm(valloader):
+            output = net(inputs.to(device))
+            output = torch.argmax(output, dim=1)
+            iou_loss += test_loss(output, labels.to(device))
+        logger.info("validation score: {}".format(iou_loss / len(valloader)))

@@ -19,17 +19,14 @@ def BinaryConnect(hparams, input_shape, num_classes):
             lq.layers.QuantDense(hparams.dense_units, **kwhparams),
             tf.keras.layers.ReLU(),
             tf.keras.layers.BatchNormalization(scale=False),
-
             tf.keras.layers.Dropout(hparams.dropout_rate),
             lq.layers.QuantDense(hparams.dense_units, **kwhparams),
             tf.keras.layers.ReLU(),
             tf.keras.layers.BatchNormalization(scale=False),
-
             tf.keras.layers.Dropout(hparams.dropout_rate),
             lq.layers.QuantDense(hparams.dense_units, **kwhparams),
             tf.keras.layers.ReLU(),
             tf.keras.layers.BatchNormalization(scale=False),
-
             tf.keras.layers.Dropout(hparams.dropout_rate),
             lq.layers.QuantDense(hparams.dense_units, **kwhparams),
             tf.keras.layers.BatchNormalization(scale=False),
@@ -57,9 +54,9 @@ class bop_mnist(default):
     kernel_constraint = None
     threshold = 1e-8
     gamma = 1e-5
-    gamma_decay = 10**(-3/500)
+    gamma_decay = 10 ** (-3 / 500)
     decay_step = int((54000 / 100) * 1)
-
+    dropout_rate = 0.2
 
     @property
     def optimizer(self):
@@ -70,6 +67,3 @@ class bop_mnist(default):
                 self.gamma, self.decay_step, self.gamma_decay, staircase=True
             ),
         )
-
-
-

@@ -14,7 +14,7 @@ Pointers:
 
 if __name__ == "__main__":
     id_ = 1
-    while "logfile_full_prec_mnist_{}.log".format(id_) in os.listdir():
+    while "logfile_full_prec_{}.log".format(id_) in os.listdir():
         id_ += 1
 
     logging.basicConfig(

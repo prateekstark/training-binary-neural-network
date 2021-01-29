@@ -122,6 +122,7 @@ def test():
     y = net(x)
     print(y.size())
 
+
 class VGG16BinaryConnect(nn.Module):
     def __init__(
         self, input_channels, output_dim, Q_l, momentum=0.2, batch_affine=False
@@ -191,11 +192,13 @@ class VGG16BinaryConnect(nn.Module):
         x = self.bn9(x)
         return x
 
+
 def test_vgg16_bc():
     net = VGG16BinaryConnect(3, 10)
     x = torch.randn(2, 3, 32, 32)
     y = net(x)
     print(y.size())
+
 
 # test_vgg16_bc()
 # test()

@@ -19,6 +19,7 @@ class BayesianTrainer(object):
         log_params=True,
         temperature=1e-10,
         initialize_lambda=10,
+        end_epoch=500,
     ):
         self.model = model
         if criterion == "crossentropy":
@@ -38,7 +39,11 @@ class BayesianTrainer(object):
 
         if lr_scheduler == "cosine":
             self.lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-                self.optim, T_max=500, eta_min=lr_final, last_epoch=-1, verbose=True
+                self.optim,
+                T_max=end_epoch,
+                eta_min=lr_final,
+                last_epoch=-1,
+                verbose=True,
             )
         else:
             raise ValueError("Wrong Scheduler, please check")

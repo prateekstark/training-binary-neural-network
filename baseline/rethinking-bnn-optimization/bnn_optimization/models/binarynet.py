@@ -139,6 +139,7 @@ class bop_cifar10(default):
             ),
         )
 
+
 @registry.register_hparams(binarynet)
 class bop_cifar100(default):
     epochs = 500
@@ -159,6 +160,3 @@ class bop_cifar100(default):
                 self.gamma, self.decay_step, self.gamma_decay, staircase=True
             ),
         )
-
-
-
