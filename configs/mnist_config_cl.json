@@ -1,0 +1,20 @@
+{
+    "dataset": "mnist",
+    "input_shape": 784,
+    "output_shape": 10,
+    "data_augmentation": false,
+    "epochs": 100,
+    "criterion": "crossentropy",
+    "validation_split": 0.0,
+    "lr_scheduler": "cosine",
+    "batch_size": 100,
+    "lr_init": 1e-3,
+    "lr_final": 1e-16,
+    "batch_affine": true,
+    "model_architecture": "BinaryConnect",
+    "mc_steps": 1,
+    "temperature": 1e-2,
+    "evaluate_steps": 100,
+    "momentum": 0.15,
+    "eps": 1e-4
+}

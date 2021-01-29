@@ -51,6 +51,27 @@ class BinaryConv2D(nn.Conv2d):
         )
 
 
+class BinaryConvTranspose2D(nn.ConvTranspose2d):
+    def forward(self, x):
+        """
+        Initialization
+        """
+        if not hasattr(self.weight, "latent_"):
+            self.weight.latent_ = self.weight.data
+        self.weight.data = binarize(self.weight.latent_)
+        if not self.bias is None:
+            self.bias.latent_ = self.bias.data.clone()
+        return F.conv_transpose2d(
+            input=x,
+            weight=self.weight,
+            bias=self.bias,
+            stride=self.stride,
+            padding=self.padding,
+            groups=self.groups,
+            dilation=self.dilation,
+        )
+
+
 if __name__ == "__main__":
     tensor = torch.Tensor([1, 2, 3, 4])
     bn_layer1 = BinaryLinear(4, 1)

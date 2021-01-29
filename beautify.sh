@@ -1,1 +1,1 @@
-black *.py STE/* BayesBiNN/*
+black `find . -name '*.py'`

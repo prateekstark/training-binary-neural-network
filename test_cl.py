@@ -1,10 +1,11 @@
+import sys
 import json
 import torch
 import logging
 import dataloader
 from torchsummary import summary
 from Trainer import BayesianTrainer
-from BayesBiNN.models.MLP import BinaryConnect
+from BayesBiNN.models.MLP import SimpleBinaryConnect
 from BayesBiNN.utils import permute_image
 import numpy as np
 from tqdm import tqdm
@@ -23,9 +24,14 @@ if __name__ == "__main__":
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
     logger.info("Code running on {}".format(device))
-    with open("mnist_config.json") as f:
-        config = json.load(f)
 
+    if len(sys.argv) == 2:
+        config_filename = sys.argv[1]
+    else:
+        raise Exception("Wrong Arguments")
+
+    with open(config_filename) as f:
+        config = json.load(f)
     logger.info("config: {}".format(config))
 
     dataset = dataloader.Dataset(
@@ -38,7 +44,14 @@ if __name__ == "__main__":
         batch_size=config["batch_size"]
     )
 
-    net = BinaryConnect(config["input_shape"], config["output_shape"]).to(device)
+    net = SimpleBinaryConnect(
+        config["input_shape"],
+        config["output_shape"],
+        eps=config["eps"],
+        momentum=config["momentum"],
+        batch_affine=config["batch_affine"],
+    ).to(device)
+
     logger.info(net)
     summary(
         net,
@@ -52,18 +65,24 @@ if __name__ == "__main__":
         permutations.append(torch.Tensor(np.random.permutation(784)).long())
 
     trainer = BayesianTrainer(
-        net,
-        config["criterion"],
-        config["lr_scheduler"],
-        logger,
-        dataset.get_trainsize(),
+        model=net,
+        criterion=config["criterion"],
+        lr_scheduler=config["lr_scheduler"],
+        logger=logger,
+        train_set_size=dataset.get_trainsize(),
+        mc_steps=config["mc_steps"],
+        lr_init=config["lr_init"],
         log_params=True,
+        temperature=config["temperature"],
+        end_epoch=100,
     )
 
     for task in range(num_tasks):
         if not task == 0:
             trainer.optim.state["lambda_prior"] = trainer.optim.state["lambda"]
         permutation = permutations[task]
+
+        torch.save(trainer.optim.state["lambda_prior"], "lamda_{}.pth".format(task))
 
         for param_group in trainer.optim.param_groups:
             param_group["lr"] = 0.001
@@ -90,8 +109,13 @@ if __name__ == "__main__":
                         inputs = permute_image(
                             inputs, permutations[task], config["batch_size"], 1
                         )
+
                         loss, correct = trainer.evaluate_step(
-                            inputs, labels, device=device
+                            inputs, labels, device=device, M=config["evaluate_steps"]
                         )
                         predictions.append(correct)
-                    logger.info("{}".format(sum(predictions) / len(predictions)))
+                    logger.info(
+                        "task_{}: {}".format(
+                            test_task, sum(predictions) / len(predictions)
+                        )
+                    )

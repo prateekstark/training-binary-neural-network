@@ -33,6 +33,7 @@ class SMLP(nn.Module):
         x = self.w2(x)
         return x
 
+
 class BinaryConnect(nn.Module):
     def __init__(
         self,
