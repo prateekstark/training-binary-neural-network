@@ -1,0 +1,2 @@
+INFO 2021-03-21 18:03:00,191 Namespace(batch_size=1, dropout_rate=0.05, epochs=500, lr=1e-10, mc_steps=1, print_dataset=False, temperature=1e-08)
+INFO 2021-03-21 18:03:00,540 Device: cpu
