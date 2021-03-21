@@ -142,24 +142,24 @@ class LRNetBig(nn.Module):
         self.bn8 = nn.BatchNorm1d(10, affine=batch_affine)
 
     def forward(self, x):
-        x = self.bn1(self.conv1(x))
+        x = self.conv1(x)
         x = F.relu(x)
 
-        x = self.bn2(self.conv2(x))
+        x = self.conv2(x)
         x = F.max_pool2d(x, 2, 2)
         x = F.relu(x)
 
-        x = self.bn3(self.conv3(x))
+        x = self.conv3(x)
         x = F.relu(x)
 
-        x = self.bn4(self.conv4(x))
+        x = self.conv4(x)
         x = F.max_pool2d(x, 2, 2)
         x = F.relu(x)
 
-        x = self.bn5(self.conv5(x))
+        x = self.conv5(x)
         x = F.relu(x)
 
-        x = self.bn6(self.conv6(x))
+        x = self.conv6(x)
         x = F.max_pool2d(x, 2, 2)
         x = F.relu(x)
 
