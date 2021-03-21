@@ -53,8 +53,8 @@ if __name__ == "__main__":
     logger.info("Device: {}".format(device))
 
     trainloader = get_dataloader(
-        image_dir="segmentation/data/biomedical_image_segmentation/train_imgs",
-        labels_dir="segmentation/data/biomedical_image_segmentation/train_labels",
+        image_dir="segmentation/data/train_imgs",
+        labels_dir="segmentation/data/train_labels",
         print_dataset=args.print_dataset,
         batch_size=args.batch_size,
         input_img_size=(572, 572),
@@ -62,8 +62,8 @@ if __name__ == "__main__":
     )
 
     valloader = get_dataloader(
-        image_dir="segmentation/data/biomedical_image_segmentation/val_imgs",
-        labels_dir="segmentation/data/biomedical_image_segmentation/val_labels",
+        image_dir="segmentation/data/val_imgs",
+        labels_dir="segmentation/data/val_labels",
         print_dataset=args.print_dataset,
         batch_size=args.batch_size,
         input_img_size=(572, 572),

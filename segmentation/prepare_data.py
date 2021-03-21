@@ -2,11 +2,12 @@ import os
 import cv2
 import torch
 from torch.utils.data import Dataset, DataLoader
-
+from torchvision import transforms
 
 class TissueSegmentation(Dataset):
     def __init__(
         self,
+        # transform=None,
         image_dir="data/train_imgs",
         labels_dir="data/train_labels",
         input_img_size=(572, 572),
@@ -15,6 +16,13 @@ class TissueSegmentation(Dataset):
     ):
         X = []
         y = []
+        self.transform = transforms.Compose([
+                            transforms.RandomHorizontalFlip(),
+                            transforms.RandomRotation(0.2),
+                            transforms.RandomVerticalFlip(),
+                            transforms.ToTensor()
+                        ])
+
         for root, directories, files in os.walk(image_dir, topdown=False):
             for name in files:
                 if ".png" in name:
@@ -55,10 +63,14 @@ class TissueSegmentation(Dataset):
         )
         labels = torch.Tensor(labels).long()
         # print(image.shape, labels.shape)
+        # if(self.transform):
+        image, labels = self.transform(image, labels)
+
         return image, labels
 
 
 def get_dataloader(
+    # transform=None,
     image_dir="data/train_imgs",
     labels_dir="data/train_labels",
     print_dataset=False,
@@ -79,6 +91,7 @@ def get_dataloader(
 
 if __name__ == "__main__":
     dataloader = get_dataloader(
+        # transform=None,
         image_dir="data/train_imgs",
         labels_dir="data/train_labels",
         print_dataset=True,
