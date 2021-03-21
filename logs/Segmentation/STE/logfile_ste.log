@@ -1,0 +1,1663 @@
+INFO 2021-01-29 20:26:32,158 Namespace(batch_size=6, dropout_rate=0.05, epochs=500, lr=0.001, print_dataset=False)
+INFO 2021-01-29 20:26:33,266 Device: cuda:0
+INFO 2021-01-29 20:26:44,312 epoch: 0                        loss: 0.7648714780807495
+INFO 2021-01-29 20:26:44,313 0.0009999901304280686
+DEBUG 2021-01-29 20:26:44,419 findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Bold.ttf) normal normal 700 normal>) = 0.33499999999999996
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'STIXNonUnicode' (STIXNonUniIta.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'STIXGeneral' (STIXGeneralItalic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'cmr10' (cmr10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'DejaVu Serif Display' (DejaVuSerifDisplay.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,420 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBolIta.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'STIXGeneral' (STIXGeneral.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'cmb10' (cmb10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'cmtt10' (cmtt10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymReg.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-BoldOblique.ttf) oblique normal 700 normal>) = 1.335
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'cmex10' (cmex10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'STIXGeneral' (STIXGeneralBolIta.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,421 findfont: score(<Font 'cmmi10' (cmmi10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymReg.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'DejaVu Sans' (DejaVuSans.ttf) normal normal 400 normal>) = 0.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymReg.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'cmsy10' (cmsy10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymReg.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'STIXSizeFiveSym' (STIXSizFiveSymReg.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'STIXNonUnicode' (STIXNonUni.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'STIXGeneral' (STIXGeneralBol.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'cmss10' (cmss10.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Oblique.ttf) oblique normal 400 normal>) = 1.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'DejaVu Sans Display' (DejaVuSansDisplay.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,422 findfont: score(<Font 'Liberation Sans' (LiberationSans-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'LKLUG' (lklug.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Liberation Serif' (LiberationSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Liberation Sans' (LiberationSans-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Abyssinica SIL' (AbyssinicaSIL-R.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Waree' (Waree.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'DejaVu Serif' (DejaVuSerifCondensed-Italic.ttf) italic normal 400 condensed>) = 11.25
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'DejaVu Serif' (DejaVuSerifCondensed-Bold.ttf) normal normal 700 condensed>) = 10.535
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Khmer OS Content' (KhmerOS_content.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Nuosu SIL' (NuosuSIL.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Lohit Marathi' (Lohit-Marathi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'DejaVu Serif' (DejaVuSerifCondensed.ttf) normal normal 400 condensed>) = 10.25
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Open Sans' (OpenSans-SemiboldItalic.ttf) italic normal 600 normal>) = 11.24
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'Meera' (Meera.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,423 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Caladea' (Caladea-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'STIX' (STIX-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'DejaVu Sans' (DejaVuSans.ttf) normal normal 400 normal>) = 0.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Overpass' (Overpass-Regular-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'FreeSerif' (FreeSerif.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Waree' (Waree-BoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Lohit Tamil' (Lohit-Tamil.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'PT Sans' (PTS56F.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Noto Emoji' (NotoEmoji-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Lohit Nepali' (Lohit-Nepali.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Liberation Serif' (LiberationSerif-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Open Sans' (OpenSans-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Cantarell' (Cantarell-Oblique.otf) oblique normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Carlito' (Carlito-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,424 findfont: score(<Font 'Overpass' (Overpass-Bold-Italic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Waree' (Waree-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'FreeMono' (FreeMonoOblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Liberation Sans' (LiberationSans-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Open Sans' (OpenSans-LightItalic.ttf) italic normal 300 normal>) = 11.145
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'VL Gothic' (VL-Gothic-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Lohit Bengali' (Lohit-Bengali.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Lohit Malayalam' (Lohit-Malayalam.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Carlito' (Carlito-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'DejaVu Sans' (DejaVuSansCondensed-Oblique.ttf) oblique normal 400 condensed>) = 1.25
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Carlito' (Carlito-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Liberation Mono' (LiberationMono-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Lohit Oriya' (Lohit-Oriya.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'Liberation Sans' (LiberationSans-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Bold.ttf) normal normal 700 normal>) = 0.33499999999999996
+DEBUG 2021-01-29 20:26:44,425 findfont: score(<Font 'FreeSans' (FreeSansBold.ttf) normal normal 600 normal>) = 10.24
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-BoldOblique.ttf) oblique normal 700 normal>) = 1.335
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-ExtraLight.ttf) normal normal 200 normal>) = 0.24
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'Overpass' (Overpass-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'NanumGothic' (NanumGothicExtraBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'Open Sans' (OpenSans-ExtraBold.ttf) normal normal 800 normal>) = 10.43
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'Padauk' (Padauk.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'Overpass' (Overpass-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'PakType Naskh Basic' (PakTypeNaskhBasic.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'FreeSerif' (FreeSerifItalic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'FreeSans' (FreeSansOblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'FreeMono' (FreeMonoBoldOblique.ttf) oblique normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'Caladea' (Caladea-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'Carlito' (Carlito-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,426 findfont: score(<Font 'FreeSerif' (FreeSerifBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'STIX' (STIX-Regular.otf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'NanumGothic' (NanumGothicBold.ttf) normal normal 600 normal>) = 10.24
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'Open Sans' (OpenSans-Semibold.ttf) normal normal 600 normal>) = 10.24
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'Liberation Mono' (LiberationMono-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'Overpass' (Overpass-ExtraLight.ttf) normal normal 200 normal>) = 10.24
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'PT Sans Narrow' (PTN77F.ttf) normal normal 700 condensed>) = 10.535
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'Open Sans' (OpenSans-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'Lohit Assamese' (Lohit-Assamese.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'AR PL UMing CN' (uming.ttc) normal normal 300 normal>) = 10.145
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'Open Sans' (OpenSans-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'PT Sans' (PTS75F.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'Caladea' (Caladea-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'WenQuanYi Zen Hei' (wqy-zenhei.ttc) normal normal 500 normal>) = 10.145
+DEBUG 2021-01-29 20:26:44,427 findfont: score(<Font 'Lohit Gujarati' (Lohit-Gujarati.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'DejaVu Sans' (DejaVuSansCondensed-Bold.ttf) normal normal 700 condensed>) = 0.5349999999999999
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'DejaVu Sans' (DejaVuSansCondensed.ttf) normal normal 400 condensed>) = 0.25
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'FreeMono' (FreeMonoBold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'Overpass' (Overpass-Light-Italic.ttf) italic normal 300 normal>) = 11.145
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'PT Sans' (PTS55F.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'Liberation Serif' (LiberationSerif-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'Cantarell' (Cantarell-Bold.otf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'Lohit Telugu' (Lohit-Telugu.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Oblique.ttf) oblique normal 400 normal>) = 1.05
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'Cantarell' (Cantarell-BoldOblique.otf) oblique normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'DejaVu Sans' (DejaVuSansCondensed-BoldOblique.ttf) oblique normal 700 condensed>) = 1.535
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'Open Sans' (OpenSans-Light.ttf) normal normal 300 normal>) = 10.145
+DEBUG 2021-01-29 20:26:44,428 findfont: score(<Font 'WenQuanYi Micro Hei' (wqy-microhei.ttc) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Liberation Mono' (LiberationMono-Italic.ttf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'STIX' (STIX-Italic.otf) italic normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Jomolhari' (Jomolhari-alpha3c-0605331.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Open Sans' (OpenSans-ExtraBoldItalic.ttf) italic normal 800 normal>) = 11.43
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'FreeSans' (FreeSansBoldOblique.ttf) oblique normal 600 normal>) = 11.24
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Open Sans' (OpenSans-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Waree' (Waree-Oblique.ttf) oblique normal 400 normal>) = 11.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Lohit Devanagari' (Lohit-Devanagari.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'FreeMono' (FreeMono.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Liberation Mono' (LiberationMono-Bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'NanumGothic' (NanumGothic.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'STIX' (STIX-BoldItalic.otf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Madan2' (madan.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'Lohit Kannada' (Lohit-Kannada.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,429 findfont: score(<Font 'DejaVu Serif' (DejaVuSerifCondensed-BoldItalic.ttf) italic normal 700 condensed>) = 11.535
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Padauk' (Padauk-bold.ttf) normal normal 700 normal>) = 10.335
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Overpass' (Overpass-Light.ttf) normal normal 300 normal>) = 10.145
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Liberation Serif' (LiberationSerif-Regular.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'FreeSans' (FreeSans.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'PT Sans Narrow' (PTN57F.ttf) normal normal 400 condensed>) = 10.25
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Cantarell' (Cantarell-Regular.otf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Lohit Punjabi' (Lohit-Punjabi.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'FreeSerif' (FreeSerifBoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'PT Sans' (PTS76F.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Caladea' (Caladea-BoldItalic.ttf) italic normal 700 normal>) = 11.335
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Khmer OS System' (KhmerOS_sys.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Khmer OS' (KhmerOS.ttf) normal normal 400 normal>) = 10.05
+DEBUG 2021-01-29 20:26:44,430 findfont: score(<Font 'Overpass' (Overpass-ExtraLight Italic.ttf) italic normal 200 normal>) = 11.24
+DEBUG 2021-01-29 20:26:44,430 findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/home/cse/btech/cs1170360/anaconda3/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+INFO 2021-01-29 20:26:45,789 validation score: 0.9279844164848328
+INFO 2021-01-29 20:26:47,449 epoch: 1                        loss: 0.6966737508773804
+INFO 2021-01-29 20:26:47,449 0.0009999605221019082
+INFO 2021-01-29 20:26:48,202 validation score: 0.7269409894943237
+INFO 2021-01-29 20:26:49,858 epoch: 2                        loss: 0.6948392391204834
+INFO 2021-01-29 20:26:49,858 0.0009999111761904045
+INFO 2021-01-29 20:26:50,759 validation score: 0.802837610244751
+INFO 2021-01-29 20:26:52,416 epoch: 3                        loss: 0.6941241025924683
+INFO 2021-01-29 20:26:52,417 0.00099984209464165
+INFO 2021-01-29 20:26:53,460 validation score: 0.4783613681793213
+INFO 2021-01-29 20:26:55,116 epoch: 4                        loss: 0.6940417289733887
+INFO 2021-01-29 20:26:55,117 0.0009997532801828658
+INFO 2021-01-29 20:26:56,309 validation score: 0.4819844961166382
+INFO 2021-01-29 20:26:57,967 epoch: 5                        loss: 0.6936551928520203
+INFO 2021-01-29 20:26:57,968 0.0009996447363202947
+INFO 2021-01-29 20:26:59,309 validation score: 0.4606360197067261
+INFO 2021-01-29 20:27:00,965 epoch: 6                        loss: 0.6935503482818604
+INFO 2021-01-29 20:27:00,965 0.0009995164673390626
+INFO 2021-01-29 20:27:02,418 validation score: 0.4451417922973633
+INFO 2021-01-29 20:27:04,068 epoch: 7                        loss: 0.6933573484420776
+INFO 2021-01-29 20:27:04,069 0.000999368478303009
+INFO 2021-01-29 20:27:05,681 validation score: 0.42492395639419556
+INFO 2021-01-29 20:27:07,336 epoch: 8                        loss: 0.6930254101753235
+INFO 2021-01-29 20:27:07,336 0.0009992007750544878
+INFO 2021-01-29 20:27:09,111 validation score: 0.4708330035209656
+INFO 2021-01-29 20:27:10,767 epoch: 9                        loss: 0.6930099129676819
+INFO 2021-01-29 20:27:10,767 0.000999013364214136
+INFO 2021-01-29 20:27:12,671 validation score: 0.43191540241241455
+INFO 2021-01-29 20:27:14,328 epoch: 10                        loss: 0.6929196715354919
+INFO 2021-01-29 20:27:14,328 0.0009988062531806128
+INFO 2021-01-29 20:27:16,408 validation score: 0.4782438278198242
+INFO 2021-01-29 20:27:18,065 epoch: 11                        loss: 0.6928390860557556
+INFO 2021-01-29 20:27:18,066 0.0009985794501303072
+INFO 2021-01-29 20:27:20,269 validation score: 0.4213752746582031
+INFO 2021-01-29 20:27:21,933 epoch: 12                        loss: 0.6928633451461792
+INFO 2021-01-29 20:27:21,933 0.0009983329640170153
+INFO 2021-01-29 20:27:24,298 validation score: 0.43208175897598267
+INFO 2021-01-29 20:27:25,954 epoch: 13                        loss: 0.6927870512008667
+INFO 2021-01-29 20:27:25,954 0.0009980668045715868
+INFO 2021-01-29 20:27:28,439 validation score: 0.3137199282646179
+INFO 2021-01-29 20:27:30,096 epoch: 14                        loss: 0.6927715539932251
+INFO 2021-01-29 20:27:30,097 0.0009977809823015407
+INFO 2021-01-29 20:27:32,768 validation score: 0.41493284702301025
+INFO 2021-01-29 20:27:34,438 epoch: 15                        loss: 0.6927227973937988
+INFO 2021-01-29 20:27:34,438 0.0009974755084906507
+INFO 2021-01-29 20:27:37,257 validation score: 0.5332520604133606
+INFO 2021-01-29 20:27:38,918 epoch: 16                        loss: 0.6926618218421936
+INFO 2021-01-29 20:27:38,919 0.0009971503951985
+INFO 2021-01-29 20:27:41,868 validation score: 0.4508315324783325
+INFO 2021-01-29 20:27:43,524 epoch: 17                        loss: 0.6926124095916748
+INFO 2021-01-29 20:27:43,524 0.0009968056552600048
+INFO 2021-01-29 20:27:46,658 validation score: 0.4291377067565918
+INFO 2021-01-29 20:27:48,316 epoch: 18                        loss: 0.6926160454750061
+INFO 2021-01-29 20:27:48,316 0.0009964413022849074
+INFO 2021-01-29 20:27:51,551 validation score: 0.40628504753112793
+INFO 2021-01-29 20:27:53,206 epoch: 19                        loss: 0.6926455497741699
+INFO 2021-01-29 20:27:53,206 0.0009960573506572396
+INFO 2021-01-29 20:27:56,581 validation score: 0.30619972944259644
+INFO 2021-01-29 20:27:58,237 epoch: 20                        loss: 0.6924862265586853
+INFO 2021-01-29 20:27:58,237 0.0009956538155347539
+INFO 2021-01-29 20:28:01,761 validation score: 0.3859875798225403
+INFO 2021-01-29 20:28:03,416 epoch: 21                        loss: 0.6925240755081177
+INFO 2021-01-29 20:28:03,416 0.000995230712848326
+INFO 2021-01-29 20:28:07,082 validation score: 0.37127166986465454
+INFO 2021-01-29 20:28:08,736 epoch: 22                        loss: 0.6924742460250854
+INFO 2021-01-29 20:28:08,736 0.000994788059301326
+INFO 2021-01-29 20:28:12,552 validation score: 0.27591192722320557
+INFO 2021-01-29 20:28:14,206 epoch: 23                        loss: 0.6924340128898621
+INFO 2021-01-29 20:28:14,206 0.0009943258723689576
+INFO 2021-01-29 20:28:18,193 validation score: 0.3171570301055908
+INFO 2021-01-29 20:28:19,847 epoch: 24                        loss: 0.6923303604125977
+INFO 2021-01-29 20:28:19,848 0.0009938441702975695
+INFO 2021-01-29 20:28:23,981 validation score: 0.3505088686943054
+INFO 2021-01-29 20:28:25,643 epoch: 25                        loss: 0.692527174949646
+INFO 2021-01-29 20:28:25,643 0.0009933429721039346
+INFO 2021-01-29 20:28:29,903 validation score: 0.3138011693954468
+INFO 2021-01-29 20:28:31,555 epoch: 26                        loss: 0.6922496557235718
+INFO 2021-01-29 20:28:31,555 0.0009928222975744997
+INFO 2021-01-29 20:28:35,978 validation score: 0.504950761795044
+INFO 2021-01-29 20:28:37,636 epoch: 27                        loss: 0.6923220157623291
+INFO 2021-01-29 20:28:37,636 0.0009922821672646034
+INFO 2021-01-29 20:28:42,186 validation score: 0.318162202835083
+INFO 2021-01-29 20:28:43,834 epoch: 28                        loss: 0.6921595335006714
+INFO 2021-01-29 20:28:43,834 0.0009917226024976655
+INFO 2021-01-29 20:28:48,549 validation score: 0.3481060862541199
+INFO 2021-01-29 20:28:50,204 epoch: 29                        loss: 0.6920968294143677
+INFO 2021-01-29 20:28:50,204 0.000991143625364345
+INFO 2021-01-29 20:28:55,032 validation score: 0.36165517568588257
+INFO 2021-01-29 20:28:56,685 epoch: 30                        loss: 0.692232072353363
+INFO 2021-01-29 20:28:56,685 0.0009905452587216678
+INFO 2021-01-29 20:29:01,668 validation score: 0.6928766369819641
+INFO 2021-01-29 20:29:03,324 epoch: 31                        loss: 0.6923981308937073
+INFO 2021-01-29 20:29:03,324 0.0009899275261921244
+INFO 2021-01-29 20:29:08,448 validation score: 0.36600905656814575
+INFO 2021-01-29 20:29:10,105 epoch: 32                        loss: 0.6920844316482544
+INFO 2021-01-29 20:29:10,105 0.000989290452162737
+INFO 2021-01-29 20:29:15,401 validation score: 0.312701940536499
+INFO 2021-01-29 20:29:17,058 epoch: 33                        loss: 0.6920825839042664
+INFO 2021-01-29 20:29:17,058 0.0009886340617840978
+INFO 2021-01-29 20:29:22,520 validation score: 0.30066776275634766
+INFO 2021-01-29 20:29:24,175 epoch: 34                        loss: 0.6914278268814087
+INFO 2021-01-29 20:29:24,176 0.0009879583809693747
+INFO 2021-01-29 20:29:29,760 validation score: 0.5051889419555664
+INFO 2021-01-29 20:29:31,416 epoch: 35                        loss: 0.6912330389022827
+INFO 2021-01-29 20:29:31,416 0.0009872634363932897
+INFO 2021-01-29 20:29:37,109 validation score: 0.3692272901535034
+INFO 2021-01-29 20:29:38,765 epoch: 36                        loss: 0.6915240287780762
+INFO 2021-01-29 20:29:38,765 0.0009865492554910645
+INFO 2021-01-29 20:29:44,670 validation score: 0.33934420347213745
+INFO 2021-01-29 20:29:46,326 epoch: 37                        loss: 0.6914743185043335
+INFO 2021-01-29 20:29:46,326 0.0009858158664573383
+INFO 2021-01-29 20:29:52,329 validation score: 0.35694658756256104
+INFO 2021-01-29 20:29:53,984 epoch: 38                        loss: 0.6913162469863892
+INFO 2021-01-29 20:29:53,984 0.0009850632982450543
+INFO 2021-01-29 20:30:00,162 validation score: 0.34296995401382446
+INFO 2021-01-29 20:30:01,823 epoch: 39                        loss: 0.6904405951499939
+INFO 2021-01-29 20:30:01,824 0.000984291580564317
+INFO 2021-01-29 20:30:08,153 validation score: 0.4755823612213135
+INFO 2021-01-29 20:30:09,808 epoch: 40                        loss: 0.6897584199905396
+INFO 2021-01-29 20:30:09,808 0.0009835007438812192
+INFO 2021-01-29 20:30:16,252 validation score: 0.4888339042663574
+INFO 2021-01-29 20:30:17,905 epoch: 41                        loss: 0.6896859407424927
+INFO 2021-01-29 20:30:17,905 0.0009826908194166385
+INFO 2021-01-29 20:30:24,501 validation score: 0.5385998487472534
+INFO 2021-01-29 20:30:26,156 epoch: 42                        loss: 0.689058244228363
+INFO 2021-01-29 20:30:26,156 0.0009818618391450066
+INFO 2021-01-29 20:30:32,898 validation score: 0.7317854166030884
+INFO 2021-01-29 20:30:34,555 epoch: 43                        loss: 0.687827467918396
+INFO 2021-01-29 20:30:34,555 0.0009810138357930448
+INFO 2021-01-29 20:30:41,460 validation score: 0.42860525846481323
+INFO 2021-01-29 20:30:43,115 epoch: 44                        loss: 0.6876100897789001
+INFO 2021-01-29 20:30:43,115 0.0009801468428384734
+INFO 2021-01-29 20:30:50,167 validation score: 0.7409610748291016
+INFO 2021-01-29 20:30:51,825 epoch: 45                        loss: 0.6864595413208008
+INFO 2021-01-29 20:30:51,826 0.0009792608945086898
+INFO 2021-01-29 20:30:59,082 validation score: 0.49224764108657837
+INFO 2021-01-29 20:31:00,738 epoch: 46                        loss: 0.6869571805000305
+INFO 2021-01-29 20:31:00,738 0.0009783560257794173
+INFO 2021-01-29 20:31:08,105 validation score: 0.35150301456451416
+INFO 2021-01-29 20:31:09,759 epoch: 47                        loss: 0.6849277019500732
+INFO 2021-01-29 20:31:09,759 0.0009774322723733236
+INFO 2021-01-29 20:31:17,240 validation score: 0.3457784056663513
+INFO 2021-01-29 20:31:18,895 epoch: 48                        loss: 0.6850910186767578
+INFO 2021-01-29 20:31:18,896 0.0009764896707586116
+INFO 2021-01-29 20:31:26,511 validation score: 0.24046707153320312
+INFO 2021-01-29 20:31:28,167 epoch: 49                        loss: 0.6852980852127075
+INFO 2021-01-29 20:31:28,167 0.0009755282581475791
+INFO 2021-01-29 20:31:35,951 validation score: 0.4563902020454407
+INFO 2021-01-29 20:31:37,608 epoch: 50                        loss: 0.6846634149551392
+INFO 2021-01-29 20:31:37,609 0.0009745480724951496
+INFO 2021-01-29 20:31:45,506 validation score: 0.46843189001083374
+INFO 2021-01-29 20:31:47,156 epoch: 51                        loss: 0.6828446388244629
+INFO 2021-01-29 20:31:47,156 0.0009735491524973744
+INFO 2021-01-29 20:31:55,242 validation score: 0.7457926273345947
+INFO 2021-01-29 20:31:56,906 epoch: 52                        loss: 0.6819965243339539
+INFO 2021-01-29 20:31:56,907 0.0009725315375899048
+INFO 2021-01-29 20:32:05,138 validation score: 0.7491689920425415
+INFO 2021-01-29 20:32:06,798 epoch: 53                        loss: 0.6802723407745361
+INFO 2021-01-29 20:32:06,798 0.0009714952679464347
+INFO 2021-01-29 20:32:15,151 validation score: 0.5492574572563171
+INFO 2021-01-29 20:32:16,806 epoch: 54                        loss: 0.6784100532531738
+INFO 2021-01-29 20:32:16,806 0.0009704403844771153
+INFO 2021-01-29 20:32:25,298 validation score: 0.6544784307479858
+INFO 2021-01-29 20:32:26,958 epoch: 55                        loss: 0.6777081489562988
+INFO 2021-01-29 20:32:26,958 0.0009693669288269398
+INFO 2021-01-29 20:32:35,591 validation score: 0.5485931634902954
+INFO 2021-01-29 20:32:37,246 epoch: 56                        loss: 0.6765602827072144
+INFO 2021-01-29 20:32:37,246 0.0009682749433740991
+INFO 2021-01-29 20:32:46,081 validation score: 0.4233071804046631
+INFO 2021-01-29 20:32:47,745 epoch: 57                        loss: 0.6757068037986755
+INFO 2021-01-29 20:32:47,746 0.0009671644712283089
+INFO 2021-01-29 20:32:56,672 validation score: 0.5285820960998535
+INFO 2021-01-29 20:32:58,326 epoch: 58                        loss: 0.6732490658760071
+INFO 2021-01-29 20:32:58,326 0.0009660355562291084
+INFO 2021-01-29 20:33:07,418 validation score: 0.699910044670105
+INFO 2021-01-29 20:33:09,070 epoch: 59                        loss: 0.6743566989898682
+INFO 2021-01-29 20:33:09,070 0.0009648882429441288
+INFO 2021-01-29 20:33:18,301 validation score: 0.5176962614059448
+INFO 2021-01-29 20:33:19,956 epoch: 60                        loss: 0.6712490320205688
+INFO 2021-01-29 20:33:19,956 0.0009637225766673339
+INFO 2021-01-29 20:33:29,354 validation score: 0.6970052123069763
+INFO 2021-01-29 20:33:31,015 epoch: 61                        loss: 0.6690102219581604
+INFO 2021-01-29 20:33:31,015 0.0009625386034172323
+INFO 2021-01-29 20:33:40,542 validation score: 0.7634577751159668
+INFO 2021-01-29 20:33:42,195 epoch: 62                        loss: 0.6675917506217957
+INFO 2021-01-29 20:33:42,195 0.0009613363699350609
+INFO 2021-01-29 20:33:51,989 validation score: 0.4905856251716614
+INFO 2021-01-29 20:33:53,642 epoch: 63                        loss: 0.6659293174743652
+INFO 2021-01-29 20:33:53,642 0.0009601159236829388
+INFO 2021-01-29 20:34:03,470 validation score: 0.6429400444030762
+INFO 2021-01-29 20:34:05,149 epoch: 64                        loss: 0.6631928086280823
+INFO 2021-01-29 20:34:05,149 0.0009588773128419943
+INFO 2021-01-29 20:34:15,118 validation score: 0.5152846574783325
+INFO 2021-01-29 20:34:16,776 epoch: 65                        loss: 0.662328839302063
+INFO 2021-01-29 20:34:16,776 0.0009576205863104626
+INFO 2021-01-29 20:34:26,909 validation score: 0.5527694225311279
+INFO 2021-01-29 20:34:28,574 epoch: 66                        loss: 0.660129189491272
+INFO 2021-01-29 20:34:28,574 0.0009563457937017554
+INFO 2021-01-29 20:34:38,850 validation score: 0.51263427734375
+INFO 2021-01-29 20:34:40,507 epoch: 67                        loss: 0.6571813225746155
+INFO 2021-01-29 20:34:40,507 0.000955052985342502
+INFO 2021-01-29 20:34:50,920 validation score: 0.4849778413772583
+INFO 2021-01-29 20:34:52,581 epoch: 68                        loss: 0.6529234647750854
+INFO 2021-01-29 20:34:52,581 0.0009537422122705628
+INFO 2021-01-29 20:35:03,150 validation score: 0.6547080278396606
+INFO 2021-01-29 20:35:04,805 epoch: 69                        loss: 0.654334306716919
+INFO 2021-01-29 20:35:04,806 0.0009524135262330142
+INFO 2021-01-29 20:35:15,523 validation score: 0.5611147880554199
+INFO 2021-01-29 20:35:17,176 epoch: 70                        loss: 0.6531136631965637
+INFO 2021-01-29 20:35:17,176 0.000951066979684106
+INFO 2021-01-29 20:35:28,031 validation score: 0.5737099051475525
+INFO 2021-01-29 20:35:29,685 epoch: 71                        loss: 0.6487301588058472
+INFO 2021-01-29 20:35:29,686 0.0009497026257831903
+INFO 2021-01-29 20:35:40,694 validation score: 0.5844974517822266
+INFO 2021-01-29 20:35:42,349 epoch: 72                        loss: 0.6438263058662415
+INFO 2021-01-29 20:35:42,349 0.0009483205183926229
+INFO 2021-01-29 20:35:53,511 validation score: 0.606086015701294
+INFO 2021-01-29 20:35:55,172 epoch: 73                        loss: 0.6424753665924072
+INFO 2021-01-29 20:35:55,172 0.0009469207120756369
+INFO 2021-01-29 20:36:06,452 validation score: 0.711083173751831
+INFO 2021-01-29 20:36:08,106 epoch: 74                        loss: 0.6420462131500244
+INFO 2021-01-29 20:36:08,106 0.000945503262094189
+INFO 2021-01-29 20:36:19,551 validation score: 0.48925691843032837
+INFO 2021-01-29 20:36:21,215 epoch: 75                        loss: 0.643462061882019
+INFO 2021-01-29 20:36:21,216 0.0009440682244067775
+INFO 2021-01-29 20:36:32,841 validation score: 0.5251317620277405
+INFO 2021-01-29 20:36:34,497 epoch: 76                        loss: 0.6418780088424683
+INFO 2021-01-29 20:36:34,497 0.0009426156556662331
+INFO 2021-01-29 20:36:46,259 validation score: 0.5250408053398132
+INFO 2021-01-29 20:36:47,920 epoch: 77                        loss: 0.6392788887023926
+INFO 2021-01-29 20:36:47,921 0.0009411456132174823
+INFO 2021-01-29 20:36:59,887 validation score: 0.6197699308395386
+INFO 2021-01-29 20:37:01,535 epoch: 78                        loss: 0.6346166133880615
+INFO 2021-01-29 20:37:01,535 0.0009396581550952838
+INFO 2021-01-29 20:37:13,581 validation score: 0.6160084009170532
+INFO 2021-01-29 20:37:15,243 epoch: 79                        loss: 0.6208784580230713
+INFO 2021-01-29 20:37:15,243 0.0009381533400219376
+INFO 2021-01-29 20:37:27,392 validation score: 0.4853940010070801
+INFO 2021-01-29 20:37:29,044 epoch: 80                        loss: 0.612819492816925
+INFO 2021-01-29 20:37:29,044 0.0009366312274049661
+INFO 2021-01-29 20:37:41,412 validation score: 0.5690966844558716
+INFO 2021-01-29 20:37:43,067 epoch: 81                        loss: 0.6004786491394043
+INFO 2021-01-29 20:37:43,067 0.0009350918773347689
+INFO 2021-01-29 20:37:55,569 validation score: 0.6057658195495605
+INFO 2021-01-29 20:37:57,230 epoch: 82                        loss: 0.5886282324790955
+INFO 2021-01-29 20:37:57,230 0.0009335353505822513
+INFO 2021-01-29 20:38:09,871 validation score: 0.5347098112106323
+INFO 2021-01-29 20:38:11,527 epoch: 83                        loss: 0.5770532488822937
+INFO 2021-01-29 20:38:11,527 0.000931961708596424
+INFO 2021-01-29 20:38:24,328 validation score: 0.41118109226226807
+INFO 2021-01-29 20:38:25,986 epoch: 84                        loss: 0.5736287832260132
+INFO 2021-01-29 20:38:25,986 0.0009303710135019784
+INFO 2021-01-29 20:38:38,921 validation score: 0.4973469376564026
+INFO 2021-01-29 20:38:40,580 epoch: 85                        loss: 0.5672124028205872
+INFO 2021-01-29 20:38:40,580 0.0009287633280968329
+INFO 2021-01-29 20:38:53,646 validation score: 0.5155591368675232
+INFO 2021-01-29 20:38:55,303 epoch: 86                        loss: 0.5615206956863403
+INFO 2021-01-29 20:38:55,303 0.0009271387158496545
+INFO 2021-01-29 20:39:08,523 validation score: 0.5333305597305298
+INFO 2021-01-29 20:39:10,176 epoch: 87                        loss: 0.5577415227890015
+INFO 2021-01-29 20:39:10,176 0.000925497240897353
+INFO 2021-01-29 20:39:23,544 validation score: 0.5065692663192749
+INFO 2021-01-29 20:39:25,196 epoch: 88                        loss: 0.5500180125236511
+INFO 2021-01-29 20:39:25,197 0.0009238389680425488
+INFO 2021-01-29 20:39:38,696 validation score: 0.5249519944190979
+INFO 2021-01-29 20:39:40,348 epoch: 89                        loss: 0.5364329814910889
+INFO 2021-01-29 20:39:40,348 0.0009221639627510148
+INFO 2021-01-29 20:39:54,070 validation score: 0.4542250633239746
+INFO 2021-01-29 20:39:55,725 epoch: 90                        loss: 0.5253735184669495
+INFO 2021-01-29 20:39:55,725 0.000920472291149092
+INFO 2021-01-29 20:40:09,562 validation score: 0.4890696406364441
+INFO 2021-01-29 20:40:11,219 epoch: 91                        loss: 0.5193198919296265
+INFO 2021-01-29 20:40:11,220 0.0009187640200210785
+INFO 2021-01-29 20:40:25,168 validation score: 0.49417638778686523
+INFO 2021-01-29 20:40:26,827 epoch: 92                        loss: 0.5080270767211914
+INFO 2021-01-29 20:40:26,827 0.0009170392168065934
+INFO 2021-01-29 20:40:40,888 validation score: 0.5194082260131836
+INFO 2021-01-29 20:40:42,546 epoch: 93                        loss: 0.4987972378730774
+INFO 2021-01-29 20:40:42,546 0.0009152979495979143
+INFO 2021-01-29 20:40:56,811 validation score: 0.40133363008499146
+INFO 2021-01-29 20:40:58,474 epoch: 94                        loss: 0.49337705969810486
+INFO 2021-01-29 20:40:58,474 0.0009135402871372891
+INFO 2021-01-29 20:41:12,851 validation score: 0.4162203073501587
+INFO 2021-01-29 20:41:14,509 epoch: 95                        loss: 0.48340749740600586
+INFO 2021-01-29 20:41:14,509 0.0009117662988142221
+INFO 2021-01-29 20:41:28,996 validation score: 0.4632114768028259
+INFO 2021-01-29 20:41:30,644 epoch: 96                        loss: 0.47993844747543335
+INFO 2021-01-29 20:41:30,645 0.0009099760546627349
+INFO 2021-01-29 20:41:45,319 validation score: 0.421405553817749
+INFO 2021-01-29 20:41:46,975 epoch: 97                        loss: 0.47564297914505005
+INFO 2021-01-29 20:41:46,975 0.0009081696253586009
+INFO 2021-01-29 20:42:01,951 validation score: 0.46885573863983154
+INFO 2021-01-29 20:42:03,610 epoch: 98                        loss: 0.46210888028144836
+INFO 2021-01-29 20:42:03,610 0.0009063470822165559
+INFO 2021-01-29 20:42:18,572 validation score: 0.4475838541984558
+INFO 2021-01-29 20:42:20,223 epoch: 99                        loss: 0.4580526351928711
+INFO 2021-01-29 20:42:20,223 0.0009045084971874829
+INFO 2021-01-29 20:42:35,329 validation score: 0.4193460941314697
+INFO 2021-01-29 20:42:36,984 epoch: 100                        loss: 0.442663311958313
+INFO 2021-01-29 20:42:36,984 0.0009026539428555702
+INFO 2021-01-29 20:42:52,297 validation score: 0.4222732186317444
+INFO 2021-01-29 20:42:53,957 epoch: 101                        loss: 0.4387533366680145
+INFO 2021-01-29 20:42:53,957 0.0009007834924354478
+INFO 2021-01-29 20:43:09,368 validation score: 0.39663010835647583
+INFO 2021-01-29 20:43:11,023 epoch: 102                        loss: 0.4323577582836151
+INFO 2021-01-29 20:43:11,023 0.0008988972197692952
+INFO 2021-01-29 20:43:26,593 validation score: 0.4072277545928955
+INFO 2021-01-29 20:43:28,251 epoch: 103                        loss: 0.42300793528556824
+INFO 2021-01-29 20:43:28,251 0.0008969951993239274
+INFO 2021-01-29 20:43:43,952 validation score: 0.41079962253570557
+INFO 2021-01-29 20:43:45,607 epoch: 104                        loss: 0.4140988886356354
+INFO 2021-01-29 20:43:45,608 0.0008950775061878552
+INFO 2021-01-29 20:44:01,428 validation score: 0.414578914642334
+INFO 2021-01-29 20:44:03,083 epoch: 105                        loss: 0.4054985046386719
+INFO 2021-01-29 20:44:03,083 0.0008931442160683197
+INFO 2021-01-29 20:44:19,088 validation score: 0.4034137725830078
+INFO 2021-01-29 20:44:20,747 epoch: 106                        loss: 0.4002222716808319
+INFO 2021-01-29 20:44:20,747 0.0008911954052883046
+INFO 2021-01-29 20:44:36,919 validation score: 0.3888697624206543
+INFO 2021-01-29 20:44:38,575 epoch: 107                        loss: 0.3974284529685974
+INFO 2021-01-29 20:44:38,575 0.0008892311507835225
+INFO 2021-01-29 20:44:54,862 validation score: 0.42503154277801514
+INFO 2021-01-29 20:44:56,514 epoch: 108                        loss: 0.3963829278945923
+INFO 2021-01-29 20:44:56,515 0.000887251530099378
+INFO 2021-01-29 20:45:12,939 validation score: 0.3856232762336731
+INFO 2021-01-29 20:45:14,598 epoch: 109                        loss: 0.38954436779022217
+INFO 2021-01-29 20:45:14,599 0.0008852566213879057
+INFO 2021-01-29 20:45:31,212 validation score: 0.3695051670074463
+INFO 2021-01-29 20:45:32,870 epoch: 110                        loss: 0.3851628005504608
+INFO 2021-01-29 20:45:32,870 0.0008832465034046863
+INFO 2021-01-29 20:45:49,610 validation score: 0.40403807163238525
+INFO 2021-01-29 20:45:51,266 epoch: 111                        loss: 0.3757959008216858
+INFO 2021-01-29 20:45:51,266 0.0008812212555057356
+INFO 2021-01-29 20:46:08,198 validation score: 0.36763572692871094
+INFO 2021-01-29 20:46:09,853 epoch: 112                        loss: 0.3781197965145111
+INFO 2021-01-29 20:46:09,854 0.0008791809576443728
+INFO 2021-01-29 20:46:26,921 validation score: 0.38698112964630127
+INFO 2021-01-29 20:46:28,582 epoch: 113                        loss: 0.3722211718559265
+INFO 2021-01-29 20:46:28,582 0.000877125690368064
+INFO 2021-01-29 20:46:45,767 validation score: 0.4118053913116455
+INFO 2021-01-29 20:46:47,424 epoch: 114                        loss: 0.3741903007030487
+INFO 2021-01-29 20:46:47,425 0.000875055534815242
+INFO 2021-01-29 20:47:04,740 validation score: 0.39590275287628174
+INFO 2021-01-29 20:47:06,395 epoch: 115                        loss: 0.37188175320625305
+INFO 2021-01-29 20:47:06,395 0.0008729705727121036
+INFO 2021-01-29 20:47:23,911 validation score: 0.39392077922821045
+INFO 2021-01-29 20:47:25,571 epoch: 116                        loss: 0.37006357312202454
+INFO 2021-01-29 20:47:25,571 0.0008708708863693823
+INFO 2021-01-29 20:47:43,161 validation score: 0.37229853868484497
+INFO 2021-01-29 20:47:44,810 epoch: 117                        loss: 0.36842191219329834
+INFO 2021-01-29 20:47:44,810 0.0008687565586790999
+INFO 2021-01-29 20:48:02,560 validation score: 0.3820383548736572
+INFO 2021-01-29 20:48:04,213 epoch: 118                        loss: 0.3655838370323181
+INFO 2021-01-29 20:48:04,214 0.0008666276731112932
+INFO 2021-01-29 20:48:22,172 validation score: 0.39638805389404297
+INFO 2021-01-29 20:48:23,828 epoch: 119                        loss: 0.35939088463783264
+INFO 2021-01-29 20:48:23,828 0.0008644843137107191
+INFO 2021-01-29 20:48:41,849 validation score: 0.38107454776763916
+INFO 2021-01-29 20:48:43,503 epoch: 120                        loss: 0.3510930836200714
+INFO 2021-01-29 20:48:43,504 0.0008623265650935368
+INFO 2021-01-29 20:49:01,680 validation score: 0.36708635091781616
+INFO 2021-01-29 20:49:03,338 epoch: 121                        loss: 0.3486561179161072
+INFO 2021-01-29 20:49:03,339 0.000860154512443967
+INFO 2021-01-29 20:49:21,702 validation score: 0.3706135153770447
+INFO 2021-01-29 20:49:23,361 epoch: 122                        loss: 0.3434807360172272
+INFO 2021-01-29 20:49:23,361 0.0008579682415109295
+INFO 2021-01-29 20:49:41,850 validation score: 0.383043110370636
+INFO 2021-01-29 20:49:43,507 epoch: 123                        loss: 0.33999428153038025
+INFO 2021-01-29 20:49:43,507 0.0008557678386046569
+INFO 2021-01-29 20:50:02,183 validation score: 0.36572790145874023
+INFO 2021-01-29 20:50:03,846 epoch: 124                        loss: 0.3373785614967346
+INFO 2021-01-29 20:50:03,846 0.000853553390593288
+INFO 2021-01-29 20:50:22,625 validation score: 0.3886169195175171
+INFO 2021-01-29 20:50:24,278 epoch: 125                        loss: 0.33727455139160156
+INFO 2021-01-29 20:50:24,279 0.0008513249848994392
+INFO 2021-01-29 20:50:43,170 validation score: 0.37677186727523804
+INFO 2021-01-29 20:50:44,825 epoch: 126                        loss: 0.33470621705055237
+INFO 2021-01-29 20:50:44,825 0.0008490827094967512
+INFO 2021-01-29 20:51:03,922 validation score: 0.3812193274497986
+INFO 2021-01-29 20:51:05,583 epoch: 127                        loss: 0.33562836050987244
+INFO 2021-01-29 20:51:05,584 0.0008468266529064175
+INFO 2021-01-29 20:51:24,779 validation score: 0.3851914405822754
+INFO 2021-01-29 20:51:26,436 epoch: 128                        loss: 0.32865315675735474
+INFO 2021-01-29 20:51:26,436 0.0008445569041936894
+INFO 2021-01-29 20:51:45,799 validation score: 0.35089200735092163
+INFO 2021-01-29 20:51:47,454 epoch: 129                        loss: 0.3236919343471527
+INFO 2021-01-29 20:51:47,454 0.0008422735529643598
+INFO 2021-01-29 20:52:07,003 validation score: 0.35959357023239136
+INFO 2021-01-29 20:52:08,667 epoch: 130                        loss: 0.3198961317539215
+INFO 2021-01-29 20:52:08,667 0.0008399766893612252
+INFO 2021-01-29 20:52:28,327 validation score: 0.36170685291290283
+INFO 2021-01-29 20:52:29,980 epoch: 131                        loss: 0.31748050451278687
+INFO 2021-01-29 20:52:29,980 0.0008376664040605281
+INFO 2021-01-29 20:52:49,850 validation score: 0.37362247705459595
+INFO 2021-01-29 20:52:51,510 epoch: 132                        loss: 0.31636106967926025
+INFO 2021-01-29 20:52:51,510 0.0008353427882683762
+INFO 2021-01-29 20:53:11,649 validation score: 0.3439450263977051
+INFO 2021-01-29 20:53:13,304 epoch: 133                        loss: 0.31576383113861084
+INFO 2021-01-29 20:53:13,304 0.0008330059337171422
+INFO 2021-01-29 20:53:33,387 validation score: 0.35948067903518677
+INFO 2021-01-29 20:53:35,046 epoch: 134                        loss: 0.3151772618293762
+INFO 2021-01-29 20:53:35,046 0.0008306559326618425
+INFO 2021-01-29 20:53:55,312 validation score: 0.33382105827331543
+INFO 2021-01-29 20:53:56,967 epoch: 135                        loss: 0.31465956568717957
+INFO 2021-01-29 20:53:56,967 0.000828292877876495
+INFO 2021-01-29 20:54:17,540 validation score: 0.35936588048934937
+INFO 2021-01-29 20:54:19,193 epoch: 136                        loss: 0.31415942311286926
+INFO 2021-01-29 20:54:19,193 0.0008259168626504565
+INFO 2021-01-29 20:54:39,785 validation score: 0.3359997272491455
+INFO 2021-01-29 20:54:41,439 epoch: 137                        loss: 0.31041282415390015
+INFO 2021-01-29 20:54:41,440 0.0008235279807847396
+INFO 2021-01-29 20:55:02,120 validation score: 0.36934685707092285
+INFO 2021-01-29 20:55:03,779 epoch: 138                        loss: 0.30944451689720154
+INFO 2021-01-29 20:55:03,779 0.0008211263265883098
+INFO 2021-01-29 20:55:24,600 validation score: 0.34848952293395996
+INFO 2021-01-29 20:55:26,262 epoch: 139                        loss: 0.30548539757728577
+INFO 2021-01-29 20:55:26,262 0.0008187119948743628
+INFO 2021-01-29 20:55:47,286 validation score: 0.35406213998794556
+INFO 2021-01-29 20:55:48,948 epoch: 140                        loss: 0.3053622245788574
+INFO 2021-01-29 20:55:48,949 0.0008162850809565805
+INFO 2021-01-29 20:56:10,040 validation score: 0.3483966588973999
+INFO 2021-01-29 20:56:11,700 epoch: 141                        loss: 0.3026477098464966
+INFO 2021-01-29 20:56:11,701 0.0008138456806453686
+INFO 2021-01-29 20:56:33,028 validation score: 0.3449481725692749
+INFO 2021-01-29 20:56:34,694 epoch: 142                        loss: 0.3034481406211853
+INFO 2021-01-29 20:56:34,695 0.000811393890244075
+INFO 2021-01-29 20:56:56,118 validation score: 0.33939528465270996
+INFO 2021-01-29 20:56:57,773 epoch: 143                        loss: 0.3011203408241272
+INFO 2021-01-29 20:56:57,773 0.0008089298065451861
+INFO 2021-01-29 20:57:19,374 validation score: 0.35666990280151367
+INFO 2021-01-29 20:57:21,034 epoch: 144                        loss: 0.30115649104118347
+INFO 2021-01-29 20:57:21,034 0.0008064535268265076
+INFO 2021-01-29 20:57:42,769 validation score: 0.3321791887283325
+INFO 2021-01-29 20:57:44,423 epoch: 145                        loss: 0.3022086024284363
+INFO 2021-01-29 20:57:44,423 0.0008039651488473223
+INFO 2021-01-29 20:58:06,290 validation score: 0.35226738452911377
+INFO 2021-01-29 20:58:07,944 epoch: 146                        loss: 0.3003119230270386
+INFO 2021-01-29 20:58:07,944 0.0008014647708445322
+INFO 2021-01-29 20:58:30,143 validation score: 0.3377336859703064
+INFO 2021-01-29 20:58:31,794 epoch: 147                        loss: 0.3017866611480713
+INFO 2021-01-29 20:58:31,795 0.0007989524915287795
+INFO 2021-01-29 20:58:53,918 validation score: 0.33867478370666504
+INFO 2021-01-29 20:58:55,576 epoch: 148                        loss: 0.30068910121917725
+INFO 2021-01-29 20:58:55,576 0.00079642841008055
+INFO 2021-01-29 20:59:17,914 validation score: 0.33365923166275024
+INFO 2021-01-29 20:59:19,566 epoch: 149                        loss: 0.3016732931137085
+INFO 2021-01-29 20:59:19,567 0.0007938926261462572
+INFO 2021-01-29 20:59:41,984 validation score: 0.3491806387901306
+INFO 2021-01-29 20:59:43,635 epoch: 150                        loss: 0.29948294162750244
+INFO 2021-01-29 20:59:43,635 0.0007913452398343089
+INFO 2021-01-29 21:00:06,232 validation score: 0.33768314123153687
+INFO 2021-01-29 21:00:07,894 epoch: 151                        loss: 0.298234760761261
+INFO 2021-01-29 21:00:07,894 0.0007887863517111549
+INFO 2021-01-29 21:00:30,615 validation score: 0.3486199975013733
+INFO 2021-01-29 21:00:32,267 epoch: 152                        loss: 0.29721665382385254
+INFO 2021-01-29 21:00:32,267 0.0007862160627973167
+INFO 2021-01-29 21:00:55,150 validation score: 0.34343379735946655
+INFO 2021-01-29 21:00:56,805 epoch: 153                        loss: 0.29698655009269714
+INFO 2021-01-29 21:00:56,805 0.0007836344745633998
+INFO 2021-01-29 21:01:19,798 validation score: 0.3417588472366333
+INFO 2021-01-29 21:01:21,457 epoch: 154                        loss: 0.2964654564857483
+INFO 2021-01-29 21:01:21,458 0.0007810416889260871
+INFO 2021-01-29 21:01:44,578 validation score: 0.33252209424972534
+INFO 2021-01-29 21:01:46,233 epoch: 155                        loss: 0.2953855097293854
+INFO 2021-01-29 21:01:46,234 0.000778437808244116
+INFO 2021-01-29 21:02:09,483 validation score: 0.3241018056869507
+INFO 2021-01-29 21:02:11,137 epoch: 156                        loss: 0.2944238483905792
+INFO 2021-01-29 21:02:11,137 0.0007758229353142374
+INFO 2021-01-29 21:02:34,551 validation score: 0.34024226665496826
+INFO 2021-01-29 21:02:36,204 epoch: 157                        loss: 0.2941738963127136
+INFO 2021-01-29 21:02:36,205 0.0007731971733671571
+INFO 2021-01-29 21:02:59,776 validation score: 0.3215479850769043
+INFO 2021-01-29 21:03:01,592 epoch: 158                        loss: 0.2937038540840149
+INFO 2021-01-29 21:03:01,592 0.0007705606260634607
+INFO 2021-01-29 21:03:25,290 validation score: 0.32999128103256226
+INFO 2021-01-29 21:03:26,948 epoch: 159                        loss: 0.2899889349937439
+INFO 2021-01-29 21:03:26,949 0.0007679133974895214
+INFO 2021-01-29 21:03:50,820 validation score: 0.324806272983551
+INFO 2021-01-29 21:03:52,475 epoch: 160                        loss: 0.2904670238494873
+INFO 2021-01-29 21:03:52,475 0.0007652555921533904
+INFO 2021-01-29 21:04:16,508 validation score: 0.3360084295272827
+INFO 2021-01-29 21:04:18,165 epoch: 161                        loss: 0.2902122139930725
+INFO 2021-01-29 21:04:18,166 0.0007625873149806715
+INFO 2021-01-29 21:04:42,349 validation score: 0.32529348134994507
+INFO 2021-01-29 21:04:44,004 epoch: 162                        loss: 0.29091495275497437
+INFO 2021-01-29 21:04:44,004 0.0007599086713103786
+INFO 2021-01-29 21:05:08,326 validation score: 0.33356958627700806
+INFO 2021-01-29 21:05:09,977 epoch: 163                        loss: 0.29214924573898315
+INFO 2021-01-29 21:05:09,977 0.0007572197668907775
+INFO 2021-01-29 21:05:34,391 validation score: 0.33057576417922974
+INFO 2021-01-29 21:05:36,044 epoch: 164                        loss: 0.2920154333114624
+INFO 2021-01-29 21:05:36,044 0.0007545207078752101
+INFO 2021-01-29 21:06:00,629 validation score: 0.32754766941070557
+INFO 2021-01-29 21:06:02,287 epoch: 165                        loss: 0.29139113426208496
+INFO 2021-01-29 21:06:02,288 0.000751811600817905
+INFO 2021-01-29 21:06:27,038 validation score: 0.341230571269989
+INFO 2021-01-29 21:06:28,697 epoch: 166                        loss: 0.29130232334136963
+INFO 2021-01-29 21:06:28,698 0.0007490925526697703
+INFO 2021-01-29 21:06:53,608 validation score: 0.3144600987434387
+INFO 2021-01-29 21:06:55,296 epoch: 167                        loss: 0.29086577892303467
+INFO 2021-01-29 21:06:55,296 0.000746363670774171
+INFO 2021-01-29 21:07:20,322 validation score: 0.34242141246795654
+INFO 2021-01-29 21:07:21,976 epoch: 168                        loss: 0.2901141047477722
+INFO 2021-01-29 21:07:21,976 0.0007436250628626917
+INFO 2021-01-29 21:07:47,158 validation score: 0.31465548276901245
+INFO 2021-01-29 21:07:48,812 epoch: 169                        loss: 0.2902016341686249
+INFO 2021-01-29 21:07:48,812 0.0007408768370508834
+INFO 2021-01-29 21:08:14,145 validation score: 0.32623612880706787
+INFO 2021-01-29 21:08:15,799 epoch: 170                        loss: 0.2870689034461975
+INFO 2021-01-29 21:08:15,799 0.0007381191018339956
+INFO 2021-01-29 21:08:41,289 validation score: 0.32846808433532715
+INFO 2021-01-29 21:08:42,942 epoch: 171                        loss: 0.28578630089759827
+INFO 2021-01-29 21:08:42,942 0.0007353519660826927
+INFO 2021-01-29 21:09:08,578 validation score: 0.31569939851760864
+INFO 2021-01-29 21:09:10,236 epoch: 172                        loss: 0.2856215834617615
+INFO 2021-01-29 21:09:10,237 0.0007325755390387559
+INFO 2021-01-29 21:09:36,038 validation score: 0.32605892419815063
+INFO 2021-01-29 21:09:37,703 epoch: 173                        loss: 0.2846384644508362
+INFO 2021-01-29 21:09:37,703 0.0007297899303107709
+INFO 2021-01-29 21:10:03,623 validation score: 0.3281785249710083
+INFO 2021-01-29 21:10:05,277 epoch: 174                        loss: 0.28450411558151245
+INFO 2021-01-29 21:10:05,278 0.0007269952498698006
+INFO 2021-01-29 21:10:31,369 validation score: 0.3231658339500427
+INFO 2021-01-29 21:10:33,031 epoch: 175                        loss: 0.283541202545166
+INFO 2021-01-29 21:10:33,031 0.0007241916080450437
+INFO 2021-01-29 21:10:59,297 validation score: 0.32455480098724365
+INFO 2021-01-29 21:11:00,954 epoch: 176                        loss: 0.2837754189968109
+INFO 2021-01-29 21:11:00,954 0.0007213791155194785
+INFO 2021-01-29 21:11:27,409 validation score: 0.3304574489593506
+INFO 2021-01-29 21:11:29,076 epoch: 177                        loss: 0.2824040949344635
+INFO 2021-01-29 21:11:29,076 0.0007185578833254944
+INFO 2021-01-29 21:11:55,660 validation score: 0.3164602518081665
+INFO 2021-01-29 21:11:57,318 epoch: 178                        loss: 0.283096045255661
+INFO 2021-01-29 21:11:57,318 0.0007157280228405078
+INFO 2021-01-29 21:12:23,999 validation score: 0.32761150598526
+INFO 2021-01-29 21:12:25,654 epoch: 179                        loss: 0.2811678349971771
+INFO 2021-01-29 21:12:25,654 0.0007128896457825649
+INFO 2021-01-29 21:12:52,527 validation score: 0.3160927891731262
+INFO 2021-01-29 21:12:54,187 epoch: 180                        loss: 0.2806507349014282
+INFO 2021-01-29 21:12:54,188 0.0007100428642059319
+INFO 2021-01-29 21:13:21,159 validation score: 0.32797902822494507
+INFO 2021-01-29 21:13:22,814 epoch: 181                        loss: 0.280269593000412
+INFO 2021-01-29 21:13:22,814 0.0007071877904966712
+INFO 2021-01-29 21:13:49,999 validation score: 0.3116839528083801
+INFO 2021-01-29 21:13:51,657 epoch: 182                        loss: 0.2809310257434845
+INFO 2021-01-29 21:13:51,657 0.000704324537368204
+INFO 2021-01-29 21:14:18,918 validation score: 0.31986916065216064
+INFO 2021-01-29 21:14:20,575 epoch: 183                        loss: 0.28164634108543396
+INFO 2021-01-29 21:14:20,575 0.000701453217856861
+INFO 2021-01-29 21:14:48,039 validation score: 0.32309138774871826
+INFO 2021-01-29 21:14:49,696 epoch: 184                        loss: 0.2825193405151367
+INFO 2021-01-29 21:14:49,696 0.0006985739453174203
+INFO 2021-01-29 21:15:17,270 validation score: 0.3196185231208801
+INFO 2021-01-29 21:15:18,926 epoch: 185                        loss: 0.2815878391265869
+INFO 2021-01-29 21:15:18,927 0.0006956868334186315
+INFO 2021-01-29 21:15:46,672 validation score: 0.3354056477546692
+INFO 2021-01-29 21:15:48,324 epoch: 186                        loss: 0.2836499512195587
+INFO 2021-01-29 21:15:48,324 0.0006927919961387287
+INFO 2021-01-29 21:16:16,178 validation score: 0.3144872188568115
+INFO 2021-01-29 21:16:17,835 epoch: 187                        loss: 0.2849942147731781
+INFO 2021-01-29 21:16:17,835 0.0006898895477609314
+INFO 2021-01-29 21:16:45,875 validation score: 0.3200366497039795
+INFO 2021-01-29 21:16:47,523 epoch: 188                        loss: 0.2872621417045593
+INFO 2021-01-29 21:16:47,523 0.0006869796028689312
+INFO 2021-01-29 21:17:15,715 validation score: 0.3197970390319824
+INFO 2021-01-29 21:17:17,366 epoch: 189                        loss: 0.28880026936531067
+INFO 2021-01-29 21:17:17,366 0.0006840622763423702
+INFO 2021-01-29 21:17:45,660 validation score: 0.33097273111343384
+INFO 2021-01-29 21:17:47,313 epoch: 190                        loss: 0.28383779525756836
+INFO 2021-01-29 21:17:47,313 0.0006811376833523045
+INFO 2021-01-29 21:18:15,779 validation score: 0.3118100166320801
+INFO 2021-01-29 21:18:17,449 epoch: 191                        loss: 0.28080055117607117
+INFO 2021-01-29 21:18:17,449 0.0006782059393566572
+INFO 2021-01-29 21:18:46,064 validation score: 0.32908570766448975
+INFO 2021-01-29 21:18:47,718 epoch: 192                        loss: 0.2821543216705322
+INFO 2021-01-29 21:18:47,719 0.0006752671600956617
+INFO 2021-01-29 21:19:16,448 validation score: 0.30022186040878296
+INFO 2021-01-29 21:19:18,103 epoch: 193                        loss: 0.2798064053058624
+INFO 2021-01-29 21:19:18,103 0.0006723214615872911
+INFO 2021-01-29 21:19:46,977 validation score: 0.3196580410003662
+INFO 2021-01-29 21:19:48,638 epoch: 194                        loss: 0.2799898386001587
+INFO 2021-01-29 21:19:48,639 0.0006693689601226786
+INFO 2021-01-29 21:20:17,651 validation score: 0.30886489152908325
+INFO 2021-01-29 21:20:19,305 epoch: 195                        loss: 0.27944931387901306
+INFO 2021-01-29 21:20:19,305 0.0006664097722615264
+INFO 2021-01-29 21:20:48,566 validation score: 0.3361406922340393
+INFO 2021-01-29 21:20:50,217 epoch: 196                        loss: 0.27714142203330994
+INFO 2021-01-29 21:20:50,217 0.0006634440148275048
+INFO 2021-01-29 21:21:19,557 validation score: 0.3167473077774048
+INFO 2021-01-29 21:21:21,218 epoch: 197                        loss: 0.27919045090675354
+INFO 2021-01-29 21:21:21,219 0.0006604718049036385
+INFO 2021-01-29 21:21:50,666 validation score: 0.3242177963256836
+INFO 2021-01-29 21:21:52,313 epoch: 198                        loss: 0.27760106325149536
+INFO 2021-01-29 21:21:52,313 0.0006574932598276865
+INFO 2021-01-29 21:22:21,979 validation score: 0.3182365298271179
+INFO 2021-01-29 21:22:23,638 epoch: 199                        loss: 0.2767263650894165
+INFO 2021-01-29 21:22:23,639 0.0006545084971875081
+INFO 2021-01-29 21:22:53,427 validation score: 0.3209300637245178
+INFO 2021-01-29 21:22:55,086 epoch: 200                        loss: 0.2763279378414154
+INFO 2021-01-29 21:22:55,086 0.0006515176348164218
+INFO 2021-01-29 21:23:25,007 validation score: 0.3100001811981201
+INFO 2021-01-29 21:23:26,665 epoch: 201                        loss: 0.27501410245895386
+INFO 2021-01-29 21:23:26,665 0.0006485207907885525
+INFO 2021-01-29 21:23:56,750 validation score: 0.32261067628860474
+INFO 2021-01-29 21:23:58,407 epoch: 202                        loss: 0.27421167492866516
+INFO 2021-01-29 21:23:58,407 0.0006455180834141713
+INFO 2021-01-29 21:24:28,643 validation score: 0.3121151328086853
+INFO 2021-01-29 21:24:30,296 epoch: 203                        loss: 0.2741130590438843
+INFO 2021-01-29 21:24:30,297 0.0006425096312350237
+INFO 2021-01-29 21:25:00,689 validation score: 0.3178924322128296
+INFO 2021-01-29 21:25:02,345 epoch: 204                        loss: 0.2747510075569153
+INFO 2021-01-29 21:25:02,346 0.0006394955530196506
+INFO 2021-01-29 21:25:32,830 validation score: 0.3143126964569092
+INFO 2021-01-29 21:25:34,488 epoch: 205                        loss: 0.27365347743034363
+INFO 2021-01-29 21:25:34,488 0.0006364759677586989
+INFO 2021-01-29 21:26:05,159 validation score: 0.319027841091156
+INFO 2021-01-29 21:26:06,815 epoch: 206                        loss: 0.2731263041496277
+INFO 2021-01-29 21:26:06,816 0.0006334509946602243
+INFO 2021-01-29 21:26:37,638 validation score: 0.30299556255340576
+INFO 2021-01-29 21:26:39,293 epoch: 207                        loss: 0.27355310320854187
+INFO 2021-01-29 21:26:39,293 0.0006304207531449852
+INFO 2021-01-29 21:27:10,251 validation score: 0.3214079737663269
+INFO 2021-01-29 21:27:11,904 epoch: 208                        loss: 0.27168190479278564
+INFO 2021-01-29 21:27:11,905 0.0006273853628417283
+INFO 2021-01-29 21:27:43,029 validation score: 0.30060863494873047
+INFO 2021-01-29 21:27:44,689 epoch: 209                        loss: 0.272741436958313
+INFO 2021-01-29 21:27:44,689 0.0006243449435824648
+INFO 2021-01-29 21:28:15,936 validation score: 0.3160581588745117
+INFO 2021-01-29 21:28:17,585 epoch: 210                        loss: 0.27404648065567017
+INFO 2021-01-29 21:28:17,585 0.0006212996153977415
+INFO 2021-01-29 21:28:48,996 validation score: 0.30982083082199097
+INFO 2021-01-29 21:28:50,656 epoch: 211                        loss: 0.27521809935569763
+INFO 2021-01-29 21:28:50,656 0.0006182494985119006
+INFO 2021-01-29 21:29:22,199 validation score: 0.3108999729156494
+INFO 2021-01-29 21:29:23,858 epoch: 212                        loss: 0.27677416801452637
+INFO 2021-01-29 21:29:23,858 0.0006151947133383338
+INFO 2021-01-29 21:29:55,550 validation score: 0.3032095432281494
+INFO 2021-01-29 21:29:57,208 epoch: 213                        loss: 0.27855879068374634
+INFO 2021-01-29 21:29:57,208 0.0006121353804747294
+INFO 2021-01-29 21:30:29,098 validation score: 0.32916420698165894
+INFO 2021-01-29 21:30:30,761 epoch: 214                        loss: 0.27644702792167664
+INFO 2021-01-29 21:30:30,761 0.0006090716206983104
+INFO 2021-01-29 21:31:02,745 validation score: 0.304607093334198
+INFO 2021-01-29 21:31:04,409 epoch: 215                        loss: 0.27384161949157715
+INFO 2021-01-29 21:31:04,409 0.0006060035549610668
+INFO 2021-01-29 21:31:37,226 validation score: 0.31269800662994385
+INFO 2021-01-29 21:31:38,911 epoch: 216                        loss: 0.2747995853424072
+INFO 2021-01-29 21:31:38,912 0.0006029313043849803
+INFO 2021-01-29 21:32:11,229 validation score: 0.3076172471046448
+INFO 2021-01-29 21:32:12,890 epoch: 217                        loss: 0.27338463068008423
+INFO 2021-01-29 21:32:12,890 0.0005998549902572435
+INFO 2021-01-29 21:32:45,337 validation score: 0.30624210834503174
+INFO 2021-01-29 21:32:46,995 epoch: 218                        loss: 0.2744854986667633
+INFO 2021-01-29 21:32:46,995 0.0005967747340254704
+INFO 2021-01-29 21:33:19,561 validation score: 0.33032482862472534
+INFO 2021-01-29 21:33:21,212 epoch: 219                        loss: 0.2731413245201111
+INFO 2021-01-29 21:33:21,213 0.000593690657292903
+INFO 2021-01-29 21:33:53,935 validation score: 0.306522011756897
+INFO 2021-01-29 21:33:55,590 epoch: 220                        loss: 0.27159011363983154
+INFO 2021-01-29 21:33:55,591 0.0005906028818136096
+INFO 2021-01-29 21:34:28,447 validation score: 0.32186901569366455
+INFO 2021-01-29 21:34:30,102 epoch: 221                        loss: 0.27386242151260376
+INFO 2021-01-29 21:34:30,102 0.0005875115294876794
+INFO 2021-01-29 21:35:03,152 validation score: 0.30740946531295776
+INFO 2021-01-29 21:35:04,811 epoch: 222                        loss: 0.2723836302757263
+INFO 2021-01-29 21:35:04,811 0.0005844167223564085
+INFO 2021-01-29 21:35:38,132 validation score: 0.32546907663345337
+INFO 2021-01-29 21:35:39,785 epoch: 223                        loss: 0.2708383798599243
+INFO 2021-01-29 21:35:39,786 0.0005813185825974836
+INFO 2021-01-29 21:36:13,078 validation score: 0.3187074065208435
+INFO 2021-01-29 21:36:14,736 epoch: 224                        loss: 0.2714577913284302
+INFO 2021-01-29 21:36:14,736 0.0005782172325201575
+INFO 2021-01-29 21:36:48,232 validation score: 0.31531721353530884
+INFO 2021-01-29 21:36:49,887 epoch: 225                        loss: 0.27186256647109985
+INFO 2021-01-29 21:36:49,887 0.000575112794560421
+INFO 2021-01-29 21:37:23,530 validation score: 0.32499009370803833
+INFO 2021-01-29 21:37:25,189 epoch: 226                        loss: 0.2699400782585144
+INFO 2021-01-29 21:37:25,189 0.0005720053912761689
+INFO 2021-01-29 21:37:58,910 validation score: 0.3059597611427307
+INFO 2021-01-29 21:38:00,563 epoch: 227                        loss: 0.2706972360610962
+INFO 2021-01-29 21:38:00,563 0.0005688951453423622
+INFO 2021-01-29 21:38:34,487 validation score: 0.32610344886779785
+INFO 2021-01-29 21:38:36,143 epoch: 228                        loss: 0.2734454870223999
+INFO 2021-01-29 21:38:36,143 0.0005657821795461847
+INFO 2021-01-29 21:39:10,289 validation score: 0.305719792842865
+INFO 2021-01-29 21:39:11,951 epoch: 229                        loss: 0.27133265137672424
+INFO 2021-01-29 21:39:11,952 0.0005626666167821958
+INFO 2021-01-29 21:39:46,217 validation score: 0.31733638048171997
+INFO 2021-01-29 21:39:47,884 epoch: 230                        loss: 0.27323853969573975
+INFO 2021-01-29 21:39:47,884 0.0005595485800474789
+INFO 2021-01-29 21:40:22,232 validation score: 0.30311208963394165
+INFO 2021-01-29 21:40:23,884 epoch: 231                        loss: 0.27277398109436035
+INFO 2021-01-29 21:40:23,885 0.0005564281924367851
+INFO 2021-01-29 21:40:58,379 validation score: 0.3125501871109009
+INFO 2021-01-29 21:41:00,036 epoch: 232                        loss: 0.2691512405872345
+INFO 2021-01-29 21:41:00,037 0.0005533055771376746
+INFO 2021-01-29 21:41:34,701 validation score: 0.31037139892578125
+INFO 2021-01-29 21:41:36,361 epoch: 233                        loss: 0.2712430953979492
+INFO 2021-01-29 21:41:36,361 0.0005501808574256523
+INFO 2021-01-29 21:42:11,132 validation score: 0.32159727811813354
+INFO 2021-01-29 21:42:12,787 epoch: 234                        loss: 0.26902326941490173
+INFO 2021-01-29 21:42:12,787 0.0005470541566593024
+INFO 2021-01-29 21:42:47,820 validation score: 0.30226320028305054
+INFO 2021-01-29 21:42:49,474 epoch: 235                        loss: 0.26932424306869507
+INFO 2021-01-29 21:42:49,474 0.0005439255982754173
+INFO 2021-01-29 21:43:24,562 validation score: 0.31101739406585693
+INFO 2021-01-29 21:43:26,224 epoch: 236                        loss: 0.2678489089012146
+INFO 2021-01-29 21:43:26,224 0.0005407953057841247
+INFO 2021-01-29 21:44:01,378 validation score: 0.31297630071640015
+INFO 2021-01-29 21:44:03,034 epoch: 237                        loss: 0.2679823935031891
+INFO 2021-01-29 21:44:03,035 0.0005376634027640126
+INFO 2021-01-29 21:44:38,357 validation score: 0.3154694437980652
+INFO 2021-01-29 21:44:40,017 epoch: 238                        loss: 0.2680220305919647
+INFO 2021-01-29 21:44:40,017 0.0005345300128572495
+INFO 2021-01-29 21:45:15,486 validation score: 0.31309419870376587
+INFO 2021-01-29 21:45:17,144 epoch: 239                        loss: 0.26781222224235535
+INFO 2021-01-29 21:45:17,144 0.0005313952597647035
+INFO 2021-01-29 21:45:52,766 validation score: 0.30781102180480957
+INFO 2021-01-29 21:45:54,423 epoch: 240                        loss: 0.26747241616249084
+INFO 2021-01-29 21:45:54,424 0.0005282592672410593
+INFO 2021-01-29 21:46:30,231 validation score: 0.31392747163772583
+INFO 2021-01-29 21:46:31,893 epoch: 241                        loss: 0.2691360414028168
+INFO 2021-01-29 21:46:31,893 0.0005251221590899321
+INFO 2021-01-29 21:47:07,774 validation score: 0.3068721294403076
+INFO 2021-01-29 21:47:09,434 epoch: 242                        loss: 0.2677748501300812
+INFO 2021-01-29 21:47:09,434 0.0005219840591589801
+INFO 2021-01-29 21:47:45,532 validation score: 0.31022077798843384
+INFO 2021-01-29 21:47:47,188 epoch: 243                        loss: 0.2667049765586853
+INFO 2021-01-29 21:47:47,188 0.0005188450913350152
+INFO 2021-01-29 21:48:23,460 validation score: 0.3076136112213135
+INFO 2021-01-29 21:48:25,120 epoch: 244                        loss: 0.2671087980270386
+INFO 2021-01-29 21:48:25,120 0.0005157053795391124
+INFO 2021-01-29 21:49:01,508 validation score: 0.3168374300003052
+INFO 2021-01-29 21:49:03,165 epoch: 245                        loss: 0.2681894600391388
+INFO 2021-01-29 21:49:03,166 0.0005125650477217173
+INFO 2021-01-29 21:49:39,688 validation score: 0.3104856610298157
+INFO 2021-01-29 21:49:41,345 epoch: 246                        loss: 0.2668488025665283
+INFO 2021-01-29 21:49:41,346 0.000509424219857753
+INFO 2021-01-29 21:50:18,084 validation score: 0.31251639127731323
+INFO 2021-01-29 21:50:19,745 epoch: 247                        loss: 0.2694655656814575
+INFO 2021-01-29 21:50:19,745 0.0005062830199417255
+INFO 2021-01-29 21:50:56,617 validation score: 0.3097754716873169
+INFO 2021-01-29 21:50:58,274 epoch: 248                        loss: 0.2662658393383026
+INFO 2021-01-29 21:50:58,274 0.000503141571982829
+INFO 2021-01-29 21:51:35,312 validation score: 0.3060917258262634
+INFO 2021-01-29 21:51:36,966 epoch: 249                        loss: 0.267389178276062
+INFO 2021-01-29 21:51:36,966 0.0005000000000000498
+INFO 2021-01-29 21:52:14,148 validation score: 0.3113030195236206
+INFO 2021-01-29 21:52:15,804 epoch: 250                        loss: 0.2662067413330078
+INFO 2021-01-29 21:52:15,804 0.0004968584280172706
+INFO 2021-01-29 21:52:53,099 validation score: 0.29865652322769165
+INFO 2021-01-29 21:52:54,755 epoch: 251                        loss: 0.26761943101882935
+INFO 2021-01-29 21:52:54,755 0.000493716980058374
+INFO 2021-01-29 21:53:32,193 validation score: 0.31907373666763306
+INFO 2021-01-29 21:53:33,850 epoch: 252                        loss: 0.2659655213356018
+INFO 2021-01-29 21:53:33,850 0.0004905757801423465
+INFO 2021-01-29 21:54:11,438 validation score: 0.30826032161712646
+INFO 2021-01-29 21:54:13,093 epoch: 253                        loss: 0.2645917534828186
+INFO 2021-01-29 21:54:13,093 0.0004874349522783823
+INFO 2021-01-29 21:54:50,783 validation score: 0.3173823356628418
+INFO 2021-01-29 21:54:52,437 epoch: 254                        loss: 0.26521754264831543
+INFO 2021-01-29 21:54:52,437 0.00048429462046098724
+INFO 2021-01-29 21:55:30,305 validation score: 0.3016444444656372
+INFO 2021-01-29 21:55:31,958 epoch: 255                        loss: 0.26418328285217285
+INFO 2021-01-29 21:55:31,959 0.0004811549086650844
+INFO 2021-01-29 21:56:09,997 validation score: 0.31505918502807617
+INFO 2021-01-29 21:56:11,655 epoch: 256                        loss: 0.26410916447639465
+INFO 2021-01-29 21:56:11,655 0.0004780159408411197
+INFO 2021-01-29 21:56:49,798 validation score: 0.30519211292266846
+INFO 2021-01-29 21:56:51,464 epoch: 257                        loss: 0.2636263072490692
+INFO 2021-01-29 21:56:51,464 0.00047487784091016763
+INFO 2021-01-29 21:57:29,788 validation score: 0.3170631527900696
+INFO 2021-01-29 21:57:31,446 epoch: 258                        loss: 0.2625201344490051
+INFO 2021-01-29 21:57:31,447 0.00047174073275904046
+INFO 2021-01-29 21:58:09,915 validation score: 0.3157086968421936
+INFO 2021-01-29 21:58:11,563 epoch: 259                        loss: 0.2637503445148468
+INFO 2021-01-29 21:58:11,563 0.00046860474023539643
+INFO 2021-01-29 21:58:50,191 validation score: 0.32050037384033203
+INFO 2021-01-29 21:58:51,854 epoch: 260                        loss: 0.2634068429470062
+INFO 2021-01-29 21:58:51,854 0.0004654699871428505
+INFO 2021-01-29 21:59:30,670 validation score: 0.3093288540840149
+INFO 2021-01-29 21:59:32,333 epoch: 261                        loss: 0.26305097341537476
+INFO 2021-01-29 21:59:32,334 0.00046233659723608723
+INFO 2021-01-29 22:00:11,267 validation score: 0.3163902759552002
+INFO 2021-01-29 22:00:12,927 epoch: 262                        loss: 0.26275870203971863
+INFO 2021-01-29 22:00:12,927 0.0004592046942159752
+INFO 2021-01-29 22:00:51,949 validation score: 0.30580586194992065
+INFO 2021-01-29 22:00:53,615 epoch: 263                        loss: 0.26215219497680664
+INFO 2021-01-29 22:00:53,616 0.0004560744017246827
+INFO 2021-01-29 22:01:32,832 validation score: 0.3211650252342224
+INFO 2021-01-29 22:01:34,487 epoch: 264                        loss: 0.2614414095878601
+INFO 2021-01-29 22:01:34,487 0.00045294584334079743
+INFO 2021-01-29 22:02:13,897 validation score: 0.30319011211395264
+INFO 2021-01-29 22:02:15,561 epoch: 265                        loss: 0.26252901554107666
+INFO 2021-01-29 22:02:15,561 0.0004498191425744475
+INFO 2021-01-29 22:02:55,011 validation score: 0.3068346381187439
+INFO 2021-01-29 22:02:56,664 epoch: 266                        loss: 0.2611873149871826
+INFO 2021-01-29 22:02:56,665 0.0004466944228624252
+INFO 2021-01-29 22:03:36,341 validation score: 0.3121917247772217
+INFO 2021-01-29 22:03:38,000 epoch: 267                        loss: 0.2619640827178955
+INFO 2021-01-29 22:03:38,000 0.00044357180756331464
+INFO 2021-01-29 22:04:17,792 validation score: 0.31870681047439575
+INFO 2021-01-29 22:04:19,453 epoch: 268                        loss: 0.26203685998916626
+INFO 2021-01-29 22:04:19,453 0.00044045141995262103
+INFO 2021-01-29 22:04:59,397 validation score: 0.3098708987236023
+INFO 2021-01-29 22:05:01,053 epoch: 269                        loss: 0.2607923746109009
+INFO 2021-01-29 22:05:01,054 0.00043733338321790406
+INFO 2021-01-29 22:05:41,139 validation score: 0.31508302688598633
+INFO 2021-01-29 22:05:42,794 epoch: 270                        loss: 0.26069092750549316
+INFO 2021-01-29 22:05:42,794 0.0004342178204539152
+INFO 2021-01-29 22:06:23,051 validation score: 0.31171292066574097
+INFO 2021-01-29 22:06:24,706 epoch: 271                        loss: 0.26121985912323
+INFO 2021-01-29 22:06:24,706 0.0004311048546577377
+INFO 2021-01-29 22:07:05,256 validation score: 0.31499290466308594
+INFO 2021-01-29 22:07:06,915 epoch: 272                        loss: 0.26059117913246155
+INFO 2021-01-29 22:07:06,915 0.0004279946087239309
+INFO 2021-01-29 22:07:47,477 validation score: 0.3040229082107544
+INFO 2021-01-29 22:07:49,142 epoch: 273                        loss: 0.26034778356552124
+INFO 2021-01-29 22:07:49,142 0.00042488720543967876
+INFO 2021-01-29 22:08:29,844 validation score: 0.3078044652938843
+INFO 2021-01-29 22:08:31,495 epoch: 274                        loss: 0.2610076069831848
+INFO 2021-01-29 22:08:31,495 0.0004217827674799422
+INFO 2021-01-29 22:09:12,288 validation score: 0.3109479546546936
+INFO 2021-01-29 22:09:13,945 epoch: 275                        loss: 0.2601098418235779
+INFO 2021-01-29 22:09:13,946 0.00041868141740261617
+INFO 2021-01-29 22:09:54,958 validation score: 0.3091585636138916
+INFO 2021-01-29 22:09:56,616 epoch: 276                        loss: 0.25985345244407654
+INFO 2021-01-29 22:09:56,616 0.00041558327764369137
+INFO 2021-01-29 22:10:37,738 validation score: 0.31569868326187134
+INFO 2021-01-29 22:10:39,398 epoch: 277                        loss: 0.2602865993976593
+INFO 2021-01-29 22:10:39,398 0.00041248847051242066
+INFO 2021-01-29 22:11:20,716 validation score: 0.31501954793930054
+INFO 2021-01-29 22:11:22,376 epoch: 278                        loss: 0.2613191604614258
+INFO 2021-01-29 22:11:22,376 0.0004093971181864903
+INFO 2021-01-29 22:12:03,819 validation score: 0.31027674674987793
+INFO 2021-01-29 22:12:05,514 epoch: 279                        loss: 0.26151299476623535
+INFO 2021-01-29 22:12:05,514 0.0004063093427071969
+INFO 2021-01-29 22:12:47,109 validation score: 0.3076601028442383
+INFO 2021-01-29 22:12:48,769 epoch: 280                        loss: 0.26119738817214966
+INFO 2021-01-29 22:12:48,769 0.00040322526597462953
+INFO 2021-01-29 22:13:30,703 validation score: 0.31013065576553345
+INFO 2021-01-29 22:13:32,356 epoch: 281                        loss: 0.2616349458694458
+INFO 2021-01-29 22:13:32,356 0.0004001450097428564
+INFO 2021-01-29 22:14:14,144 validation score: 0.3154156804084778
+INFO 2021-01-29 22:14:15,793 epoch: 282                        loss: 0.262512743473053
+INFO 2021-01-29 22:14:15,793 0.0003970686956151194
+INFO 2021-01-29 22:14:57,768 validation score: 0.30947136878967285
+INFO 2021-01-29 22:14:59,424 epoch: 283                        loss: 0.2631017565727234
+INFO 2021-01-29 22:14:59,424 0.00039399644503903316
+INFO 2021-01-29 22:15:41,539 validation score: 0.30638569593429565
+INFO 2021-01-29 22:15:43,196 epoch: 284                        loss: 0.2631836533546448
+INFO 2021-01-29 22:15:43,197 0.0003909283793017895
+INFO 2021-01-29 22:16:25,508 validation score: 0.312555730342865
+INFO 2021-01-29 22:16:27,166 epoch: 285                        loss: 0.26132407784461975
+INFO 2021-01-29 22:16:27,167 0.00038786461952537043
+INFO 2021-01-29 22:17:09,564 validation score: 0.3099411725997925
+INFO 2021-01-29 22:17:11,213 epoch: 286                        loss: 0.2602642774581909
+INFO 2021-01-29 22:17:11,214 0.00038480528666176616
+INFO 2021-01-29 22:17:53,773 validation score: 0.311947226524353
+INFO 2021-01-29 22:17:55,422 epoch: 287                        loss: 0.26093789935112
+INFO 2021-01-29 22:17:55,423 0.0003817505014881993
+INFO 2021-01-29 22:18:38,148 validation score: 0.3093528151512146
+INFO 2021-01-29 22:18:39,805 epoch: 288                        loss: 0.25951823592185974
+INFO 2021-01-29 22:18:39,805 0.00037870038460235825
+INFO 2021-01-29 22:19:22,685 validation score: 0.3093562126159668
+INFO 2021-01-29 22:19:24,336 epoch: 289                        loss: 0.25891923904418945
+INFO 2021-01-29 22:19:24,336 0.00037565505641763496
+INFO 2021-01-29 22:20:07,329 validation score: 0.3207237720489502
+INFO 2021-01-29 22:20:08,988 epoch: 290                        loss: 0.25813180208206177
+INFO 2021-01-29 22:20:08,988 0.0003726146371583716
+INFO 2021-01-29 22:20:52,149 validation score: 0.31355857849121094
+INFO 2021-01-29 22:20:53,803 epoch: 291                        loss: 0.2582136392593384
+INFO 2021-01-29 22:20:53,803 0.00036957924685511445
+INFO 2021-01-29 22:21:37,118 validation score: 0.3097856044769287
+INFO 2021-01-29 22:21:38,773 epoch: 292                        loss: 0.25797420740127563
+INFO 2021-01-29 22:21:38,773 0.00036654900533987555
+INFO 2021-01-29 22:22:22,209 validation score: 0.3123452067375183
+INFO 2021-01-29 22:22:23,868 epoch: 293                        loss: 0.2579793930053711
+INFO 2021-01-29 22:22:23,868 0.00036352403224140084
+INFO 2021-01-29 22:23:07,197 validation score: 0.309145987033844
+INFO 2021-01-29 22:23:08,852 epoch: 294                        loss: 0.25815868377685547
+INFO 2021-01-29 22:23:08,852 0.0003605044469804491
+INFO 2021-01-29 22:23:52,237 validation score: 0.308143675327301
+INFO 2021-01-29 22:23:53,895 epoch: 295                        loss: 0.2590153217315674
+INFO 2021-01-29 22:23:53,896 0.00035749036876507606
+INFO 2021-01-29 22:24:37,457 validation score: 0.3088057041168213
+INFO 2021-01-29 22:24:39,114 epoch: 296                        loss: 0.25922131538391113
+INFO 2021-01-29 22:24:39,114 0.0003544819165859285
+INFO 2021-01-29 22:25:22,849 validation score: 0.31330442428588867
+INFO 2021-01-29 22:25:24,504 epoch: 297                        loss: 0.25766313076019287
+INFO 2021-01-29 22:25:24,504 0.0003514792092115472
+INFO 2021-01-29 22:26:08,425 validation score: 0.3079987168312073
+INFO 2021-01-29 22:26:10,075 epoch: 298                        loss: 0.25744128227233887
+INFO 2021-01-29 22:26:10,075 0.00034848236518367806
+INFO 2021-01-29 22:26:54,079 validation score: 0.3186473250389099
+INFO 2021-01-29 22:26:55,736 epoch: 299                        loss: 0.2567656636238098
+INFO 2021-01-29 22:26:55,736 0.0003454915028125916
+INFO 2021-01-29 22:27:39,875 validation score: 0.30894625186920166
+INFO 2021-01-29 22:27:41,525 epoch: 300                        loss: 0.25844505429267883
+INFO 2021-01-29 22:27:41,525 0.0003425067401724132
+INFO 2021-01-29 22:28:25,799 validation score: 0.31456345319747925
+INFO 2021-01-29 22:28:27,454 epoch: 301                        loss: 0.25761979818344116
+INFO 2021-01-29 22:28:27,454 0.0003395281950964612
+INFO 2021-01-29 22:29:11,906 validation score: 0.3102695345878601
+INFO 2021-01-29 22:29:13,566 epoch: 302                        loss: 0.25801101326942444
+INFO 2021-01-29 22:29:13,566 0.000336555985172595
+INFO 2021-01-29 22:29:58,169 validation score: 0.31333136558532715
+INFO 2021-01-29 22:29:59,822 epoch: 303                        loss: 0.2577935457229614
+INFO 2021-01-29 22:29:59,823 0.0003335902277385732
+INFO 2021-01-29 22:30:44,536 validation score: 0.3172968626022339
+INFO 2021-01-29 22:30:46,198 epoch: 304                        loss: 0.257007360458374
+INFO 2021-01-29 22:30:46,198 0.0003306310398774211
+INFO 2021-01-29 22:31:31,059 validation score: 0.3116433024406433
+INFO 2021-01-29 22:31:32,717 epoch: 305                        loss: 0.2568064332008362
+INFO 2021-01-29 22:31:32,717 0.0003276785384128085
+INFO 2021-01-29 22:32:17,729 validation score: 0.31449687480926514
+INFO 2021-01-29 22:32:19,385 epoch: 306                        loss: 0.25684595108032227
+INFO 2021-01-29 22:32:19,386 0.0003247328399044378
+INFO 2021-01-29 22:33:04,540 validation score: 0.3107728958129883
+INFO 2021-01-29 22:33:06,196 epoch: 307                        loss: 0.25778383016586304
+INFO 2021-01-29 22:33:06,197 0.00032179406064344234
+INFO 2021-01-29 22:33:51,736 validation score: 0.3213626742362976
+INFO 2021-01-29 22:33:53,396 epoch: 308                        loss: 0.25850361585617065
+INFO 2021-01-29 22:33:53,396 0.0003188623166477951
+INFO 2021-01-29 22:34:38,864 validation score: 0.316805899143219
+INFO 2021-01-29 22:34:40,515 epoch: 309                        loss: 0.25717252492904663
+INFO 2021-01-29 22:34:40,515 0.00031593772365772925
+INFO 2021-01-29 22:35:26,135 validation score: 0.3128403425216675
+INFO 2021-01-29 22:35:27,792 epoch: 310                        loss: 0.25732409954071045
+INFO 2021-01-29 22:35:27,793 0.00031302039713116834
+INFO 2021-01-29 22:36:13,539 validation score: 0.31453102827072144
+INFO 2021-01-29 22:36:15,194 epoch: 311                        loss: 0.256657212972641
+INFO 2021-01-29 22:36:15,194 0.00031011045223916826
+INFO 2021-01-29 22:37:02,482 validation score: 0.3088757395744324
+INFO 2021-01-29 22:37:04,184 epoch: 312                        loss: 0.25755220651626587
+INFO 2021-01-29 22:37:04,184 0.0003072080038613708
+INFO 2021-01-29 22:37:50,251 validation score: 0.31743454933166504
+INFO 2021-01-29 22:37:51,912 epoch: 313                        loss: 0.2574763596057892
+INFO 2021-01-29 22:37:51,912 0.00030431316658146825
+INFO 2021-01-29 22:38:38,080 validation score: 0.3124004006385803
+INFO 2021-01-29 22:38:39,743 epoch: 314                        loss: 0.257224977016449
+INFO 2021-01-29 22:38:39,743 0.00030142605468267927
+INFO 2021-01-29 22:39:26,064 validation score: 0.30713117122650146
+INFO 2021-01-29 22:39:27,724 epoch: 315                        loss: 0.2571202516555786
+INFO 2021-01-29 22:39:27,724 0.0002985467821432386
+INFO 2021-01-29 22:40:14,207 validation score: 0.31863242387771606
+INFO 2021-01-29 22:40:15,862 epoch: 316                        loss: 0.25581204891204834
+INFO 2021-01-29 22:40:15,862 0.00029567546263189575
+INFO 2021-01-29 22:41:02,520 validation score: 0.30429428815841675
+INFO 2021-01-29 22:41:04,174 epoch: 317                        loss: 0.2566244602203369
+INFO 2021-01-29 22:41:04,175 0.0002928122095034285
+INFO 2021-01-29 22:41:50,955 validation score: 0.3149125576019287
+INFO 2021-01-29 22:41:52,614 epoch: 318                        loss: 0.2559845447540283
+INFO 2021-01-29 22:41:52,614 0.0002899571357941677
+INFO 2021-01-29 22:42:39,521 validation score: 0.3011283874511719
+INFO 2021-01-29 22:42:41,174 epoch: 319                        loss: 0.25634947419166565
+INFO 2021-01-29 22:42:41,175 0.0002871103542175348
+INFO 2021-01-29 22:43:28,284 validation score: 0.32289618253707886
+INFO 2021-01-29 22:43:29,944 epoch: 320                        loss: 0.25667402148246765
+INFO 2021-01-29 22:43:29,945 0.00028427197715959207
+INFO 2021-01-29 22:44:17,178 validation score: 0.3067058324813843
+INFO 2021-01-29 22:44:18,833 epoch: 321                        loss: 0.25535234808921814
+INFO 2021-01-29 22:44:18,833 0.00028144211667460533
+INFO 2021-01-29 22:45:06,180 validation score: 0.31815779209136963
+INFO 2021-01-29 22:45:07,834 epoch: 322                        loss: 0.25602471828460693
+INFO 2021-01-29 22:45:07,834 0.00027862088448062127
+INFO 2021-01-29 22:45:55,340 validation score: 0.3096764087677002
+INFO 2021-01-29 22:45:56,993 epoch: 323                        loss: 0.2552170157432556
+INFO 2021-01-29 22:45:56,993 0.0002758083919550562
+INFO 2021-01-29 22:46:44,628 validation score: 0.31328028440475464
+INFO 2021-01-29 22:46:46,288 epoch: 324                        loss: 0.2553972899913788
+INFO 2021-01-29 22:46:46,288 0.0002730047501302991
+INFO 2021-01-29 22:47:34,045 validation score: 0.30761951208114624
+INFO 2021-01-29 22:47:35,695 epoch: 325                        loss: 0.2570111155509949
+INFO 2021-01-29 22:47:35,695 0.00027021006968932886
+INFO 2021-01-29 22:48:23,645 validation score: 0.3211333751678467
+INFO 2021-01-29 22:48:25,302 epoch: 326                        loss: 0.25527700781822205
+INFO 2021-01-29 22:48:25,302 0.00026742446096134385
+INFO 2021-01-29 22:49:13,390 validation score: 0.30720728635787964
+INFO 2021-01-29 22:49:15,045 epoch: 327                        loss: 0.2555365264415741
+INFO 2021-01-29 22:49:15,045 0.0002646480339174072
+INFO 2021-01-29 22:50:03,359 validation score: 0.3181228041648865
+INFO 2021-01-29 22:50:05,016 epoch: 328                        loss: 0.25498467683792114
+INFO 2021-01-29 22:50:05,016 0.00026188089816610397
+INFO 2021-01-29 22:50:53,378 validation score: 0.3128873109817505
+INFO 2021-01-29 22:50:55,033 epoch: 329                        loss: 0.2543689012527466
+INFO 2021-01-29 22:50:55,034 0.0002591231629492164
+INFO 2021-01-29 22:51:43,582 validation score: 0.312999963760376
+INFO 2021-01-29 22:51:45,236 epoch: 330                        loss: 0.2541148066520691
+INFO 2021-01-29 22:51:45,236 0.0002563749371374081
+INFO 2021-01-29 22:52:33,886 validation score: 0.31036365032196045
+INFO 2021-01-29 22:52:35,538 epoch: 331                        loss: 0.25420188903808594
+INFO 2021-01-29 22:52:35,538 0.00025363632922592854
+INFO 2021-01-29 22:53:24,323 validation score: 0.3125395178794861
+INFO 2021-01-29 22:53:25,977 epoch: 332                        loss: 0.2541797459125519
+INFO 2021-01-29 22:53:25,977 0.00025090744733032933
+INFO 2021-01-29 22:54:14,929 validation score: 0.3109150528907776
+INFO 2021-01-29 22:54:16,583 epoch: 333                        loss: 0.25415605306625366
+INFO 2021-01-29 22:54:16,583 0.0002481883991821946
+INFO 2021-01-29 22:55:05,648 validation score: 0.30811935663223267
+INFO 2021-01-29 22:55:07,304 epoch: 334                        loss: 0.25529468059539795
+INFO 2021-01-29 22:55:07,305 0.0002454792921248896
+INFO 2021-01-29 22:55:56,579 validation score: 0.3080596923828125
+INFO 2021-01-29 22:55:58,233 epoch: 335                        loss: 0.2547285258769989
+INFO 2021-01-29 22:55:58,234 0.00024278023310932224
+INFO 2021-01-29 22:56:47,644 validation score: 0.3100360035896301
+INFO 2021-01-29 22:56:49,303 epoch: 336                        loss: 0.25504428148269653
+INFO 2021-01-29 22:56:49,303 0.00024009132868972117
+INFO 2021-01-29 22:57:38,825 validation score: 0.31412482261657715
+INFO 2021-01-29 22:57:40,492 epoch: 337                        loss: 0.25665515661239624
+INFO 2021-01-29 22:57:40,492 0.00023741268501942814
+INFO 2021-01-29 22:58:30,206 validation score: 0.31101226806640625
+INFO 2021-01-29 22:58:31,864 epoch: 338                        loss: 0.2545919716358185
+INFO 2021-01-29 22:58:31,864 0.00023474440784670942
+INFO 2021-01-29 22:59:21,688 validation score: 0.3062295913696289
+INFO 2021-01-29 22:59:23,348 epoch: 339                        loss: 0.25559085607528687
+INFO 2021-01-29 22:59:23,348 0.0002320866025105784
+INFO 2021-01-29 23:00:13,343 validation score: 0.3068332076072693
+INFO 2021-01-29 23:00:14,996 epoch: 340                        loss: 0.25529128313064575
+INFO 2021-01-29 23:00:14,996 0.000229439373936639
+INFO 2021-01-29 23:01:05,070 validation score: 0.3066176176071167
+INFO 2021-01-29 23:01:06,752 epoch: 341                        loss: 0.2551426887512207
+INFO 2021-01-29 23:01:06,753 0.00022680282663294264
+INFO 2021-01-29 23:01:57,006 validation score: 0.3053070306777954
+INFO 2021-01-29 23:01:58,669 epoch: 342                        loss: 0.2542875409126282
+INFO 2021-01-29 23:01:58,670 0.00022417706468586232
+INFO 2021-01-29 23:02:49,071 validation score: 0.31004947423934937
+INFO 2021-01-29 23:02:50,735 epoch: 343                        loss: 0.25438228249549866
+INFO 2021-01-29 23:02:50,735 0.00022156219175598364
+INFO 2021-01-29 23:03:41,334 validation score: 0.31001681089401245
+INFO 2021-01-29 23:03:42,990 epoch: 344                        loss: 0.25519251823425293
+INFO 2021-01-29 23:03:42,991 0.00021895831107401258
+INFO 2021-01-29 23:04:33,688 validation score: 0.314072847366333
+INFO 2021-01-29 23:04:35,346 epoch: 345                        loss: 0.25463879108428955
+INFO 2021-01-29 23:04:35,346 0.00021636552543670006
+INFO 2021-01-29 23:05:26,215 validation score: 0.3163374662399292
+INFO 2021-01-29 23:05:27,873 epoch: 346                        loss: 0.25439801812171936
+INFO 2021-01-29 23:05:27,874 0.00021378393720278296
+INFO 2021-01-29 23:06:18,876 validation score: 0.3138657212257385
+INFO 2021-01-29 23:06:20,532 epoch: 347                        loss: 0.25548213720321655
+INFO 2021-01-29 23:06:20,533 0.000211213648288945
+INFO 2021-01-29 23:07:11,657 validation score: 0.30697208642959595
+INFO 2021-01-29 23:07:13,316 epoch: 348                        loss: 0.2565056383609772
+INFO 2021-01-29 23:07:13,317 0.00020865476016579103
+INFO 2021-01-29 23:08:04,609 validation score: 0.3158988952636719
+INFO 2021-01-29 23:08:06,265 epoch: 349                        loss: 0.25500378012657166
+INFO 2021-01-29 23:08:06,266 0.00020610737385384274
+INFO 2021-01-29 23:08:57,725 validation score: 0.30932414531707764
+INFO 2021-01-29 23:08:59,383 epoch: 350                        loss: 0.2536826431751251
+INFO 2021-01-29 23:08:59,384 0.0002035715899195499
+INFO 2021-01-29 23:09:50,975 validation score: 0.30947303771972656
+INFO 2021-01-29 23:09:52,637 epoch: 351                        loss: 0.2535707950592041
+INFO 2021-01-29 23:09:52,637 0.0002010475084713205
+INFO 2021-01-29 23:10:44,384 validation score: 0.30742305517196655
+INFO 2021-01-29 23:10:46,042 epoch: 352                        loss: 0.2544161081314087
+INFO 2021-01-29 23:10:46,042 0.0001985352291555676
+INFO 2021-01-29 23:11:37,948 validation score: 0.3081376552581787
+INFO 2021-01-29 23:11:39,603 epoch: 353                        loss: 0.25337880849838257
+INFO 2021-01-29 23:11:39,604 0.0001960348511527775
+INFO 2021-01-29 23:12:31,707 validation score: 0.3078910708427429
+INFO 2021-01-29 23:12:33,364 epoch: 354                        loss: 0.25404828786849976
+INFO 2021-01-29 23:12:33,365 0.00019354647317359238
+INFO 2021-01-29 23:13:25,548 validation score: 0.31532150506973267
+INFO 2021-01-29 23:13:27,205 epoch: 355                        loss: 0.25304651260375977
+INFO 2021-01-29 23:13:27,205 0.0001910701934549135
+INFO 2021-01-29 23:14:19,600 validation score: 0.31162452697753906
+INFO 2021-01-29 23:14:21,251 epoch: 356                        loss: 0.25265559554100037
+INFO 2021-01-29 23:14:21,252 0.00018860610975602484
+INFO 2021-01-29 23:15:13,757 validation score: 0.30895543098449707
+INFO 2021-01-29 23:15:15,413 epoch: 357                        loss: 0.2530781030654907
+INFO 2021-01-29 23:15:15,414 0.0001861543193547311
+INFO 2021-01-29 23:16:08,050 validation score: 0.30906665325164795
+INFO 2021-01-29 23:16:09,710 epoch: 358                        loss: 0.2531300187110901
+INFO 2021-01-29 23:16:09,711 0.00018371491904351932
+INFO 2021-01-29 23:17:02,463 validation score: 0.3081415295600891
+INFO 2021-01-29 23:17:04,116 epoch: 359                        loss: 0.2540775239467621
+INFO 2021-01-29 23:17:04,116 0.0001812880051257369
+INFO 2021-01-29 23:17:57,030 validation score: 0.31345999240875244
+INFO 2021-01-29 23:17:58,716 epoch: 360                        loss: 0.25275343656539917
+INFO 2021-01-29 23:17:58,716 0.00017887367341178997
+INFO 2021-01-29 23:18:51,787 validation score: 0.3063117265701294
+INFO 2021-01-29 23:18:53,444 epoch: 361                        loss: 0.2531385123729706
+INFO 2021-01-29 23:18:53,445 0.00017647201921536004
+INFO 2021-01-29 23:19:46,623 validation score: 0.3123403787612915
+INFO 2021-01-29 23:19:48,280 epoch: 362                        loss: 0.2523191571235657
+INFO 2021-01-29 23:19:48,281 0.00017408313734964306
+INFO 2021-01-29 23:20:41,611 validation score: 0.30791616439819336
+INFO 2021-01-29 23:20:43,259 epoch: 363                        loss: 0.2518445551395416
+INFO 2021-01-29 23:20:43,259 0.0001717071221236046
+INFO 2021-01-29 23:21:36,757 validation score: 0.3083893656730652
+INFO 2021-01-29 23:21:38,410 epoch: 364                        loss: 0.25234559178352356
+INFO 2021-01-29 23:21:38,411 0.00016934406733825697
+INFO 2021-01-29 23:22:32,104 validation score: 0.3076806664466858
+INFO 2021-01-29 23:22:33,751 epoch: 365                        loss: 0.2530839145183563
+INFO 2021-01-29 23:22:33,751 0.00016699406628295746
+INFO 2021-01-29 23:23:27,515 validation score: 0.3045881390571594
+INFO 2021-01-29 23:23:29,171 epoch: 366                        loss: 0.25267836451530457
+INFO 2021-01-29 23:23:29,172 0.00016465721173172348
+INFO 2021-01-29 23:24:23,096 validation score: 0.30998343229293823
+INFO 2021-01-29 23:24:24,761 epoch: 367                        loss: 0.2526663541793823
+INFO 2021-01-29 23:24:24,761 0.0001623335959395715
+INFO 2021-01-29 23:25:18,847 validation score: 0.3116767406463623
+INFO 2021-01-29 23:25:20,503 epoch: 368                        loss: 0.2517109215259552
+INFO 2021-01-29 23:25:20,504 0.00016002331063887435
+INFO 2021-01-29 23:26:14,885 validation score: 0.31083524227142334
+INFO 2021-01-29 23:26:16,544 epoch: 369                        loss: 0.251558780670166
+INFO 2021-01-29 23:26:16,545 0.00015772644703574
+INFO 2021-01-29 23:27:10,858 validation score: 0.30916571617126465
+INFO 2021-01-29 23:27:12,511 epoch: 370                        loss: 0.2519868314266205
+INFO 2021-01-29 23:27:12,511 0.00015544309580641015
+INFO 2021-01-29 23:28:07,028 validation score: 0.31832975149154663
+INFO 2021-01-29 23:28:08,689 epoch: 371                        loss: 0.2523941397666931
+INFO 2021-01-29 23:28:08,689 0.00015317334709368227
+INFO 2021-01-29 23:29:03,307 validation score: 0.3134344816207886
+INFO 2021-01-29 23:29:04,962 epoch: 372                        loss: 0.2520202100276947
+INFO 2021-01-29 23:29:04,963 0.00015091729050334865
+INFO 2021-01-29 23:29:59,720 validation score: 0.30957913398742676
+INFO 2021-01-29 23:30:01,375 epoch: 373                        loss: 0.25250300765037537
+INFO 2021-01-29 23:30:01,375 0.00014867501510066044
+INFO 2021-01-29 23:30:56,457 validation score: 0.31336748600006104
+INFO 2021-01-29 23:30:58,124 epoch: 374                        loss: 0.2521025836467743
+INFO 2021-01-29 23:30:58,124 0.00014644660940681163
+INFO 2021-01-29 23:31:53,217 validation score: 0.3132774233818054
+INFO 2021-01-29 23:31:54,871 epoch: 375                        loss: 0.2521430552005768
+INFO 2021-01-29 23:31:54,871 0.0001442321613954429
+INFO 2021-01-29 23:32:50,105 validation score: 0.31277167797088623
+INFO 2021-01-29 23:32:51,763 epoch: 376                        loss: 0.25162220001220703
+INFO 2021-01-29 23:32:51,764 0.0001420317584891702
+INFO 2021-01-29 23:33:47,160 validation score: 0.3106239438056946
+INFO 2021-01-29 23:33:48,820 epoch: 377                        loss: 0.2519550323486328
+INFO 2021-01-29 23:33:48,820 0.00013984548755613255
+INFO 2021-01-29 23:34:44,345 validation score: 0.31136804819107056
+INFO 2021-01-29 23:34:46,005 epoch: 378                        loss: 0.25147807598114014
+INFO 2021-01-29 23:34:46,005 0.000137673434906563
+INFO 2021-01-29 23:35:41,697 validation score: 0.3096235990524292
+INFO 2021-01-29 23:35:43,356 epoch: 379                        loss: 0.2517507076263428
+INFO 2021-01-29 23:35:43,356 0.0001355156862893806
+INFO 2021-01-29 23:36:39,156 validation score: 0.3144081234931946
+INFO 2021-01-29 23:36:40,810 epoch: 380                        loss: 0.2520078122615814
+INFO 2021-01-29 23:36:40,810 0.00013337232688880675
+INFO 2021-01-29 23:37:36,739 validation score: 0.3168948292732239
+INFO 2021-01-29 23:37:38,394 epoch: 381                        loss: 0.2515333890914917
+INFO 2021-01-29 23:37:38,394 0.00013124344132099997
+INFO 2021-01-29 23:38:34,506 validation score: 0.3101171851158142
+INFO 2021-01-29 23:38:36,163 epoch: 382                        loss: 0.2509334087371826
+INFO 2021-01-29 23:38:36,163 0.00012912911363071754
+INFO 2021-01-29 23:39:32,409 validation score: 0.31073248386383057
+INFO 2021-01-29 23:39:34,072 epoch: 383                        loss: 0.2509171962738037
+INFO 2021-01-29 23:39:34,072 0.00012702942728799624
+INFO 2021-01-29 23:40:30,449 validation score: 0.31324684619903564
+INFO 2021-01-29 23:40:32,100 epoch: 384                        loss: 0.2509245276451111
+INFO 2021-01-29 23:40:32,100 0.0001249444651848577
+INFO 2021-01-29 23:41:28,627 validation score: 0.3130813241004944
+INFO 2021-01-29 23:41:30,282 epoch: 385                        loss: 0.25189208984375
+INFO 2021-01-29 23:41:30,282 0.00012287430963203575
+INFO 2021-01-29 23:42:27,673 validation score: 0.3099302649497986
+INFO 2021-01-29 23:42:29,372 epoch: 386                        loss: 0.25123658776283264
+INFO 2021-01-29 23:42:29,372 0.00012081904235572697
+INFO 2021-01-29 23:43:26,243 validation score: 0.31583327054977417
+INFO 2021-01-29 23:43:27,903 epoch: 387                        loss: 0.2506379783153534
+INFO 2021-01-29 23:43:27,903 0.00011877874449436428
+INFO 2021-01-29 23:44:24,879 validation score: 0.3091059923171997
+INFO 2021-01-29 23:44:26,533 epoch: 388                        loss: 0.2506970465183258
+INFO 2021-01-29 23:44:26,533 0.00011675349659541334
+INFO 2021-01-29 23:45:23,653 validation score: 0.3118438124656677
+INFO 2021-01-29 23:45:25,312 epoch: 389                        loss: 0.25082239508628845
+INFO 2021-01-29 23:45:25,312 0.00011474337861219395
+INFO 2021-01-29 23:46:22,576 validation score: 0.30481594800949097
+INFO 2021-01-29 23:46:24,235 epoch: 390                        loss: 0.2509465217590332
+INFO 2021-01-29 23:46:24,235 0.00011274846990072186
+INFO 2021-01-29 23:47:21,624 validation score: 0.3080989718437195
+INFO 2021-01-29 23:47:23,283 epoch: 391                        loss: 0.2501339316368103
+INFO 2021-01-29 23:47:23,283 0.00011076884921657725
+INFO 2021-01-29 23:48:20,807 validation score: 0.3084135055541992
+INFO 2021-01-29 23:48:22,464 epoch: 392                        loss: 0.2511482536792755
+INFO 2021-01-29 23:48:22,464 0.00010880459471179505
+INFO 2021-01-29 23:49:20,155 validation score: 0.31096893548965454
+INFO 2021-01-29 23:49:21,815 epoch: 393                        loss: 0.2512589693069458
+INFO 2021-01-29 23:49:21,815 0.00010685578393178001
+INFO 2021-01-29 23:50:19,666 validation score: 0.31703174114227295
+INFO 2021-01-29 23:50:21,328 epoch: 394                        loss: 0.2503772974014282
+INFO 2021-01-29 23:50:21,328 0.00010492249381224429
+INFO 2021-01-29 23:51:19,308 validation score: 0.3088483214378357
+INFO 2021-01-29 23:51:20,961 epoch: 395                        loss: 0.25063663721084595
+INFO 2021-01-29 23:51:20,962 0.000103004800676172
+INFO 2021-01-29 23:52:19,157 validation score: 0.31539207696914673
+INFO 2021-01-29 23:52:20,811 epoch: 396                        loss: 0.25046318769454956
+INFO 2021-01-29 23:52:20,812 0.00010110278023080444
+INFO 2021-01-29 23:53:19,100 validation score: 0.3054999113082886
+INFO 2021-01-29 23:53:20,753 epoch: 397                        loss: 0.2506963610649109
+INFO 2021-01-29 23:53:20,753 9.921650756465169e-05
+INFO 2021-01-29 23:54:19,195 validation score: 0.31282734870910645
+INFO 2021-01-29 23:54:20,854 epoch: 398                        loss: 0.2504401206970215
+INFO 2021-01-29 23:54:20,855 9.73460571445293e-05
+INFO 2021-01-29 23:55:19,462 validation score: 0.3092901110649109
+INFO 2021-01-29 23:55:21,118 epoch: 399                        loss: 0.24997812509536743
+INFO 2021-01-29 23:55:21,118 9.549150281261676e-05
+INFO 2021-01-29 23:56:19,838 validation score: 0.31161344051361084
+INFO 2021-01-29 23:56:21,493 epoch: 400                        loss: 0.24957308173179626
+INFO 2021-01-29 23:56:21,493 9.365291778354365e-05
+INFO 2021-01-29 23:57:20,467 validation score: 0.3098878860473633
+INFO 2021-01-29 23:57:22,124 epoch: 401                        loss: 0.25040799379348755
+INFO 2021-01-29 23:57:22,125 9.183037464149885e-05
+INFO 2021-01-29 23:58:21,158 validation score: 0.3144192099571228
+INFO 2021-01-29 23:58:22,815 epoch: 402                        loss: 0.25076407194137573
+INFO 2021-01-29 23:58:22,815 9.002394533736492e-05
+INFO 2021-01-29 23:59:21,998 validation score: 0.313151478767395
+INFO 2021-01-29 23:59:23,660 epoch: 403                        loss: 0.2500360608100891
+INFO 2021-01-29 23:59:23,661 8.823370118587745e-05
+INFO 2021-01-30 00:00:23,068 validation score: 0.31314533948898315
+INFO 2021-01-30 00:00:24,731 epoch: 404                        loss: 0.25005537271499634
+INFO 2021-01-30 00:00:24,731 8.64597128628105e-05
+INFO 2021-01-30 00:01:24,226 validation score: 0.31202346086502075
+INFO 2021-01-30 00:01:25,884 epoch: 405                        loss: 0.2509647011756897
+INFO 2021-01-30 00:01:25,885 8.470205040218525e-05
+INFO 2021-01-30 00:02:25,502 validation score: 0.3130480647087097
+INFO 2021-01-30 00:02:27,162 epoch: 406                        loss: 0.25002795457839966
+INFO 2021-01-30 00:02:27,162 8.296078319350603e-05
+INFO 2021-01-30 00:03:26,943 validation score: 0.3115401864051819
+INFO 2021-01-30 00:03:28,603 epoch: 407                        loss: 0.2511218786239624
+INFO 2021-01-30 00:03:28,603 8.123597997902106e-05
+INFO 2021-01-30 00:04:28,554 validation score: 0.30989474058151245
+INFO 2021-01-30 00:04:30,213 epoch: 408                        loss: 0.25002846121788025
+INFO 2021-01-30 00:04:30,213 7.952770885100753e-05
+INFO 2021-01-30 00:05:30,238 validation score: 0.31273961067199707
+INFO 2021-01-30 00:05:31,895 epoch: 409                        loss: 0.25055667757987976
+INFO 2021-01-30 00:05:31,896 7.783603724908468e-05
+INFO 2021-01-30 00:06:32,072 validation score: 0.30958032608032227
+INFO 2021-01-30 00:06:33,732 epoch: 410                        loss: 0.24963653087615967
+INFO 2021-01-30 00:06:33,733 7.616103195755076e-05
+INFO 2021-01-30 00:07:34,075 validation score: 0.312764048576355
+INFO 2021-01-30 00:07:35,731 epoch: 411                        loss: 0.24963122606277466
+INFO 2021-01-30 00:07:35,732 7.450275910274668e-05
+INFO 2021-01-30 00:08:36,214 validation score: 0.3077625632286072
+INFO 2021-01-30 00:08:37,872 epoch: 412                        loss: 0.25036460161209106
+INFO 2021-01-30 00:08:37,872 7.286128415044508e-05
+INFO 2021-01-30 00:09:38,477 validation score: 0.31181830167770386
+INFO 2021-01-30 00:09:40,134 epoch: 413                        loss: 0.2506139278411865
+INFO 2021-01-30 00:09:40,134 7.123667190326682e-05
+INFO 2021-01-30 00:10:40,888 validation score: 0.31112462282180786
+INFO 2021-01-30 00:10:42,542 epoch: 414                        loss: 0.2497880607843399
+INFO 2021-01-30 00:10:42,543 6.962898649812126e-05
+INFO 2021-01-30 00:11:43,485 validation score: 0.3114302158355713
+INFO 2021-01-30 00:11:45,145 epoch: 415                        loss: 0.24950149655342102
+INFO 2021-01-30 00:11:45,145 6.803829140367544e-05
+INFO 2021-01-30 00:12:46,236 validation score: 0.3114834427833557
+INFO 2021-01-30 00:12:47,904 epoch: 416                        loss: 0.24987223744392395
+INFO 2021-01-30 00:12:47,904 6.646464941784833e-05
+INFO 2021-01-30 00:13:49,154 validation score: 0.310733437538147
+INFO 2021-01-30 00:13:50,814 epoch: 417                        loss: 0.24972091615200043
+INFO 2021-01-30 00:13:50,815 6.490812266533066e-05
+INFO 2021-01-30 00:14:52,178 validation score: 0.3094598650932312
+INFO 2021-01-30 00:14:53,833 epoch: 418                        loss: 0.2501900792121887
+INFO 2021-01-30 00:14:53,833 6.336877259513359e-05
+INFO 2021-01-30 00:15:55,404 validation score: 0.3088955283164978
+INFO 2021-01-30 00:15:57,063 epoch: 419                        loss: 0.2492748200893402
+INFO 2021-01-30 00:15:57,063 6.184665997816202e-05
+INFO 2021-01-30 00:16:58,738 validation score: 0.30998754501342773
+INFO 2021-01-30 00:17:00,393 epoch: 420                        loss: 0.24957676231861115
+INFO 2021-01-30 00:17:00,393 6.0341844904815894e-05
+INFO 2021-01-30 00:18:02,207 validation score: 0.30941444635391235
+INFO 2021-01-30 00:18:03,866 epoch: 421                        loss: 0.24988141655921936
+INFO 2021-01-30 00:18:03,866 5.8854386782617405e-05
+INFO 2021-01-30 00:19:05,762 validation score: 0.3050704002380371
+INFO 2021-01-30 00:19:07,414 epoch: 422                        loss: 0.2497348189353943
+INFO 2021-01-30 00:19:07,415 5.738434433386668e-05
+INFO 2021-01-30 00:20:09,606 validation score: 0.31334561109542847
+INFO 2021-01-30 00:20:11,271 epoch: 423                        loss: 0.24947987496852875
+INFO 2021-01-30 00:20:11,271 5.5931775593322155e-05
+INFO 2021-01-30 00:21:13,486 validation score: 0.31194770336151123
+INFO 2021-01-30 00:21:15,144 epoch: 424                        loss: 0.24992361664772034
+INFO 2021-01-30 00:21:15,144 5.4496737905910645e-05
+INFO 2021-01-30 00:22:17,475 validation score: 0.307807981967926
+INFO 2021-01-30 00:22:19,161 epoch: 425                        loss: 0.2489147037267685
+INFO 2021-01-30 00:22:19,161 5.307928792446279e-05
+INFO 2021-01-30 00:23:21,665 validation score: 0.3087720274925232
+INFO 2021-01-30 00:23:23,319 epoch: 426                        loss: 0.24933025240898132
+INFO 2021-01-30 00:23:23,320 5.1679481607476885e-05
+INFO 2021-01-30 00:24:25,933 validation score: 0.3134985566139221
+INFO 2021-01-30 00:24:27,582 epoch: 427                        loss: 0.2502538561820984
+INFO 2021-01-30 00:24:27,583 5.029737421690942e-05
+INFO 2021-01-30 00:25:30,335 validation score: 0.30815207958221436
+INFO 2021-01-30 00:25:31,995 epoch: 428                        loss: 0.2489718347787857
+INFO 2021-01-30 00:25:31,995 4.893302031599367e-05
+INFO 2021-01-30 00:26:34,966 validation score: 0.31043052673339844
+INFO 2021-01-30 00:26:36,621 epoch: 429                        loss: 0.2493898868560791
+INFO 2021-01-30 00:26:36,621 4.758647376708555e-05
+INFO 2021-01-30 00:27:39,665 validation score: 0.30996519327163696
+INFO 2021-01-30 00:27:41,320 epoch: 430                        loss: 0.24949806928634644
+INFO 2021-01-30 00:27:41,320 4.625778772953686e-05
+INFO 2021-01-30 00:28:44,535 validation score: 0.31353968381881714
+INFO 2021-01-30 00:28:46,189 epoch: 431                        loss: 0.24930231273174286
+INFO 2021-01-30 00:28:46,189 4.494701465759766e-05
+INFO 2021-01-30 00:29:49,514 validation score: 0.30972421169281006
+INFO 2021-01-30 00:29:51,170 epoch: 432                        loss: 0.2487582564353943
+INFO 2021-01-30 00:29:51,170 4.365420629834424e-05
+INFO 2021-01-30 00:30:54,659 validation score: 0.3097347021102905
+INFO 2021-01-30 00:30:56,315 epoch: 433                        loss: 0.24925869703292847
+INFO 2021-01-30 00:30:56,315 4.237941368963698e-05
+INFO 2021-01-30 00:31:59,985 validation score: 0.310343861579895
+INFO 2021-01-30 00:32:01,638 epoch: 434                        loss: 0.24930289387702942
+INFO 2021-01-30 00:32:01,639 4.11226871581053e-05
+INFO 2021-01-30 00:33:05,447 validation score: 0.3080754280090332
+INFO 2021-01-30 00:33:07,101 epoch: 435                        loss: 0.24890249967575073
+INFO 2021-01-30 00:33:07,101 3.988407631716092e-05
+INFO 2021-01-30 00:34:11,093 validation score: 0.30877333879470825
+INFO 2021-01-30 00:34:12,742 epoch: 436                        loss: 0.2489503026008606
+INFO 2021-01-30 00:34:12,742 3.8663630065038675e-05
+INFO 2021-01-30 00:35:16,885 validation score: 0.31126487255096436
+INFO 2021-01-30 00:35:18,541 epoch: 437                        loss: 0.24876484274864197
+INFO 2021-01-30 00:35:18,541 3.7461396582867165e-05
+INFO 2021-01-30 00:36:22,975 validation score: 0.3124428987503052
+INFO 2021-01-30 00:36:24,632 epoch: 438                        loss: 0.24869707226753235
+INFO 2021-01-30 00:36:24,632 3.6277423332765725e-05
+INFO 2021-01-30 00:37:28,995 validation score: 0.3121185898780823
+INFO 2021-01-30 00:37:30,653 epoch: 439                        loss: 0.24835404753684998
+INFO 2021-01-30 00:37:30,653 3.5111757055970745e-05
+INFO 2021-01-30 00:38:35,198 validation score: 0.307420551776886
+INFO 2021-01-30 00:38:36,853 epoch: 440                        loss: 0.24974101781845093
+INFO 2021-01-30 00:38:36,853 3.3964443770991114e-05
+INFO 2021-01-30 00:39:41,567 validation score: 0.3114311099052429
+INFO 2021-01-30 00:39:43,225 epoch: 441                        loss: 0.24946807324886322
+INFO 2021-01-30 00:39:43,225 3.283552877179069e-05
+INFO 2021-01-30 00:40:48,062 validation score: 0.31340491771698
+INFO 2021-01-30 00:40:49,712 epoch: 442                        loss: 0.2495974600315094
+INFO 2021-01-30 00:40:49,713 3.172505662600067e-05
+INFO 2021-01-30 00:41:54,695 validation score: 0.31289947032928467
+INFO 2021-01-30 00:41:56,353 epoch: 443                        loss: 0.24875381588935852
+INFO 2021-01-30 00:41:56,353 3.0633071173159884e-05
+INFO 2021-01-30 00:43:01,510 validation score: 0.3136870861053467
+INFO 2021-01-30 00:43:03,160 epoch: 444                        loss: 0.2486547827720642
+INFO 2021-01-30 00:43:03,161 2.9559615522984357e-05
+INFO 2021-01-30 00:44:08,575 validation score: 0.3100224733352661
+INFO 2021-01-30 00:44:10,228 epoch: 445                        loss: 0.24896559119224548
+INFO 2021-01-30 00:44:10,228 2.8504732053664873e-05
+INFO 2021-01-30 00:45:15,678 validation score: 0.3081687092781067
+INFO 2021-01-30 00:45:17,333 epoch: 446                        loss: 0.2494848370552063
+INFO 2021-01-30 00:45:17,334 2.7468462410194887e-05
+INFO 2021-01-30 00:46:22,905 validation score: 0.31097275018692017
+INFO 2021-01-30 00:46:24,563 epoch: 447                        loss: 0.2485722303390503
+INFO 2021-01-30 00:46:24,564 2.6450847502725224e-05
+INFO 2021-01-30 00:47:30,895 validation score: 0.3131478428840637
+INFO 2021-01-30 00:47:32,704 epoch: 448                        loss: 0.24916759133338928
+INFO 2021-01-30 00:47:32,704 2.545192750495009e-05
+INFO 2021-01-30 00:48:38,616 validation score: 0.30965203046798706
+INFO 2021-01-30 00:48:40,270 epoch: 449                        loss: 0.24804969131946564
+INFO 2021-01-30 00:48:40,270 2.4471741852520776e-05
+INFO 2021-01-30 00:49:46,312 validation score: 0.3117743134498596
+INFO 2021-01-30 00:49:47,970 epoch: 450                        loss: 0.2490113079547882
+INFO 2021-01-30 00:49:47,970 2.3510329241488263e-05
+INFO 2021-01-30 00:50:54,255 validation score: 0.31183922290802
+INFO 2021-01-30 00:50:55,913 epoch: 451                        loss: 0.2490372657775879
+INFO 2021-01-30 00:50:55,913 2.2567727626776254e-05
+INFO 2021-01-30 00:52:02,286 validation score: 0.30736666917800903
+INFO 2021-01-30 00:52:03,943 epoch: 452                        loss: 0.24858681857585907
+INFO 2021-01-30 00:52:03,944 2.164397422068255e-05
+INFO 2021-01-30 00:53:10,665 validation score: 0.3119674324989319
+INFO 2021-01-30 00:53:12,325 epoch: 453                        loss: 0.24894392490386963
+INFO 2021-01-30 00:53:12,325 2.0739105491409996e-05
+INFO 2021-01-30 00:54:18,949 validation score: 0.3124557137489319
+INFO 2021-01-30 00:54:20,610 epoch: 454                        loss: 0.248714879155159
+INFO 2021-01-30 00:54:20,610 1.985315716162647e-05
+INFO 2021-01-30 00:55:27,408 validation score: 0.3126150369644165
+INFO 2021-01-30 00:55:29,066 epoch: 455                        loss: 0.24818408489227295
+INFO 2021-01-30 00:55:29,066 1.898616420705518e-05
+INFO 2021-01-30 00:56:36,097 validation score: 0.31226760149002075
+INFO 2021-01-30 00:56:37,756 epoch: 456                        loss: 0.24900177121162415
+INFO 2021-01-30 00:56:37,756 1.813816085509332e-05
+INFO 2021-01-30 00:57:44,866 validation score: 0.3070864677429199
+INFO 2021-01-30 00:57:46,553 epoch: 457                        loss: 0.24867630004882812
+INFO 2021-01-30 00:57:46,553 1.7309180583461318e-05
+INFO 2021-01-30 00:58:53,824 validation score: 0.3123156428337097
+INFO 2021-01-30 00:58:55,481 epoch: 458                        loss: 0.24820470809936523
+INFO 2021-01-30 00:58:55,481 1.649925611888084e-05
+INFO 2021-01-30 01:00:02,862 validation score: 0.3114900588989258
+INFO 2021-01-30 01:00:04,517 epoch: 459                        loss: 0.24807490408420563
+INFO 2021-01-30 01:00:04,518 1.5708419435782882e-05
+INFO 2021-01-30 01:01:12,047 validation score: 0.3093799948692322
+INFO 2021-01-30 01:01:13,702 epoch: 460                        loss: 0.2480902075767517
+INFO 2021-01-30 01:01:13,702 1.49367017550456e-05
+INFO 2021-01-30 01:02:21,442 validation score: 0.3084644675254822
+INFO 2021-01-30 01:02:23,096 epoch: 461                        loss: 0.24886906147003174
+INFO 2021-01-30 01:02:23,096 1.4184133542761588e-05
+INFO 2021-01-30 01:03:30,863 validation score: 0.31294357776641846
+INFO 2021-01-30 01:03:32,523 epoch: 462                        loss: 0.24808117747306824
+INFO 2021-01-30 01:03:32,523 1.3450744509035388e-05
+INFO 2021-01-30 01:04:40,513 validation score: 0.30819541215896606
+INFO 2021-01-30 01:04:42,173 epoch: 463                        loss: 0.24894461035728455
+INFO 2021-01-30 01:04:42,173 1.27365636068101e-05
+INFO 2021-01-30 01:05:50,417 validation score: 0.3126535415649414
+INFO 2021-01-30 01:05:52,088 epoch: 464                        loss: 0.24807974696159363
+INFO 2021-01-30 01:05:52,089 1.2041619030725126e-05
+INFO 2021-01-30 01:07:00,350 validation score: 0.3064514398574829
+INFO 2021-01-30 01:07:02,004 epoch: 465                        loss: 0.24822071194648743
+INFO 2021-01-30 01:07:02,004 1.1365938216002115e-05
+INFO 2021-01-30 01:08:10,427 validation score: 0.3057630658149719
+INFO 2021-01-30 01:08:12,083 epoch: 466                        loss: 0.2485218495130539
+INFO 2021-01-30 01:08:12,083 1.0709547837362889e-05
+INFO 2021-01-30 01:09:20,754 validation score: 0.3102877736091614
+INFO 2021-01-30 01:09:22,413 epoch: 467                        loss: 0.24792559444904327
+INFO 2021-01-30 01:09:22,413 1.0072473807975557e-05
+INFO 2021-01-30 01:10:31,147 validation score: 0.30775517225265503
+INFO 2021-01-30 01:10:32,805 epoch: 468                        loss: 0.24804291129112244
+INFO 2021-01-30 01:10:32,805 9.454741278432063e-06
+INFO 2021-01-30 01:11:41,605 validation score: 0.3077699542045593
+INFO 2021-01-30 01:11:43,267 epoch: 469                        loss: 0.2482556402683258
+INFO 2021-01-30 01:11:43,267 8.85637463575475e-06
+INFO 2021-01-30 01:12:52,189 validation score: 0.31167393922805786
+INFO 2021-01-30 01:12:53,849 epoch: 470                        loss: 0.24849916994571686
+INFO 2021-01-30 01:12:53,849 8.277397502434308e-06
+INFO 2021-01-30 01:14:02,937 validation score: 0.30803555250167847
+INFO 2021-01-30 01:14:04,593 epoch: 471                        loss: 0.24817678332328796
+INFO 2021-01-30 01:14:04,593 7.71783273549656e-06
+INFO 2021-01-30 01:15:13,857 validation score: 0.3089407682418823
+INFO 2021-01-30 01:15:15,512 epoch: 472                        loss: 0.24849866330623627
+INFO 2021-01-30 01:15:15,512 7.1777024256002555e-06
+INFO 2021-01-30 01:16:24,896 validation score: 0.30842483043670654
+INFO 2021-01-30 01:16:26,554 epoch: 473                        loss: 0.24820882081985474
+INFO 2021-01-30 01:16:26,554 6.657027896165313e-06
+INFO 2021-01-30 01:17:36,047 validation score: 0.3112828731536865
+INFO 2021-01-30 01:17:37,702 epoch: 474                        loss: 0.24793344736099243
+INFO 2021-01-30 01:17:37,702 6.155829702530553e-06
+INFO 2021-01-30 01:18:47,353 validation score: 0.3102557063102722
+INFO 2021-01-30 01:18:49,010 epoch: 475                        loss: 0.24784159660339355
+INFO 2021-01-30 01:18:49,011 5.674127631142455e-06
+INFO 2021-01-30 01:19:58,845 validation score: 0.3087616562843323
+INFO 2021-01-30 01:20:00,506 epoch: 476                        loss: 0.2479645013809204
+INFO 2021-01-30 01:20:00,506 5.21194069877401e-06
+INFO 2021-01-30 01:21:10,584 validation score: 0.3099724054336548
+INFO 2021-01-30 01:21:12,245 epoch: 477                        loss: 0.24817177653312683
+INFO 2021-01-30 01:21:12,245 4.769287151773928e-06
+INFO 2021-01-30 01:22:22,354 validation score: 0.3088136911392212
+INFO 2021-01-30 01:22:24,013 epoch: 478                        loss: 0.2481813132762909
+INFO 2021-01-30 01:22:24,013 4.3461844653462695e-06
+INFO 2021-01-30 01:23:34,252 validation score: 0.31390976905822754
+INFO 2021-01-30 01:23:35,910 epoch: 479                        loss: 0.24796950817108154
+INFO 2021-01-30 01:23:35,910 3.9426493428607225e-06
+INFO 2021-01-30 01:24:46,366 validation score: 0.31189030408859253
+INFO 2021-01-30 01:24:48,024 epoch: 480                        loss: 0.24791452288627625
+INFO 2021-01-30 01:24:48,024 3.5586977151928497e-06
+INFO 2021-01-30 01:25:58,610 validation score: 0.31127679347991943
+INFO 2021-01-30 01:26:00,265 epoch: 481                        loss: 0.24837926030158997
+INFO 2021-01-30 01:26:00,265 3.194344740095482e-06
+INFO 2021-01-30 01:27:10,975 validation score: 0.3151013255119324
+INFO 2021-01-30 01:27:12,636 epoch: 482                        loss: 0.2484680414199829
+INFO 2021-01-30 01:27:12,636 2.849604801600252e-06
+INFO 2021-01-30 01:28:23,486 validation score: 0.3076225519180298
+INFO 2021-01-30 01:28:25,207 epoch: 483                        loss: 0.24888789653778076
+INFO 2021-01-30 01:28:25,207 2.52449150944966e-06
+INFO 2021-01-30 01:29:36,235 validation score: 0.31084805727005005
+INFO 2021-01-30 01:29:37,892 epoch: 484                        loss: 0.2475823014974594
+INFO 2021-01-30 01:29:37,892 2.219017698559779e-06
+INFO 2021-01-30 01:30:48,994 validation score: 0.31164854764938354
+INFO 2021-01-30 01:30:50,651 epoch: 485                        loss: 0.2487865835428238
+INFO 2021-01-30 01:30:50,651 1.9331954285135534e-06
+INFO 2021-01-30 01:32:01,923 validation score: 0.31341552734375
+INFO 2021-01-30 01:32:03,572 epoch: 486                        loss: 0.24784749746322632
+INFO 2021-01-30 01:32:03,572 1.6670359830848984e-06
+INFO 2021-01-30 01:33:14,927 validation score: 0.3121901750564575
+INFO 2021-01-30 01:33:16,582 epoch: 487                        loss: 0.2477625459432602
+INFO 2021-01-30 01:33:16,582 1.4205498697928905e-06
+INFO 2021-01-30 01:34:28,117 validation score: 0.3122926354408264
+INFO 2021-01-30 01:34:29,773 epoch: 488                        loss: 0.24812252819538116
+INFO 2021-01-30 01:34:29,773 1.1937468194872671e-06
+INFO 2021-01-30 01:35:41,525 validation score: 0.31152814626693726
+INFO 2021-01-30 01:35:43,181 epoch: 489                        loss: 0.24811455607414246
+INFO 2021-01-30 01:35:43,181 9.866357859641216e-07
+INFO 2021-01-30 01:36:55,053 validation score: 0.30986762046813965
+INFO 2021-01-30 01:36:56,703 epoch: 490                        loss: 0.2481277734041214
+INFO 2021-01-30 01:36:56,704 7.992249456124087e-07
+INFO 2021-01-30 01:38:08,786 validation score: 0.31127631664276123
+INFO 2021-01-30 01:38:10,438 epoch: 491                        loss: 0.24748221039772034
+INFO 2021-01-30 01:38:10,439 6.315216970912028e-07
+INFO 2021-01-30 01:39:22,615 validation score: 0.31045013666152954
+INFO 2021-01-30 01:39:24,273 epoch: 492                        loss: 0.24798348546028137
+INFO 2021-01-30 01:39:24,273 4.835326610375981e-07
+INFO 2021-01-30 01:40:36,766 validation score: 0.3072155714035034
+INFO 2021-01-30 01:40:38,423 epoch: 493                        loss: 0.2481667548418045
+INFO 2021-01-30 01:40:38,423 3.5526367980536197e-07
+INFO 2021-01-30 01:41:50,906 validation score: 0.3104245066642761
+INFO 2021-01-30 01:41:52,563 epoch: 494                        loss: 0.24772809445858002
+INFO 2021-01-30 01:41:52,563 2.4671981723417523e-07
+INFO 2021-01-30 01:43:05,225 validation score: 0.3095623850822449
+INFO 2021-01-30 01:43:06,882 epoch: 495                        loss: 0.24762506783008575
+INFO 2021-01-30 01:43:06,882 1.579053584500142e-07
+INFO 2021-01-30 01:44:19,637 validation score: 0.30959850549697876
+INFO 2021-01-30 01:44:21,290 epoch: 496                        loss: 0.24872848391532898
+INFO 2021-01-30 01:44:21,291 8.882380969550846e-08
+INFO 2021-01-30 01:45:34,248 validation score: 0.31111353635787964
+INFO 2021-01-30 01:45:35,904 epoch: 497                        loss: 0.24785412847995758
+INFO 2021-01-30 01:45:35,905 3.9477898191940166e-08
+INFO 2021-01-30 01:46:48,930 validation score: 0.31194525957107544
+INFO 2021-01-30 01:46:50,585 epoch: 498                        loss: 0.24784879386425018
+INFO 2021-01-30 01:46:50,585 9.869572031441343e-09
+INFO 2021-01-30 01:48:03,778 validation score: 0.3114416003227234
+INFO 2021-01-30 01:48:05,435 epoch: 499                        loss: 0.2476530373096466
+INFO 2021-01-30 01:48:05,435 1e-16
+INFO 2021-01-30 01:49:18,780 validation score: 0.3108242154121399
