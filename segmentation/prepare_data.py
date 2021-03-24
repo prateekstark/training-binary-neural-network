@@ -3,6 +3,8 @@ import cv2
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
+import torchvision.transforms.functional as TF
+
 
 class TissueSegmentation(Dataset):
     def __init__(
@@ -16,12 +18,14 @@ class TissueSegmentation(Dataset):
     ):
         X = []
         y = []
-        self.transform = transforms.Compose([
-                            transforms.RandomHorizontalFlip(),
-                            transforms.RandomRotation(0.2),
-                            transforms.RandomVerticalFlip(),
-                            transforms.ToTensor()
-                        ])
+        self.transform = transforms.Compose(
+            [
+                transforms.RandomHorizontalFlip(),
+                transforms.RandomRotation(0.2),
+                transforms.RandomVerticalFlip(),
+                [transforms.ToTensor(), transforms.ToTensor()],
+            ]
+        )
 
         for root, directories, files in os.walk(image_dir, topdown=False):
             for name in files:
@@ -50,6 +54,34 @@ class TissueSegmentation(Dataset):
     def print_dataset(self):
         for X, y in self.samples:
             print(X, y)
+
+    # def transform(self, image, mask):
+    #     # Resize
+    #     # resize = transforms.Resize(size=(520, 520))
+    #     # image = resize(image)
+    #     # mask = resize(mask)
+
+    #     # # Random crop
+    #     # i, j, h, w = transforms.RandomCrop.get_params(
+    #     # image, output_size=(512, 512))
+    #     # image = TF.crop(image, i, j, h, w)
+    #     # mask = TF.crop(mask, i, j, h, w)
+
+    #     # Random horizontal flipping
+    #     if random.random() > 0.5:
+    #         image = TF.hflip(image)
+    #         mask = TF.hflip(mask)
+
+    #     # Random vertical flipping
+    #     if random.random() > 0.5:
+    #         image = TF.vflip(image)
+    #         mask = TF.vflip(mask)
+
+    #     # Transform to tensor
+    #     image = TF.to_tensor(image)
+    #     mask = TF.to_tensor(mask)
+
+    #     return image, mask
 
     def __getitem__(self, index):
         image_path, label_path = self.samples[index]

@@ -5,12 +5,14 @@ import scipy.stats as st
 
 
 def calc_entropy(input_tensor):
-    lsm = torch.nn.LogSoftmax(dim=0).to('cuda')
+    lsm = torch.nn.LogSoftmax(dim=0).to("cuda")
     log_probs = lsm(input_tensor)
     probs = torch.exp(log_probs)
     p_log_p = log_probs * probs
     entropy = -p_log_p.mean()
     return entropy
+
+
 if __name__ == "__main__":
     index = 2
 
@@ -23,7 +25,7 @@ if __name__ == "__main__":
     start = 0
     for i in range(bins):
         x.append(start)
-        start += 1. / bins
+        start += 1.0 / bins
     print(calc_entropy(tensor))
     # plt.xticks(fontsize=18)
     # plt.yticks(fontsize=1)
@@ -34,8 +36,7 @@ if __name__ == "__main__":
     plt.show()
 
 
-
 # plt.xlabel('Epochs', size=22)
 # plt.ylabel('Accuracy (%)', size=22)
-# plt.legend(loc=4, prop={'size': 22}) 
+# plt.legend(loc=4, prop={'size': 22})
 # plt.savefig('CIFAR100.png', dpi=300)
