@@ -3,5 +3,5 @@ torch
 wandb               #optional
 torchvision
 torchsummary
-Pillow==7.2.2
+Pillow==8.1.1
 opencv-python
