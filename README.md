@@ -1,7 +1,6 @@
 # Training Binary Neural Networks
 <p align="left">
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
-<a href="https://doi.org/10.5281/zenodo.4716863"><img alt="Code style: black" src="https://zenodo.org/badge/DOI/10.5281/zenodo.4716863.svg"></a>
 </p>
 
 We reproduce the results for the paper, "*Training Binary Neural Networks using the Bayesian Learning Rule*". We make an end-to-end trainer for training Binary Neural Networks using various methods and Keras like usage. This is our entry for the ML Reproducibility Challenge 2020.
